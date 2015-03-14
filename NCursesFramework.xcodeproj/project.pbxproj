@@ -40,7 +40,7 @@
 		2CB180BD1AB1F75700731445 /* NCRendition_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */; };
 		2CB180C01AB1FB2100731445 /* NCCursesKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BE1AB1FB2100731445 /* NCCursesKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CB180C11AB1FB2100731445 /* NCCursesKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB180BF1AB1FB2100731445 /* NCCursesKey.m */; };
-		2CB4BD901A76A60500E21116 /* libNCursesF.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB4BD841A76A60500E21116 /* libNCursesF.dylib */; };
+		2CB4BD901A76A60500E21116 /* libNCursesFramework.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */; };
 		2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B891A924CDA00ED0BF1 /* NCColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */; };
 		2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,8 +107,8 @@
 		2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition_Protected.h; sourceTree = "<group>"; };
 		2CB180BE1AB1FB2100731445 /* NCCursesKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesKey.h; sourceTree = "<group>"; };
 		2CB180BF1AB1FB2100731445 /* NCCursesKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesKey.m; sourceTree = "<group>"; };
-		2CB4BD841A76A60500E21116 /* libNCursesF.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libNCursesF.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CB4BD8F1A76A60500E21116 /* NCursesFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCursesFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libNCursesFramework.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB4BD8F1A76A60500E21116 /* NCursesFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCursesFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4BD951A76A60500E21116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD61B891A924CDA00ED0BF1 /* NCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
 		2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB4BD901A76A60500E21116 /* libNCursesF.dylib in Frameworks */,
+				2CB4BD901A76A60500E21116 /* libNCursesFramework.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,8 +246,8 @@
 		2CB4BD851A76A60500E21116 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CB4BD841A76A60500E21116 /* libNCursesF.dylib */,
-				2CB4BD8F1A76A60500E21116 /* NCursesFTests.xctest */,
+				2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */,
+				2CB4BD8F1A76A60500E21116 /* NCursesFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,9 +375,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2CB4BD831A76A60500E21116 /* NCursesF */ = {
+		2CB4BD831A76A60500E21116 /* NCursesFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CB4BD981A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesF" */;
+			buildConfigurationList = 2CB4BD981A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFramework" */;
 			buildPhases = (
 				2CB4BD801A76A60500E21116 /* Sources */,
 				2CB4BD811A76A60500E21116 /* Frameworks */,
@@ -388,14 +388,14 @@
 			);
 			dependencies = (
 			);
-			name = NCursesF;
+			name = NCursesFramework;
 			productName = NCursesF;
-			productReference = 2CB4BD841A76A60500E21116 /* libNCursesF.dylib */;
+			productReference = 2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		2CB4BD8E1A76A60500E21116 /* NCursesFTests */ = {
+		2CB4BD8E1A76A60500E21116 /* NCursesFrameworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CB4BD9B1A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFTests" */;
+			buildConfigurationList = 2CB4BD9B1A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFrameworkTests" */;
 			buildPhases = (
 				2CB4BD8B1A76A60500E21116 /* Sources */,
 				2CB4BD8C1A76A60500E21116 /* Frameworks */,
@@ -406,9 +406,9 @@
 			dependencies = (
 				2CB4BD921A76A60500E21116 /* PBXTargetDependency */,
 			);
-			name = NCursesFTests;
+			name = NCursesFrameworkTests;
 			productName = NCursesFTests;
-			productReference = 2CB4BD8F1A76A60500E21116 /* NCursesFTests.xctest */;
+			productReference = 2CB4BD8F1A76A60500E21116 /* NCursesFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -428,7 +428,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2CB4BD7F1A76A60500E21116 /* Build configuration list for PBXProject "NCursesF" */;
+			buildConfigurationList = 2CB4BD7F1A76A60500E21116 /* Build configuration list for PBXProject "NCursesFramework" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -440,8 +440,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CB4BD831A76A60500E21116 /* NCursesF */,
-				2CB4BD8E1A76A60500E21116 /* NCursesFTests */,
+				2CB4BD831A76A60500E21116 /* NCursesFramework */,
+				2CB4BD8E1A76A60500E21116 /* NCursesFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -496,7 +496,7 @@
 /* Begin PBXTargetDependency section */
 		2CB4BD921A76A60500E21116 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2CB4BD831A76A60500E21116 /* NCursesF */;
+			target = 2CB4BD831A76A60500E21116 /* NCursesFramework */;
 			targetProxy = 2CB4BD911A76A60500E21116 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -584,7 +584,7 @@
 				EXECUTABLE_PREFIX = lib;
 				INSTALL_PATH = "@executable_path/";
 				OTHER_LDFLAGS = "-lncurses";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NCursesFramework;
 			};
 			name = Debug;
 		};
@@ -596,7 +596,7 @@
 				EXECUTABLE_PREFIX = lib;
 				INSTALL_PATH = "@executable_path/";
 				OTHER_LDFLAGS = "-lncurses";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NCursesFramework;
 			};
 			name = Release;
 		};
@@ -614,7 +614,7 @@
 				);
 				INFOPLIST_FILE = NCursesFTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NCursesFrameworkTests;
 			};
 			name = Debug;
 		};
@@ -628,14 +628,14 @@
 				);
 				INFOPLIST_FILE = NCursesFTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NCursesFrameworkTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CB4BD7F1A76A60500E21116 /* Build configuration list for PBXProject "NCursesF" */ = {
+		2CB4BD7F1A76A60500E21116 /* Build configuration list for PBXProject "NCursesFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CB4BD961A76A60500E21116 /* Debug */,
@@ -644,7 +644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CB4BD981A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesF" */ = {
+		2CB4BD981A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CB4BD991A76A60500E21116 /* Debug */,
@@ -653,7 +653,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CB4BD9B1A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFTests" */ = {
+		2CB4BD9B1A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFrameworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CB4BD9C1A76A60500E21116 /* Debug */,
