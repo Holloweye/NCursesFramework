@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C1466AC1AAF4E6900778FB6 /* NCGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466A31AAF4E6900778FB6 /* NCGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1466AD1AAF4E6900778FB6 /* NCGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466A41AAF4E6900778FB6 /* NCGraphic.m */; };
+		2C1466B01AAF4E6900778FB6 /* NCString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466A81AAF4E6900778FB6 /* NCString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1466B11AAF4E6900778FB6 /* NCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466A91AAF4E6900778FB6 /* NCString.m */; };
+		2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466B21AAF513800778FB6 /* NCRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1466B51AAF513800778FB6 /* NCRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466B31AAF513800778FB6 /* NCRendition.m */; };
+		2C1466BB1AAF53B000778FB6 /* NCMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466B91AAF53B000778FB6 /* NCMatrix.h */; };
+		2C1466BC1AAF53B000778FB6 /* NCMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466BA1AAF53B000778FB6 /* NCMatrix.m */; };
+		2C9EEA6B1AB2B46800BC607A /* NCCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA5F1AB2B46800BC607A /* NCCanvas.h */; };
+		2C9EEA6C1AB2B46800BC607A /* NCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA601AB2B46800BC607A /* NCCanvas.m */; };
+		2C9EEA6D1AB2B46800BC607A /* NCBorderDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA631AB2B46800BC607A /* NCBorderDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9EEA6E1AB2B46800BC607A /* NCBorderDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA641AB2B46800BC607A /* NCBorderDecorator.m */; };
+		2C9EEA6F1AB2B46800BC607A /* NCDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA651AB2B46800BC607A /* NCDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9EEA701AB2B46800BC607A /* NCDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA661AB2B46800BC607A /* NCDecorator.m */; };
+		2C9EEA711AB2B46800BC607A /* NCText.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA691AB2B46800BC607A /* NCText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9EEA721AB2B46800BC607A /* NCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA6A1AB2B46800BC607A /* NCText.m */; };
+		2C9EEA751AB2B48100BC607A /* NCBorderStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA731AB2B48100BC607A /* NCBorderStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9EEA761AB2B48100BC607A /* NCBorderStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA741AB2B48100BC607A /* NCBorderStrategy.m */; };
+		2C9EEA791AB2B56000BC607A /* NCBorderFilledStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA771AB2B56000BC607A /* NCBorderFilledStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9EEA7A1AB2B56000BC607A /* NCBorderFilledStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA781AB2B56000BC607A /* NCBorderFilledStrategy.m */; };
+		2C9EEA7D1AB2BA1300BC607A /* NCBorderDottedStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA7B1AB2BA1300BC607A /* NCBorderDottedStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9EEA7E1AB2BA1300BC607A /* NCBorderDottedStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA7C1AB2BA1300BC607A /* NCBorderDottedStrategy.m */; };
+		2CA7A1831AB34052002DD22F /* NCScrollDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7A1811AB34051002DD22F /* NCScrollDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CA7A1841AB34052002DD22F /* NCScrollDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7A1821AB34052002DD22F /* NCScrollDecorator.m */; };
+		2CA7A1871AB34369002DD22F /* NCScrollBarStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7A1851AB34369002DD22F /* NCScrollBarStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CA7A1881AB34369002DD22F /* NCScrollBarStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7A1861AB34369002DD22F /* NCScrollBarStrategy.m */; };
+		2CA7A18B1AB345F3002DD22F /* NCScrollBarSimpleStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7A1891AB345F3002DD22F /* NCScrollBarSimpleStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CA7A18C1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7A18A1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m */; };
+		2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180B81AB1F68000731445 /* NCCursesRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CB180BB1AB1F68000731445 /* NCCursesRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB180B91AB1F68000731445 /* NCCursesRendition.m */; };
+		2CB180BD1AB1F75700731445 /* NCRendition_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */; };
+		2CB180C01AB1FB2100731445 /* NCCursesKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BE1AB1FB2100731445 /* NCCursesKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CB180C11AB1FB2100731445 /* NCCursesKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB180BF1AB1FB2100731445 /* NCCursesKey.m */; };
+		2CB4BD901A76A60500E21116 /* libNCursesF.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB4BD841A76A60500E21116 /* libNCursesF.dylib */; };
+		2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B891A924CDA00ED0BF1 /* NCColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */; };
+		2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CD61BB21A924CDA00ED0BF1 /* NCKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8F1A924CDA00ED0BF1 /* NCKey.m */; };
+		2CD61BB31A924CDA00ED0BF1 /* NCRender.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B911A924CDA00ED0BF1 /* NCRender.h */; };
+		2CD61BB41A924CDA00ED0BF1 /* NCRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B921A924CDA00ED0BF1 /* NCRender.m */; };
+		2CD61BB91A924CDA00ED0BF1 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B9A1A924CDA00ED0BF1 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CD61BBA1A924CDA00ED0BF1 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B9B1A924CDA00ED0BF1 /* Logger.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CB4BD911A76A60500E21116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CB4BD7C1A76A60500E21116 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CB4BD831A76A60500E21116;
+			remoteInfo = NCursesF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2CB4BDBF1A76A6E200E21116 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2C1466A31AAF4E6900778FB6 /* NCGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCGraphic.h; sourceTree = "<group>"; };
+		2C1466A41AAF4E6900778FB6 /* NCGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCGraphic.m; sourceTree = "<group>"; };
+		2C1466A81AAF4E6900778FB6 /* NCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCString.h; sourceTree = "<group>"; };
+		2C1466A91AAF4E6900778FB6 /* NCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCString.m; sourceTree = "<group>"; };
+		2C1466B21AAF513800778FB6 /* NCRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition.h; sourceTree = "<group>"; };
+		2C1466B31AAF513800778FB6 /* NCRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRendition.m; sourceTree = "<group>"; };
+		2C1466B91AAF53B000778FB6 /* NCMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMatrix.h; sourceTree = "<group>"; };
+		2C1466BA1AAF53B000778FB6 /* NCMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMatrix.m; sourceTree = "<group>"; };
+		2C9EEA5F1AB2B46800BC607A /* NCCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvas.h; sourceTree = "<group>"; };
+		2C9EEA601AB2B46800BC607A /* NCCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvas.m; sourceTree = "<group>"; };
+		2C9EEA631AB2B46800BC607A /* NCBorderDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderDecorator.h; sourceTree = "<group>"; };
+		2C9EEA641AB2B46800BC607A /* NCBorderDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderDecorator.m; sourceTree = "<group>"; };
+		2C9EEA651AB2B46800BC607A /* NCDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDecorator.h; sourceTree = "<group>"; };
+		2C9EEA661AB2B46800BC607A /* NCDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDecorator.m; sourceTree = "<group>"; };
+		2C9EEA691AB2B46800BC607A /* NCText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCText.h; sourceTree = "<group>"; };
+		2C9EEA6A1AB2B46800BC607A /* NCText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCText.m; sourceTree = "<group>"; };
+		2C9EEA731AB2B48100BC607A /* NCBorderStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderStrategy.h; sourceTree = "<group>"; };
+		2C9EEA741AB2B48100BC607A /* NCBorderStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderStrategy.m; sourceTree = "<group>"; };
+		2C9EEA771AB2B56000BC607A /* NCBorderFilledStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderFilledStrategy.h; sourceTree = "<group>"; };
+		2C9EEA781AB2B56000BC607A /* NCBorderFilledStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderFilledStrategy.m; sourceTree = "<group>"; };
+		2C9EEA7B1AB2BA1300BC607A /* NCBorderDottedStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderDottedStrategy.h; sourceTree = "<group>"; };
+		2C9EEA7C1AB2BA1300BC607A /* NCBorderDottedStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderDottedStrategy.m; sourceTree = "<group>"; };
+		2CA7A1811AB34051002DD22F /* NCScrollDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollDecorator.h; sourceTree = "<group>"; };
+		2CA7A1821AB34052002DD22F /* NCScrollDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollDecorator.m; sourceTree = "<group>"; };
+		2CA7A1851AB34369002DD22F /* NCScrollBarStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollBarStrategy.h; sourceTree = "<group>"; };
+		2CA7A1861AB34369002DD22F /* NCScrollBarStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollBarStrategy.m; sourceTree = "<group>"; };
+		2CA7A1891AB345F3002DD22F /* NCScrollBarSimpleStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollBarSimpleStrategy.h; sourceTree = "<group>"; };
+		2CA7A18A1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollBarSimpleStrategy.m; sourceTree = "<group>"; };
+		2CB180B81AB1F68000731445 /* NCCursesRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesRendition.h; sourceTree = "<group>"; };
+		2CB180B91AB1F68000731445 /* NCCursesRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesRendition.m; sourceTree = "<group>"; };
+		2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition_Protected.h; sourceTree = "<group>"; };
+		2CB180BE1AB1FB2100731445 /* NCCursesKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesKey.h; sourceTree = "<group>"; };
+		2CB180BF1AB1FB2100731445 /* NCCursesKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesKey.m; sourceTree = "<group>"; };
+		2CB4BD841A76A60500E21116 /* libNCursesF.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libNCursesF.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB4BD8F1A76A60500E21116 /* NCursesFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCursesFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB4BD951A76A60500E21116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CD61B891A924CDA00ED0BF1 /* NCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
+		2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
+		2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCKey.h; sourceTree = "<group>"; };
+		2CD61B8F1A924CDA00ED0BF1 /* NCKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCKey.m; sourceTree = "<group>"; };
+		2CD61B911A924CDA00ED0BF1 /* NCRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRender.h; sourceTree = "<group>"; };
+		2CD61B921A924CDA00ED0BF1 /* NCRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRender.m; sourceTree = "<group>"; };
+		2CD61B9A1A924CDA00ED0BF1 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		2CD61B9B1A924CDA00ED0BF1 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CB4BD811A76A60500E21116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB4BD8C1A76A60500E21116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB4BD901A76A60500E21116 /* libNCursesF.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C1466A01AAF4E6900778FB6 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				2C9EEA5E1AB2B46800BC607A /* Canvas */,
+				2C9EEA611AB2B46800BC607A /* Decorator */,
+				2C9EEA671AB2B46800BC607A /* Leaf */,
+				2C1466A31AAF4E6900778FB6 /* NCGraphic.h */,
+				2C1466A41AAF4E6900778FB6 /* NCGraphic.m */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		2C1466A71AAF4E6900778FB6 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				2C1466A81AAF4E6900778FB6 /* NCString.h */,
+				2C1466A91AAF4E6900778FB6 /* NCString.m */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		2C1466B81AAF539900778FB6 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				2C1466B91AAF53B000778FB6 /* NCMatrix.h */,
+				2C1466BA1AAF53B000778FB6 /* NCMatrix.m */,
+			);
+			path = Matrix;
+			sourceTree = "<group>";
+		};
+		2C9EEA5E1AB2B46800BC607A /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				2C9EEA5F1AB2B46800BC607A /* NCCanvas.h */,
+				2C9EEA601AB2B46800BC607A /* NCCanvas.m */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		2C9EEA611AB2B46800BC607A /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				2CA7A1801AB34045002DD22F /* Scroll */,
+				2C9EEA621AB2B46800BC607A /* Border */,
+				2C9EEA651AB2B46800BC607A /* NCDecorator.h */,
+				2C9EEA661AB2B46800BC607A /* NCDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		2C9EEA621AB2B46800BC607A /* Border */ = {
+			isa = PBXGroup;
+			children = (
+				2C9EEA631AB2B46800BC607A /* NCBorderDecorator.h */,
+				2C9EEA641AB2B46800BC607A /* NCBorderDecorator.m */,
+				2C9EEA731AB2B48100BC607A /* NCBorderStrategy.h */,
+				2C9EEA741AB2B48100BC607A /* NCBorderStrategy.m */,
+				2C9EEA771AB2B56000BC607A /* NCBorderFilledStrategy.h */,
+				2C9EEA781AB2B56000BC607A /* NCBorderFilledStrategy.m */,
+				2C9EEA7B1AB2BA1300BC607A /* NCBorderDottedStrategy.h */,
+				2C9EEA7C1AB2BA1300BC607A /* NCBorderDottedStrategy.m */,
+			);
+			path = Border;
+			sourceTree = "<group>";
+		};
+		2C9EEA671AB2B46800BC607A /* Leaf */ = {
+			isa = PBXGroup;
+			children = (
+				2C9EEA681AB2B46800BC607A /* Text */,
+			);
+			path = Leaf;
+			sourceTree = "<group>";
+		};
+		2C9EEA681AB2B46800BC607A /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				2C9EEA691AB2B46800BC607A /* NCText.h */,
+				2C9EEA6A1AB2B46800BC607A /* NCText.m */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		2CA7A1801AB34045002DD22F /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				2CA7A1811AB34051002DD22F /* NCScrollDecorator.h */,
+				2CA7A1821AB34052002DD22F /* NCScrollDecorator.m */,
+				2CA7A1851AB34369002DD22F /* NCScrollBarStrategy.h */,
+				2CA7A1861AB34369002DD22F /* NCScrollBarStrategy.m */,
+				2CA7A1891AB345F3002DD22F /* NCScrollBarSimpleStrategy.h */,
+				2CA7A18A1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		2CB4BD7B1A76A60500E21116 = {
+			isa = PBXGroup;
+			children = (
+				2CD61B6F1A924CDA00ED0BF1 /* Classes */,
+				2CB4BD931A76A60500E21116 /* NCursesFTests */,
+				2CB4BD851A76A60500E21116 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CB4BD851A76A60500E21116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4BD841A76A60500E21116 /* libNCursesF.dylib */,
+				2CB4BD8F1A76A60500E21116 /* NCursesFTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CB4BD931A76A60500E21116 /* NCursesFTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4BD941A76A60500E21116 /* Supporting Files */,
+			);
+			path = NCursesFTests;
+			sourceTree = "<group>";
+		};
+		2CB4BD941A76A60500E21116 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4BD951A76A60500E21116 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CD61B6F1A924CDA00ED0BF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2CD61B871A924CDA00ED0BF1 /* IO */,
+				2CD61B981A924CDA00ED0BF1 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2CD61B871A924CDA00ED0BF1 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				2C1466B81AAF539900778FB6 /* Matrix */,
+				2C1466A01AAF4E6900778FB6 /* Graphics */,
+				2C1466A71AAF4E6900778FB6 /* String */,
+				2CD61B881A924CDA00ED0BF1 /* Color */,
+				2CD61B8D1A924CDA00ED0BF1 /* Key */,
+				2CD61B901A924CDA00ED0BF1 /* Rendering */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		2CD61B881A924CDA00ED0BF1 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				2CD61B891A924CDA00ED0BF1 /* NCColor.h */,
+				2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		2CD61B8D1A924CDA00ED0BF1 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */,
+				2CD61B8F1A924CDA00ED0BF1 /* NCKey.m */,
+				2CB180BE1AB1FB2100731445 /* NCCursesKey.h */,
+				2CB180BF1AB1FB2100731445 /* NCCursesKey.m */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		2CD61B901A924CDA00ED0BF1 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				2CD61B911A924CDA00ED0BF1 /* NCRender.h */,
+				2CD61B921A924CDA00ED0BF1 /* NCRender.m */,
+				2C1466B21AAF513800778FB6 /* NCRendition.h */,
+				2C1466B31AAF513800778FB6 /* NCRendition.m */,
+				2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */,
+				2CB180B81AB1F68000731445 /* NCCursesRendition.h */,
+				2CB180B91AB1F68000731445 /* NCCursesRendition.m */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		2CD61B981A924CDA00ED0BF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2CD61B991A924CDA00ED0BF1 /* Logger */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2CD61B991A924CDA00ED0BF1 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				2CD61B9A1A924CDA00ED0BF1 /* Logger.h */,
+				2CD61B9B1A924CDA00ED0BF1 /* Logger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2CB4BD821A76A60500E21116 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1466AC1AAF4E6900778FB6 /* NCGraphic.h in Headers */,
+				2C1466B01AAF4E6900778FB6 /* NCString.h in Headers */,
+				2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */,
+				2C9EEA791AB2B56000BC607A /* NCBorderFilledStrategy.h in Headers */,
+				2C9EEA7D1AB2BA1300BC607A /* NCBorderDottedStrategy.h in Headers */,
+				2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */,
+				2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */,
+				2C9EEA6B1AB2B46800BC607A /* NCCanvas.h in Headers */,
+				2C9EEA711AB2B46800BC607A /* NCText.h in Headers */,
+				2CA7A1871AB34369002DD22F /* NCScrollBarStrategy.h in Headers */,
+				2CA7A18B1AB345F3002DD22F /* NCScrollBarSimpleStrategy.h in Headers */,
+				2CA7A1831AB34052002DD22F /* NCScrollDecorator.h in Headers */,
+				2C9EEA6D1AB2B46800BC607A /* NCBorderDecorator.h in Headers */,
+				2C9EEA6F1AB2B46800BC607A /* NCDecorator.h in Headers */,
+				2C9EEA751AB2B48100BC607A /* NCBorderStrategy.h in Headers */,
+				2CB180C01AB1FB2100731445 /* NCCursesKey.h in Headers */,
+				2C1466BB1AAF53B000778FB6 /* NCMatrix.h in Headers */,
+				2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */,
+				2CD61BB31A924CDA00ED0BF1 /* NCRender.h in Headers */,
+				2CD61BB91A924CDA00ED0BF1 /* Logger.h in Headers */,
+				2CB180BD1AB1F75700731445 /* NCRendition_Protected.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2CB4BD831A76A60500E21116 /* NCursesF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CB4BD981A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesF" */;
+			buildPhases = (
+				2CB4BD801A76A60500E21116 /* Sources */,
+				2CB4BD811A76A60500E21116 /* Frameworks */,
+				2CB4BD821A76A60500E21116 /* Headers */,
+				2CB4BDBF1A76A6E200E21116 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NCursesF;
+			productName = NCursesF;
+			productReference = 2CB4BD841A76A60500E21116 /* libNCursesF.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		2CB4BD8E1A76A60500E21116 /* NCursesFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CB4BD9B1A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFTests" */;
+			buildPhases = (
+				2CB4BD8B1A76A60500E21116 /* Sources */,
+				2CB4BD8C1A76A60500E21116 /* Frameworks */,
+				2CB4BD8D1A76A60500E21116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CB4BD921A76A60500E21116 /* PBXTargetDependency */,
+			);
+			name = NCursesFTests;
+			productName = NCursesFTests;
+			productReference = 2CB4BD8F1A76A60500E21116 /* NCursesFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CB4BD7C1A76A60500E21116 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ChristerUL;
+				TargetAttributes = {
+					2CB4BD831A76A60500E21116 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2CB4BD8E1A76A60500E21116 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 2CB4BD7F1A76A60500E21116 /* Build configuration list for PBXProject "NCursesF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2CB4BD7B1A76A60500E21116;
+			productRefGroup = 2CB4BD851A76A60500E21116 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CB4BD831A76A60500E21116 /* NCursesF */,
+				2CB4BD8E1A76A60500E21116 /* NCursesFTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CB4BD8D1A76A60500E21116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CB4BD801A76A60500E21116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CD61BBA1A924CDA00ED0BF1 /* Logger.m in Sources */,
+				2CA7A1881AB34369002DD22F /* NCScrollBarStrategy.m in Sources */,
+				2C1466BC1AAF53B000778FB6 /* NCMatrix.m in Sources */,
+				2CB180C11AB1FB2100731445 /* NCCursesKey.m in Sources */,
+				2C9EEA761AB2B48100BC607A /* NCBorderStrategy.m in Sources */,
+				2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */,
+				2C9EEA7A1AB2B56000BC607A /* NCBorderFilledStrategy.m in Sources */,
+				2C1466AD1AAF4E6900778FB6 /* NCGraphic.m in Sources */,
+				2CA7A18C1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m in Sources */,
+				2C9EEA721AB2B46800BC607A /* NCText.m in Sources */,
+				2C9EEA6C1AB2B46800BC607A /* NCCanvas.m in Sources */,
+				2C1466B11AAF4E6900778FB6 /* NCString.m in Sources */,
+				2CD61BB21A924CDA00ED0BF1 /* NCKey.m in Sources */,
+				2CA7A1841AB34052002DD22F /* NCScrollDecorator.m in Sources */,
+				2C9EEA701AB2B46800BC607A /* NCDecorator.m in Sources */,
+				2C9EEA6E1AB2B46800BC607A /* NCBorderDecorator.m in Sources */,
+				2C9EEA7E1AB2BA1300BC607A /* NCBorderDottedStrategy.m in Sources */,
+				2CD61BB41A924CDA00ED0BF1 /* NCRender.m in Sources */,
+				2C1466B51AAF513800778FB6 /* NCRendition.m in Sources */,
+				2CB180BB1AB1F68000731445 /* NCCursesRendition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB4BD8B1A76A60500E21116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CB4BD921A76A60500E21116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CB4BD831A76A60500E21116 /* NCursesF */;
+			targetProxy = 2CB4BD911A76A60500E21116 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2CB4BD961A76A60500E21116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2CB4BD971A76A60500E21116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2CB4BD991A76A60500E21116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				INSTALL_PATH = "@executable_path/";
+				OTHER_LDFLAGS = "-lncurses";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CB4BD9A1A76A60500E21116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				INSTALL_PATH = "@executable_path/";
+				OTHER_LDFLAGS = "-lncurses";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CB4BD9C1A76A60500E21116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NCursesFTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CB4BD9D1A76A60500E21116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NCursesFTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CB4BD7F1A76A60500E21116 /* Build configuration list for PBXProject "NCursesF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB4BD961A76A60500E21116 /* Debug */,
+				2CB4BD971A76A60500E21116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CB4BD981A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB4BD991A76A60500E21116 /* Debug */,
+				2CB4BD9A1A76A60500E21116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CB4BD9B1A76A60500E21116 /* Build configuration list for PBXNativeTarget "NCursesFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB4BD9C1A76A60500E21116 /* Debug */,
+				2CB4BD9D1A76A60500E21116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CB4BD7C1A76A60500E21116 /* Project object */;
+}
