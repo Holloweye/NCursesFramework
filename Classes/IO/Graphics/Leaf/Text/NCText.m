@@ -9,6 +9,13 @@
 #import "NCText.h"
 #import "NCCursesRendition.h"
 
+@interface NCText ()
+{
+    NSArray *_textCache;
+    int _widthCache;
+}
+@end
+
 @implementation NCText
 
 - (instancetype)init
@@ -20,6 +27,20 @@
         self.alignment = NCLineAlignmentLeft;
     }
     return self;
+}
+
+- (void)setText:(NCString *)text
+{
+    _text = text;
+    _textCache = nil;
+    _widthCache = 0;
+}
+
+- (void)setLineBreak:(NCLineBreakMode)lineBreak
+{
+    _lineBreak = lineBreak;
+    _textCache = nil;
+    _widthCache = 0;
 }
 
 - (NCCursesRendition *)drawInBounds:(CGSize)bounds
@@ -106,70 +127,77 @@
                   inBounds:(CGSize)bounds
                   withMode:(NCLineBreakMode)mode
 {
-    NSMutableArray *preWrapping = [NSMutableArray arrayWithArray:[text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]]];
-    
-    if(mode == NCLineBreakByNoWrapping) {
-        return preWrapping;
-    }
-    
-    NSMutableArray *lines = [NSMutableArray array];
-    
-    for(NCString *t in preWrapping)
-    {
-        NCString *text = t;
-        while(text.length > 0 && lines.count < bounds.height)
+    if(_textCache && _widthCache == bounds.width) {
+        return _textCache;
+    } else {
+        _widthCache = bounds.width;
+        
+        NSMutableArray *preWrapping = [NSMutableArray arrayWithArray:[text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]]];
+        
+        if(mode == NCLineBreakByNoWrapping) {
+            return preWrapping;
+        }
+        
+        NSMutableArray *lines = [NSMutableArray array];
+        
+        for(NCString *t in preWrapping)
         {
-            int maxPossibleLength = MIN(text.length, bounds.width);
-            
-            if(mode == NCLineBreakByCharWrapping)
+            NCString *text = t;
+            while(text.length > 0 && lines.count < bounds.height)
             {
-                [lines addObject:[text substringToIndex:maxPossibleLength]];
-                text = [text substringFromIndex:maxPossibleLength];
-            }
-            else if(mode == NCLineBreakByWordWrapping)
-            {
-                if(maxPossibleLength == text.length) {
-                    [lines addObject:text];
-                    text = [[NCString alloc] initWithText:@""
-                                           withBackground:[NCColor blackColor]
-                                           withForeground:[NCColor whiteColor]];
-                } else {
-                    if(!isblank([text characterAtIndex:maxPossibleLength-1]) && !isblank([text characterAtIndex:maxPossibleLength])) {
-                        int wordS = maxPossibleLength-1;
-                        int wordL = 0;
-                        for(int i = maxPossibleLength-1; i >= 0; i--) {
-                            char c = [text characterAtIndex:i];
-                            if(isblank(c)) {
-                                break;
+                int maxPossibleLength = MIN(text.length, bounds.width);
+                
+                if(mode == NCLineBreakByCharWrapping)
+                {
+                    [lines addObject:[text substringToIndex:maxPossibleLength]];
+                    text = [text substringFromIndex:maxPossibleLength];
+                }
+                else if(mode == NCLineBreakByWordWrapping)
+                {
+                    if(maxPossibleLength == text.length) {
+                        [lines addObject:text];
+                        text = [[NCString alloc] initWithText:@""
+                                               withBackground:[NCColor blackColor]
+                                               withForeground:[NCColor whiteColor]];
+                    } else {
+                        if(!isblank([text characterAtIndex:maxPossibleLength-1]) && !isblank([text characterAtIndex:maxPossibleLength])) {
+                            int wordS = maxPossibleLength-1;
+                            int wordL = 0;
+                            for(int i = maxPossibleLength-1; i >= 0; i--) {
+                                char c = [text characterAtIndex:i];
+                                if(isblank(c)) {
+                                    break;
+                                } else {
+                                    wordS = i;
+                                }
+                            }
+                            for(int i = wordS; i < text.length; i++) {
+                                char c = [text characterAtIndex:i];
+                                wordL++;
+                                if(isblank(c)) {
+                                    break;
+                                }
+                            }
+                            if(wordL > bounds.width) {
+                                [lines addObject:[text substringToIndex:maxPossibleLength]];
+                                text = [text substringFromIndex:maxPossibleLength];
                             } else {
-                                wordS = i;
+                                [lines addObject:[text substringToIndex:wordS]];
+                                text = [text substringFromIndex:wordS];
                             }
-                        }
-                        for(int i = wordS; i < text.length; i++) {
-                            char c = [text characterAtIndex:i];
-                            wordL++;
-                            if(isblank(c)) {
-                                break;
-                            }
-                        }
-                        if(wordL > bounds.width) {
+                            
+                        } else {
                             [lines addObject:[text substringToIndex:maxPossibleLength]];
                             text = [text substringFromIndex:maxPossibleLength];
-                        } else {
-                            [lines addObject:[text substringToIndex:wordS]];
-                            text = [text substringFromIndex:wordS];
                         }
-                        
-                    } else {
-                        [lines addObject:[text substringToIndex:maxPossibleLength]];
-                        text = [text substringFromIndex:maxPossibleLength];
                     }
                 }
             }
         }
+        
+        _textCache = lines;
+        return lines;
     }
-    
-    return lines;
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
