@@ -7,14 +7,14 @@
 //
 
 #import "NCGraphic.h"
-#import "NCCursesRendition.h"
+#import "NCPlatform.h"
 
 @implementation NCGraphic
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
 {
-    NCCursesRendition *rendition = [[NCCursesRendition alloc] initWithBounds:bounds];
-    return rendition;
+    return [platform createRenditionWithBounds:bounds];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds

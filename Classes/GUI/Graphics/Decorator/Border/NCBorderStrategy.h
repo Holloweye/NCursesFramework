@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class NCCursesRendition;
+@class NCRendition;
+@class NCPlatform;
 
 typedef enum : NSUInteger {
     NCBorderPositionTop,
@@ -18,7 +19,8 @@ typedef enum : NSUInteger {
 
 @interface NCBorderStrategy : NSObject
 
-- (NCCursesRendition*)drawInBounds:(CGSize)bounds
-                          position:(NCBorderPosition)position;
+- (NCRendition*)drawInBounds:(CGSize)bounds
+                withPlatform:(NCPlatform *)platform
+                    position:(NCBorderPosition)position;
 
 @end

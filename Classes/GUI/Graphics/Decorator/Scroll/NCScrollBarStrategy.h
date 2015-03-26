@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@class NCCursesRendition;
+@class NCRendition;
+@class NCPlatform;
 
 @interface NCScrollBarStrategy : NSObject
 
-- (NCCursesRendition*)drawInBounds:(CGSize)bounds
-                               pos:(int)pos
-                               max:(int)max;
+- (NCRendition*)drawInBounds:(CGSize)bounds
+                withPlatform:(NCPlatform *)platform
+                         pos:(int)pos
+                         max:(int)max;
 
 @end

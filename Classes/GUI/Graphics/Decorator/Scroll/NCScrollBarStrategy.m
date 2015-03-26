@@ -7,13 +7,13 @@
 //
 
 #import "NCScrollBarStrategy.h"
-#import "NCCursesRendition.h"
 
 @implementation NCScrollBarStrategy
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
-                                pos:(int)pos
-                                max:(int)max
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
+                          pos:(int)pos
+                          max:(int)max
 {
     return nil;
 }

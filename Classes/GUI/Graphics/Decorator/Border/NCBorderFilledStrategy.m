@@ -7,8 +7,9 @@
 //
 
 #import "NCBorderFilledStrategy.h"
-#import "NCCursesRendition.h"
 #import "NCColor.h"
+#import "NCRendition.h"
+#import "NCPlatform.h"
 
 @interface NCBorderFilledStrategy ()
 {
@@ -72,10 +73,11 @@
     return self;
 }
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
-                           position:(NCBorderPosition)position
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
+                     position:(NCBorderPosition)position
 {
-    NCCursesRendition *rendition = [[NCCursesRendition alloc] initWithBounds:bounds];
+    NCRendition *rendition = [platform createRenditionWithBounds:bounds];
     for(int y = 0; y < bounds.height; y++) {
         for(int x = 0; x < bounds.width; x++) {
             if(position == NCBorderPositionTop)

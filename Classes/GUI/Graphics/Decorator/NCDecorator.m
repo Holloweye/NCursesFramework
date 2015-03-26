@@ -19,9 +19,11 @@
     return self;
 }
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
 {
-    return [_graphic drawInBounds:bounds];
+    return [_graphic drawInBounds:bounds
+                     withPlatform:platform];
 }
 
 @end

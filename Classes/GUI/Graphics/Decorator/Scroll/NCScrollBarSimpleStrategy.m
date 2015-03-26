@@ -7,8 +7,9 @@
 //
 
 #import "NCScrollBarSimpleStrategy.h"
-#import "NCCursesRendition.h"
+#import "NCRendition.h"
 #import "NCColor.h"
+#import "NCPlatform.h"
 
 @interface NCScrollBarSimpleStrategy ()
 {
@@ -39,11 +40,12 @@
     return self;
 }
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
-                                pos:(int)pos
-                                max:(int)max
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
+                          pos:(int)pos
+                          max:(int)max
 {
-    NCCursesRendition *rendition = [[NCCursesRendition alloc] initWithBounds:bounds];
+    NCRendition *rendition = [platform createRenditionWithBounds:bounds];
     
     float const DIFF_FOR_MIN_SIZE = 200;
     float const BAR_MAX_SIZE = MAX(MAX(bounds.width, bounds.height) * 0.7, 1);

@@ -10,8 +10,9 @@
 
 @implementation NCBorderStrategy
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
-                           position:(NCBorderPosition)position
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
+                     position:(NCBorderPosition)position
 {
     return nil;
 }

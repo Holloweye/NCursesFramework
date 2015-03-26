@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@class NCCursesRendition;
+@class NCRendition;
 @class NCCanvas;
+@class NCPlatform;
 
 @interface NCGraphic : NSObject
 
-- (NCCursesRendition*)drawInBounds:(CGSize)bounds;
+- (NCRendition*)drawInBounds:(CGSize)bounds
+                withPlatform:(NCPlatform*)platform;
 - (CGSize)sizeWithinBounds:(CGSize)bounds;
 
 - (NCCanvas*)getCanvas;

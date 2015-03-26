@@ -8,6 +8,7 @@
 
 #import "NCCanvas.h"
 #import "NCRendition.h"
+#import "NCPlatform.h"
 
 @interface NCCanvas ()
 {
@@ -42,9 +43,9 @@
 }
 
 - (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
 {
-    NCRendition *rendition = [[NCRendition alloc] initWithBounds:bounds];
-    return rendition;
+    return [platform createRenditionWithBounds:bounds];
 }
 
 @end

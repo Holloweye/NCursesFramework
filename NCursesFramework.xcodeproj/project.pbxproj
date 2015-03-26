@@ -7,40 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1466AC1AAF4E6900778FB6 /* NCGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466A31AAF4E6900778FB6 /* NCGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C1466AD1AAF4E6900778FB6 /* NCGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466A41AAF4E6900778FB6 /* NCGraphic.m */; };
 		2C1466B01AAF4E6900778FB6 /* NCString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466A81AAF4E6900778FB6 /* NCString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C1466B11AAF4E6900778FB6 /* NCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466A91AAF4E6900778FB6 /* NCString.m */; };
 		2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466B21AAF513800778FB6 /* NCRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C1466B51AAF513800778FB6 /* NCRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466B31AAF513800778FB6 /* NCRendition.m */; };
 		2C1466BB1AAF53B000778FB6 /* NCMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466B91AAF53B000778FB6 /* NCMatrix.h */; };
 		2C1466BC1AAF53B000778FB6 /* NCMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466BA1AAF53B000778FB6 /* NCMatrix.m */; };
-		2C9EEA6B1AB2B46800BC607A /* NCCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA5F1AB2B46800BC607A /* NCCanvas.h */; };
-		2C9EEA6C1AB2B46800BC607A /* NCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA601AB2B46800BC607A /* NCCanvas.m */; };
-		2C9EEA6D1AB2B46800BC607A /* NCBorderDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA631AB2B46800BC607A /* NCBorderDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C9EEA6E1AB2B46800BC607A /* NCBorderDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA641AB2B46800BC607A /* NCBorderDecorator.m */; };
-		2C9EEA6F1AB2B46800BC607A /* NCDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA651AB2B46800BC607A /* NCDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C9EEA701AB2B46800BC607A /* NCDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA661AB2B46800BC607A /* NCDecorator.m */; };
-		2C9EEA711AB2B46800BC607A /* NCText.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA691AB2B46800BC607A /* NCText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C9EEA721AB2B46800BC607A /* NCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA6A1AB2B46800BC607A /* NCText.m */; };
-		2C9EEA751AB2B48100BC607A /* NCBorderStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA731AB2B48100BC607A /* NCBorderStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C9EEA761AB2B48100BC607A /* NCBorderStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA741AB2B48100BC607A /* NCBorderStrategy.m */; };
-		2C9EEA791AB2B56000BC607A /* NCBorderFilledStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA771AB2B56000BC607A /* NCBorderFilledStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C9EEA7A1AB2B56000BC607A /* NCBorderFilledStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA781AB2B56000BC607A /* NCBorderFilledStrategy.m */; };
-		2C9EEA7D1AB2BA1300BC607A /* NCBorderDottedStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EEA7B1AB2BA1300BC607A /* NCBorderDottedStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C9EEA7E1AB2BA1300BC607A /* NCBorderDottedStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EEA7C1AB2BA1300BC607A /* NCBorderDottedStrategy.m */; };
-		2CA7A1831AB34052002DD22F /* NCScrollDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7A1811AB34051002DD22F /* NCScrollDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CA7A1841AB34052002DD22F /* NCScrollDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7A1821AB34052002DD22F /* NCScrollDecorator.m */; };
-		2CA7A1871AB34369002DD22F /* NCScrollBarStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7A1851AB34369002DD22F /* NCScrollBarStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CA7A1881AB34369002DD22F /* NCScrollBarStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7A1861AB34369002DD22F /* NCScrollBarStrategy.m */; };
-		2CA7A18B1AB345F3002DD22F /* NCScrollBarSimpleStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7A1891AB345F3002DD22F /* NCScrollBarSimpleStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CA7A18C1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7A18A1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m */; };
 		2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180B81AB1F68000731445 /* NCCursesRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CB180BB1AB1F68000731445 /* NCCursesRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB180B91AB1F68000731445 /* NCCursesRendition.m */; };
 		2CB180BD1AB1F75700731445 /* NCRendition_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */; };
-		2CB180C01AB1FB2100731445 /* NCCursesKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BE1AB1FB2100731445 /* NCCursesKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CB180C11AB1FB2100731445 /* NCCursesKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB180BF1AB1FB2100731445 /* NCCursesKey.m */; };
 		2CB4BD901A76A60500E21116 /* libNCursesFramework.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */; };
+		2CC147EF1AC4664000079172 /* NCCursesPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147EB1AC4664000079172 /* NCCursesPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC147F01AC4664000079172 /* NCCursesPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147EC1AC4664000079172 /* NCCursesPlatform.m */; };
+		2CC147F11AC4664000079172 /* NCPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147ED1AC4664000079172 /* NCPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC147F21AC4664000079172 /* NCPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147EE1AC4664000079172 /* NCPlatform.m */; };
+		2CC148111AC4670F00079172 /* NCCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147F61AC4670F00079172 /* NCCanvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148121AC4670F00079172 /* NCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147F71AC4670F00079172 /* NCCanvas.m */; };
+		2CC148131AC4670F00079172 /* NCBorderDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147FA1AC4670F00079172 /* NCBorderDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148141AC4670F00079172 /* NCBorderDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147FB1AC4670F00079172 /* NCBorderDecorator.m */; };
+		2CC148151AC4670F00079172 /* NCBorderDottedStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147FC1AC4670F00079172 /* NCBorderDottedStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148161AC4670F00079172 /* NCBorderDottedStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147FD1AC4670F00079172 /* NCBorderDottedStrategy.m */; };
+		2CC148171AC4670F00079172 /* NCBorderFilledStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147FE1AC4670F00079172 /* NCBorderFilledStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148181AC4670F00079172 /* NCBorderFilledStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147FF1AC4670F00079172 /* NCBorderFilledStrategy.m */; };
+		2CC148191AC4670F00079172 /* NCBorderStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC148001AC4670F00079172 /* NCBorderStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC1481A1AC4670F00079172 /* NCBorderStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148011AC4670F00079172 /* NCBorderStrategy.m */; };
+		2CC1481B1AC4670F00079172 /* NCDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC148021AC4670F00079172 /* NCDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC1481C1AC4670F00079172 /* NCDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148031AC4670F00079172 /* NCDecorator.m */; };
+		2CC1481D1AC4670F00079172 /* NCScrollBarSimpleStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC148051AC4670F00079172 /* NCScrollBarSimpleStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC1481E1AC4670F00079172 /* NCScrollBarSimpleStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148061AC4670F00079172 /* NCScrollBarSimpleStrategy.m */; };
+		2CC1481F1AC4670F00079172 /* NCScrollBarStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC148071AC4670F00079172 /* NCScrollBarStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148201AC4670F00079172 /* NCScrollBarStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148081AC4670F00079172 /* NCScrollBarStrategy.m */; };
+		2CC148211AC4670F00079172 /* NCScrollDecorator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC148091AC4670F00079172 /* NCScrollDecorator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148221AC4670F00079172 /* NCScrollDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1480A1AC4670F00079172 /* NCScrollDecorator.m */; };
+		2CC148231AC4670F00079172 /* NCText.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC1480D1AC4670F00079172 /* NCText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148241AC4670F00079172 /* NCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1480E1AC4670F00079172 /* NCText.m */; };
+		2CC148251AC4670F00079172 /* NCGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC1480F1AC4670F00079172 /* NCGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC148261AC4670F00079172 /* NCGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148101AC4670F00079172 /* NCGraphic.m */; };
 		2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B891A924CDA00ED0BF1 /* NCColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */; };
 		2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,42 +76,44 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C1466A31AAF4E6900778FB6 /* NCGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCGraphic.h; sourceTree = "<group>"; };
-		2C1466A41AAF4E6900778FB6 /* NCGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCGraphic.m; sourceTree = "<group>"; };
 		2C1466A81AAF4E6900778FB6 /* NCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCString.h; sourceTree = "<group>"; };
 		2C1466A91AAF4E6900778FB6 /* NCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCString.m; sourceTree = "<group>"; };
 		2C1466B21AAF513800778FB6 /* NCRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition.h; sourceTree = "<group>"; };
 		2C1466B31AAF513800778FB6 /* NCRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRendition.m; sourceTree = "<group>"; };
 		2C1466B91AAF53B000778FB6 /* NCMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMatrix.h; sourceTree = "<group>"; };
 		2C1466BA1AAF53B000778FB6 /* NCMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMatrix.m; sourceTree = "<group>"; };
-		2C9EEA5F1AB2B46800BC607A /* NCCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvas.h; sourceTree = "<group>"; };
-		2C9EEA601AB2B46800BC607A /* NCCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvas.m; sourceTree = "<group>"; };
-		2C9EEA631AB2B46800BC607A /* NCBorderDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderDecorator.h; sourceTree = "<group>"; };
-		2C9EEA641AB2B46800BC607A /* NCBorderDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderDecorator.m; sourceTree = "<group>"; };
-		2C9EEA651AB2B46800BC607A /* NCDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDecorator.h; sourceTree = "<group>"; };
-		2C9EEA661AB2B46800BC607A /* NCDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDecorator.m; sourceTree = "<group>"; };
-		2C9EEA691AB2B46800BC607A /* NCText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCText.h; sourceTree = "<group>"; };
-		2C9EEA6A1AB2B46800BC607A /* NCText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCText.m; sourceTree = "<group>"; };
-		2C9EEA731AB2B48100BC607A /* NCBorderStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderStrategy.h; sourceTree = "<group>"; };
-		2C9EEA741AB2B48100BC607A /* NCBorderStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderStrategy.m; sourceTree = "<group>"; };
-		2C9EEA771AB2B56000BC607A /* NCBorderFilledStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderFilledStrategy.h; sourceTree = "<group>"; };
-		2C9EEA781AB2B56000BC607A /* NCBorderFilledStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderFilledStrategy.m; sourceTree = "<group>"; };
-		2C9EEA7B1AB2BA1300BC607A /* NCBorderDottedStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderDottedStrategy.h; sourceTree = "<group>"; };
-		2C9EEA7C1AB2BA1300BC607A /* NCBorderDottedStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderDottedStrategy.m; sourceTree = "<group>"; };
-		2CA7A1811AB34051002DD22F /* NCScrollDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollDecorator.h; sourceTree = "<group>"; };
-		2CA7A1821AB34052002DD22F /* NCScrollDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollDecorator.m; sourceTree = "<group>"; };
-		2CA7A1851AB34369002DD22F /* NCScrollBarStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollBarStrategy.h; sourceTree = "<group>"; };
-		2CA7A1861AB34369002DD22F /* NCScrollBarStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollBarStrategy.m; sourceTree = "<group>"; };
-		2CA7A1891AB345F3002DD22F /* NCScrollBarSimpleStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollBarSimpleStrategy.h; sourceTree = "<group>"; };
-		2CA7A18A1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollBarSimpleStrategy.m; sourceTree = "<group>"; };
 		2CB180B81AB1F68000731445 /* NCCursesRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesRendition.h; sourceTree = "<group>"; };
 		2CB180B91AB1F68000731445 /* NCCursesRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesRendition.m; sourceTree = "<group>"; };
 		2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition_Protected.h; sourceTree = "<group>"; };
-		2CB180BE1AB1FB2100731445 /* NCCursesKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesKey.h; sourceTree = "<group>"; };
-		2CB180BF1AB1FB2100731445 /* NCCursesKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesKey.m; sourceTree = "<group>"; };
 		2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libNCursesFramework.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4BD8F1A76A60500E21116 /* NCursesFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCursesFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4BD951A76A60500E21116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC147EB1AC4664000079172 /* NCCursesPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesPlatform.h; sourceTree = "<group>"; };
+		2CC147EC1AC4664000079172 /* NCCursesPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesPlatform.m; sourceTree = "<group>"; };
+		2CC147ED1AC4664000079172 /* NCPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPlatform.h; sourceTree = "<group>"; };
+		2CC147EE1AC4664000079172 /* NCPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPlatform.m; sourceTree = "<group>"; };
+		2CC147F61AC4670F00079172 /* NCCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvas.h; sourceTree = "<group>"; };
+		2CC147F71AC4670F00079172 /* NCCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvas.m; sourceTree = "<group>"; };
+		2CC147FA1AC4670F00079172 /* NCBorderDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderDecorator.h; sourceTree = "<group>"; };
+		2CC147FB1AC4670F00079172 /* NCBorderDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderDecorator.m; sourceTree = "<group>"; };
+		2CC147FC1AC4670F00079172 /* NCBorderDottedStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderDottedStrategy.h; sourceTree = "<group>"; };
+		2CC147FD1AC4670F00079172 /* NCBorderDottedStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderDottedStrategy.m; sourceTree = "<group>"; };
+		2CC147FE1AC4670F00079172 /* NCBorderFilledStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderFilledStrategy.h; sourceTree = "<group>"; };
+		2CC147FF1AC4670F00079172 /* NCBorderFilledStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderFilledStrategy.m; sourceTree = "<group>"; };
+		2CC148001AC4670F00079172 /* NCBorderStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBorderStrategy.h; sourceTree = "<group>"; };
+		2CC148011AC4670F00079172 /* NCBorderStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBorderStrategy.m; sourceTree = "<group>"; };
+		2CC148021AC4670F00079172 /* NCDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDecorator.h; sourceTree = "<group>"; };
+		2CC148031AC4670F00079172 /* NCDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDecorator.m; sourceTree = "<group>"; };
+		2CC148051AC4670F00079172 /* NCScrollBarSimpleStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollBarSimpleStrategy.h; sourceTree = "<group>"; };
+		2CC148061AC4670F00079172 /* NCScrollBarSimpleStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollBarSimpleStrategy.m; sourceTree = "<group>"; };
+		2CC148071AC4670F00079172 /* NCScrollBarStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollBarStrategy.h; sourceTree = "<group>"; };
+		2CC148081AC4670F00079172 /* NCScrollBarStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollBarStrategy.m; sourceTree = "<group>"; };
+		2CC148091AC4670F00079172 /* NCScrollDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollDecorator.h; sourceTree = "<group>"; };
+		2CC1480A1AC4670F00079172 /* NCScrollDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollDecorator.m; sourceTree = "<group>"; };
+		2CC1480D1AC4670F00079172 /* NCText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCText.h; sourceTree = "<group>"; };
+		2CC1480E1AC4670F00079172 /* NCText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCText.m; sourceTree = "<group>"; };
+		2CC1480F1AC4670F00079172 /* NCGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCGraphic.h; sourceTree = "<group>"; };
+		2CC148101AC4670F00079172 /* NCGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCGraphic.m; sourceTree = "<group>"; };
 		2CD61B891A924CDA00ED0BF1 /* NCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
 		2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
 		2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCKey.h; sourceTree = "<group>"; };
@@ -139,18 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C1466A01AAF4E6900778FB6 /* Graphics */ = {
-			isa = PBXGroup;
-			children = (
-				2C9EEA5E1AB2B46800BC607A /* Canvas */,
-				2C9EEA611AB2B46800BC607A /* Decorator */,
-				2C9EEA671AB2B46800BC607A /* Leaf */,
-				2C1466A31AAF4E6900778FB6 /* NCGraphic.h */,
-				2C1466A41AAF4E6900778FB6 /* NCGraphic.m */,
-			);
-			path = Graphics;
-			sourceTree = "<group>";
-		};
 		2C1466A71AAF4E6900778FB6 /* String */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,71 +159,6 @@
 				2C1466BA1AAF53B000778FB6 /* NCMatrix.m */,
 			);
 			path = Matrix;
-			sourceTree = "<group>";
-		};
-		2C9EEA5E1AB2B46800BC607A /* Canvas */ = {
-			isa = PBXGroup;
-			children = (
-				2C9EEA5F1AB2B46800BC607A /* NCCanvas.h */,
-				2C9EEA601AB2B46800BC607A /* NCCanvas.m */,
-			);
-			path = Canvas;
-			sourceTree = "<group>";
-		};
-		2C9EEA611AB2B46800BC607A /* Decorator */ = {
-			isa = PBXGroup;
-			children = (
-				2CA7A1801AB34045002DD22F /* Scroll */,
-				2C9EEA621AB2B46800BC607A /* Border */,
-				2C9EEA651AB2B46800BC607A /* NCDecorator.h */,
-				2C9EEA661AB2B46800BC607A /* NCDecorator.m */,
-			);
-			path = Decorator;
-			sourceTree = "<group>";
-		};
-		2C9EEA621AB2B46800BC607A /* Border */ = {
-			isa = PBXGroup;
-			children = (
-				2C9EEA631AB2B46800BC607A /* NCBorderDecorator.h */,
-				2C9EEA641AB2B46800BC607A /* NCBorderDecorator.m */,
-				2C9EEA731AB2B48100BC607A /* NCBorderStrategy.h */,
-				2C9EEA741AB2B48100BC607A /* NCBorderStrategy.m */,
-				2C9EEA771AB2B56000BC607A /* NCBorderFilledStrategy.h */,
-				2C9EEA781AB2B56000BC607A /* NCBorderFilledStrategy.m */,
-				2C9EEA7B1AB2BA1300BC607A /* NCBorderDottedStrategy.h */,
-				2C9EEA7C1AB2BA1300BC607A /* NCBorderDottedStrategy.m */,
-			);
-			path = Border;
-			sourceTree = "<group>";
-		};
-		2C9EEA671AB2B46800BC607A /* Leaf */ = {
-			isa = PBXGroup;
-			children = (
-				2C9EEA681AB2B46800BC607A /* Text */,
-			);
-			path = Leaf;
-			sourceTree = "<group>";
-		};
-		2C9EEA681AB2B46800BC607A /* Text */ = {
-			isa = PBXGroup;
-			children = (
-				2C9EEA691AB2B46800BC607A /* NCText.h */,
-				2C9EEA6A1AB2B46800BC607A /* NCText.m */,
-			);
-			path = Text;
-			sourceTree = "<group>";
-		};
-		2CA7A1801AB34045002DD22F /* Scroll */ = {
-			isa = PBXGroup;
-			children = (
-				2CA7A1811AB34051002DD22F /* NCScrollDecorator.h */,
-				2CA7A1821AB34052002DD22F /* NCScrollDecorator.m */,
-				2CA7A1851AB34369002DD22F /* NCScrollBarStrategy.h */,
-				2CA7A1861AB34369002DD22F /* NCScrollBarStrategy.m */,
-				2CA7A1891AB345F3002DD22F /* NCScrollBarSimpleStrategy.h */,
-				2CA7A18A1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m */,
-			);
-			path = Scroll;
 			sourceTree = "<group>";
 		};
 		2CB4BD7B1A76A60500E21116 = {
@@ -268,9 +195,106 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2CC147EA1AC4664000079172 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				2CC147EB1AC4664000079172 /* NCCursesPlatform.h */,
+				2CC147EC1AC4664000079172 /* NCCursesPlatform.m */,
+				2CC147ED1AC4664000079172 /* NCPlatform.h */,
+				2CC147EE1AC4664000079172 /* NCPlatform.m */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		2CC147F31AC4670F00079172 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				2CC147F41AC4670F00079172 /* Graphics */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		2CC147F41AC4670F00079172 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				2CC147F51AC4670F00079172 /* Canvas */,
+				2CC147F81AC4670F00079172 /* Decorator */,
+				2CC1480B1AC4670F00079172 /* Leaf */,
+				2CC1480F1AC4670F00079172 /* NCGraphic.h */,
+				2CC148101AC4670F00079172 /* NCGraphic.m */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		2CC147F51AC4670F00079172 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				2CC147F61AC4670F00079172 /* NCCanvas.h */,
+				2CC147F71AC4670F00079172 /* NCCanvas.m */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		2CC147F81AC4670F00079172 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				2CC147F91AC4670F00079172 /* Border */,
+				2CC148021AC4670F00079172 /* NCDecorator.h */,
+				2CC148031AC4670F00079172 /* NCDecorator.m */,
+				2CC148041AC4670F00079172 /* Scroll */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		2CC147F91AC4670F00079172 /* Border */ = {
+			isa = PBXGroup;
+			children = (
+				2CC147FA1AC4670F00079172 /* NCBorderDecorator.h */,
+				2CC147FB1AC4670F00079172 /* NCBorderDecorator.m */,
+				2CC147FC1AC4670F00079172 /* NCBorderDottedStrategy.h */,
+				2CC147FD1AC4670F00079172 /* NCBorderDottedStrategy.m */,
+				2CC147FE1AC4670F00079172 /* NCBorderFilledStrategy.h */,
+				2CC147FF1AC4670F00079172 /* NCBorderFilledStrategy.m */,
+				2CC148001AC4670F00079172 /* NCBorderStrategy.h */,
+				2CC148011AC4670F00079172 /* NCBorderStrategy.m */,
+			);
+			path = Border;
+			sourceTree = "<group>";
+		};
+		2CC148041AC4670F00079172 /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				2CC148051AC4670F00079172 /* NCScrollBarSimpleStrategy.h */,
+				2CC148061AC4670F00079172 /* NCScrollBarSimpleStrategy.m */,
+				2CC148071AC4670F00079172 /* NCScrollBarStrategy.h */,
+				2CC148081AC4670F00079172 /* NCScrollBarStrategy.m */,
+				2CC148091AC4670F00079172 /* NCScrollDecorator.h */,
+				2CC1480A1AC4670F00079172 /* NCScrollDecorator.m */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		2CC1480B1AC4670F00079172 /* Leaf */ = {
+			isa = PBXGroup;
+			children = (
+				2CC1480C1AC4670F00079172 /* Text */,
+			);
+			path = Leaf;
+			sourceTree = "<group>";
+		};
+		2CC1480C1AC4670F00079172 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				2CC1480D1AC4670F00079172 /* NCText.h */,
+				2CC1480E1AC4670F00079172 /* NCText.m */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		2CD61B6F1A924CDA00ED0BF1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2CC147F31AC4670F00079172 /* GUI */,
 				2CD61B871A924CDA00ED0BF1 /* IO */,
 				2CD61B981A924CDA00ED0BF1 /* Utils */,
 			);
@@ -280,8 +304,8 @@
 		2CD61B871A924CDA00ED0BF1 /* IO */ = {
 			isa = PBXGroup;
 			children = (
+				2CC147EA1AC4664000079172 /* Platform */,
 				2C1466B81AAF539900778FB6 /* Matrix */,
-				2C1466A01AAF4E6900778FB6 /* Graphics */,
 				2C1466A71AAF4E6900778FB6 /* String */,
 				2CD61B881A924CDA00ED0BF1 /* Color */,
 				2CD61B8D1A924CDA00ED0BF1 /* Key */,
@@ -304,8 +328,6 @@
 			children = (
 				2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */,
 				2CD61B8F1A924CDA00ED0BF1 /* NCKey.m */,
-				2CB180BE1AB1FB2100731445 /* NCCursesKey.h */,
-				2CB180BF1AB1FB2100731445 /* NCCursesKey.m */,
 			);
 			path = Key;
 			sourceTree = "<group>";
@@ -348,22 +370,23 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C1466AC1AAF4E6900778FB6 /* NCGraphic.h in Headers */,
 				2C1466B01AAF4E6900778FB6 /* NCString.h in Headers */,
+				2CC148251AC4670F00079172 /* NCGraphic.h in Headers */,
+				2CC148151AC4670F00079172 /* NCBorderDottedStrategy.h in Headers */,
+				2CC147F11AC4664000079172 /* NCPlatform.h in Headers */,
+				2CC148171AC4670F00079172 /* NCBorderFilledStrategy.h in Headers */,
+				2CC148111AC4670F00079172 /* NCCanvas.h in Headers */,
+				2CC148231AC4670F00079172 /* NCText.h in Headers */,
+				2CC148211AC4670F00079172 /* NCScrollDecorator.h in Headers */,
+				2CC147EF1AC4664000079172 /* NCCursesPlatform.h in Headers */,
+				2CC148131AC4670F00079172 /* NCBorderDecorator.h in Headers */,
+				2CC1481B1AC4670F00079172 /* NCDecorator.h in Headers */,
+				2CC148191AC4670F00079172 /* NCBorderStrategy.h in Headers */,
+				2CC1481F1AC4670F00079172 /* NCScrollBarStrategy.h in Headers */,
+				2CC1481D1AC4670F00079172 /* NCScrollBarSimpleStrategy.h in Headers */,
 				2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */,
-				2C9EEA791AB2B56000BC607A /* NCBorderFilledStrategy.h in Headers */,
-				2C9EEA7D1AB2BA1300BC607A /* NCBorderDottedStrategy.h in Headers */,
 				2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */,
 				2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */,
-				2C9EEA6B1AB2B46800BC607A /* NCCanvas.h in Headers */,
-				2C9EEA711AB2B46800BC607A /* NCText.h in Headers */,
-				2CA7A1871AB34369002DD22F /* NCScrollBarStrategy.h in Headers */,
-				2CA7A18B1AB345F3002DD22F /* NCScrollBarSimpleStrategy.h in Headers */,
-				2CA7A1831AB34052002DD22F /* NCScrollDecorator.h in Headers */,
-				2C9EEA6D1AB2B46800BC607A /* NCBorderDecorator.h in Headers */,
-				2C9EEA6F1AB2B46800BC607A /* NCDecorator.h in Headers */,
-				2C9EEA751AB2B48100BC607A /* NCBorderStrategy.h in Headers */,
-				2CB180C01AB1FB2100731445 /* NCCursesKey.h in Headers */,
 				2C1466BB1AAF53B000778FB6 /* NCMatrix.h in Headers */,
 				2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */,
 				2CD61BB31A924CDA00ED0BF1 /* NCRender.h in Headers */,
@@ -462,24 +485,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD61BBA1A924CDA00ED0BF1 /* Logger.m in Sources */,
-				2CA7A1881AB34369002DD22F /* NCScrollBarStrategy.m in Sources */,
 				2C1466BC1AAF53B000778FB6 /* NCMatrix.m in Sources */,
-				2CB180C11AB1FB2100731445 /* NCCursesKey.m in Sources */,
-				2C9EEA761AB2B48100BC607A /* NCBorderStrategy.m in Sources */,
 				2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */,
-				2C9EEA7A1AB2B56000BC607A /* NCBorderFilledStrategy.m in Sources */,
-				2C1466AD1AAF4E6900778FB6 /* NCGraphic.m in Sources */,
-				2CA7A18C1AB345F3002DD22F /* NCScrollBarSimpleStrategy.m in Sources */,
-				2C9EEA721AB2B46800BC607A /* NCText.m in Sources */,
-				2C9EEA6C1AB2B46800BC607A /* NCCanvas.m in Sources */,
+				2CC1481A1AC4670F00079172 /* NCBorderStrategy.m in Sources */,
+				2CC147F01AC4664000079172 /* NCCursesPlatform.m in Sources */,
 				2C1466B11AAF4E6900778FB6 /* NCString.m in Sources */,
+				2CC148121AC4670F00079172 /* NCCanvas.m in Sources */,
 				2CD61BB21A924CDA00ED0BF1 /* NCKey.m in Sources */,
-				2CA7A1841AB34052002DD22F /* NCScrollDecorator.m in Sources */,
-				2C9EEA701AB2B46800BC607A /* NCDecorator.m in Sources */,
-				2C9EEA6E1AB2B46800BC607A /* NCBorderDecorator.m in Sources */,
-				2C9EEA7E1AB2BA1300BC607A /* NCBorderDottedStrategy.m in Sources */,
+				2CC148181AC4670F00079172 /* NCBorderFilledStrategy.m in Sources */,
+				2CC148241AC4670F00079172 /* NCText.m in Sources */,
+				2CC147F21AC4664000079172 /* NCPlatform.m in Sources */,
+				2CC148201AC4670F00079172 /* NCScrollBarStrategy.m in Sources */,
+				2CC1481E1AC4670F00079172 /* NCScrollBarSimpleStrategy.m in Sources */,
+				2CC148141AC4670F00079172 /* NCBorderDecorator.m in Sources */,
+				2CC148221AC4670F00079172 /* NCScrollDecorator.m in Sources */,
+				2CC148161AC4670F00079172 /* NCBorderDottedStrategy.m in Sources */,
+				2CC1481C1AC4670F00079172 /* NCDecorator.m in Sources */,
 				2CD61BB41A924CDA00ED0BF1 /* NCRender.m in Sources */,
 				2C1466B51AAF513800778FB6 /* NCRendition.m in Sources */,
+				2CC148261AC4670F00079172 /* NCGraphic.m in Sources */,
 				2CB180BB1AB1F68000731445 /* NCCursesRendition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,8 @@
 //
 
 #import "NCText.h"
-#import "NCCursesRendition.h"
+#import "NCRendition.h"
+#import "NCPlatform.h"
 
 @interface NCText ()
 {
@@ -43,9 +44,11 @@
     _widthCache = 0;
 }
 
-- (NCCursesRendition *)drawInBounds:(CGSize)bounds
+- (NCRendition *)drawInBounds:(CGSize)bounds
+                 withPlatform:(NCPlatform *)platform
 {
-    NCCursesRendition *rendition = [super drawInBounds:bounds];
+    NCRendition *rendition = [super drawInBounds:bounds
+                                    withPlatform:platform];
     @try {
         int index = 0;
         NSArray *lines = [self lineBreakAndTruncate:self.text
