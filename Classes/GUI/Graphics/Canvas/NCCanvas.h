@@ -9,5 +9,5 @@
 #import "NCGraphic.h"
 
 @interface NCCanvas : NCGraphic
-
+@property (nonatomic, strong, readonly) NSMutableArray *children;
 @end

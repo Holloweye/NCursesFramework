@@ -43,6 +43,8 @@
 		2CC148241AC4670F00079172 /* NCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1480E1AC4670F00079172 /* NCText.m */; };
 		2CC148251AC4670F00079172 /* NCGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC1480F1AC4670F00079172 /* NCGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CC148261AC4670F00079172 /* NCGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148101AC4670F00079172 /* NCGraphic.m */; };
+		2CC148291AC46EB100079172 /* NCLinearLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC148271AC46EB100079172 /* NCLinearLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC1482A1AC46EB100079172 /* NCLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC148281AC46EB100079172 /* NCLinearLayout.m */; };
 		2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B891A924CDA00ED0BF1 /* NCColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */; };
 		2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,6 +116,8 @@
 		2CC1480E1AC4670F00079172 /* NCText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCText.m; sourceTree = "<group>"; };
 		2CC1480F1AC4670F00079172 /* NCGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCGraphic.h; sourceTree = "<group>"; };
 		2CC148101AC4670F00079172 /* NCGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCGraphic.m; sourceTree = "<group>"; };
+		2CC148271AC46EB100079172 /* NCLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLinearLayout.h; sourceTree = "<group>"; };
+		2CC148281AC46EB100079172 /* NCLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLinearLayout.m; sourceTree = "<group>"; };
 		2CD61B891A924CDA00ED0BF1 /* NCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
 		2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
 		2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCKey.h; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 			children = (
 				2CC147F61AC4670F00079172 /* NCCanvas.h */,
 				2CC147F71AC4670F00079172 /* NCCanvas.m */,
+				2CC148271AC46EB100079172 /* NCLinearLayout.h */,
+				2CC148281AC46EB100079172 /* NCLinearLayout.m */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				2CC1481D1AC4670F00079172 /* NCScrollBarSimpleStrategy.h in Headers */,
 				2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */,
 				2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */,
+				2CC148291AC46EB100079172 /* NCLinearLayout.h in Headers */,
 				2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */,
 				2C1466BB1AAF53B000778FB6 /* NCMatrix.h in Headers */,
 				2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */,
@@ -499,6 +506,7 @@
 				2CC1481E1AC4670F00079172 /* NCScrollBarSimpleStrategy.m in Sources */,
 				2CC148141AC4670F00079172 /* NCBorderDecorator.m in Sources */,
 				2CC148221AC4670F00079172 /* NCScrollDecorator.m in Sources */,
+				2CC1482A1AC46EB100079172 /* NCLinearLayout.m in Sources */,
 				2CC148161AC4670F00079172 /* NCBorderDottedStrategy.m in Sources */,
 				2CC1481C1AC4670F00079172 /* NCDecorator.m in Sources */,
 				2CD61BB41A924CDA00ED0BF1 /* NCRender.m in Sources */,

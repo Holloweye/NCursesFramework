@@ -10,12 +10,6 @@
 #import "NCRendition.h"
 #import "NCPlatform.h"
 
-@interface NCCanvas ()
-{
-    NSMutableArray *_children;
-}
-@end
-
 @implementation NCCanvas
 
 - (instancetype)init

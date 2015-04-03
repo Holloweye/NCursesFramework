@@ -48,6 +48,7 @@
     if(self.graphic) {
         if(_orientation == NCScrollOrientationVertical) {
             CGSize size = [self.graphic sizeWithinBounds:CGSizeMake(bounds.width-(self.strategy?1:0), NSIntegerMax)];
+            
             NCRendition *graphicRendition = [self.graphic drawInBounds:CGSizeMake(MAX(size.width, bounds.width-(self.strategy?1:0)),
                                                                                   MAX(size.height, bounds.height))
                                                           withPlatform:platform];

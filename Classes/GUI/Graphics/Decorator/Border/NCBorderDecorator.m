@@ -70,4 +70,14 @@
     return rendition;
 }
 
+- (CGSize)sizeWithinBounds:(CGSize)bounds
+{
+    CGSize size = CGSizeZero;
+    if(self.graphic) {
+        size = [self.graphic sizeWithinBounds:bounds];
+        size = CGSizeMake(size.width+2, size.height+2);
+    }
+    return CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
+}
+
 @end

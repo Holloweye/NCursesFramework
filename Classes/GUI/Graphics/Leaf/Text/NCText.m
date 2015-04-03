@@ -148,7 +148,7 @@
             NCString *text = t;
             while(text.length > 0 && lines.count < bounds.height)
             {
-                int maxPossibleLength = MIN(text.length, bounds.width);
+                NSInteger maxPossibleLength = MIN(text.length, bounds.width);
                 
                 if(mode == NCLineBreakByCharWrapping)
                 {
@@ -164,9 +164,9 @@
                                                withForeground:[NCColor whiteColor]];
                     } else {
                         if(!isblank([text characterAtIndex:maxPossibleLength-1]) && !isblank([text characterAtIndex:maxPossibleLength])) {
-                            int wordS = maxPossibleLength-1;
-                            int wordL = 0;
-                            for(int i = maxPossibleLength-1; i >= 0; i--) {
+                            NSInteger wordS = maxPossibleLength-1;
+                            NSInteger wordL = 0;
+                            for(NSInteger i = maxPossibleLength-1; i >= 0; i--) {
                                 char c = [text characterAtIndex:i];
                                 if(isblank(c)) {
                                     break;
@@ -174,7 +174,7 @@
                                     wordS = i;
                                 }
                             }
-                            for(int i = wordS; i < text.length; i++) {
+                            for(NSInteger i = wordS; i < text.length; i++) {
                                 char c = [text characterAtIndex:i];
                                 wordL++;
                                 if(isblank(c)) {
@@ -213,7 +213,7 @@
 
 - (CGSize) sizeOfText:(NCString*)text
             breakMode:(NCLineBreakMode)linebreak
-                width:(int)width
+                width:(NSUInteger)width
 {
     NSArray *lines = [self lineBreakText:text
                                 inBounds:CGSizeMake(width, NSIntegerMax)
