@@ -38,6 +38,20 @@
     return self;
 }
 
+- (id)initWithAttributes:(NSDictionary *)attributes
+{
+    self = [super initWithAttributes:attributes];
+    if(self) {
+        NSString *orientation = [attributes objectForKey:@"orientation"];
+        if(orientation && [orientation isEqualToString:@"horizontal"]) {
+            self.orientation = NCLinearLayoutOrientationHorizontal;
+        } else {
+            self.orientation = NCLinearLayoutOrientationVertical;
+        }
+    }
+    return self;
+}
+
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {

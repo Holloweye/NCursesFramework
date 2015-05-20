@@ -14,7 +14,7 @@
 {
     self = [super init];
     if(self) {
-        _graphic = graphic;
+        [self addChild:graphic];
     }
     return self;
 }
@@ -24,6 +24,16 @@
 {
     return [_graphic drawInBounds:bounds
                      withPlatform:platform];
+}
+
+- (void)addChild:(NCGraphic *)child
+{
+    _graphic = child;
+}
+
+- (void)removeChild:(NCGraphic *)child
+{
+    _graphic = nil;
 }
 
 @end

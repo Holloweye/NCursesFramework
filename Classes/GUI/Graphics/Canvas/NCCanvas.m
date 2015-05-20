@@ -21,6 +21,15 @@
     return self;
 }
 
+- (id)initWithAttributes:(NSDictionary *)attributes
+{
+    self = [super initWithAttributes:attributes];
+    if(self) {
+        _children = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (NCCanvas *)getCanvas
 {
     return self;

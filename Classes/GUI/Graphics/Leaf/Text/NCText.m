@@ -1,5 +1,5 @@
 //
-//  NCGraphicText.m
+//  NCText.m
 //  NCursesF
 //
 //  Created by Christer on 2015-03-10.
@@ -26,6 +26,25 @@
         self.lineBreak = NCLineBreakByWordWrapping;
         self.truncation = NCLineTruncationByTruncationTail;
         self.alignment = NCLineAlignmentLeft;
+    }
+    return self;
+}
+
+- (id)initWithAttributes:(NSDictionary *)attributes
+{
+    self = [super initWithAttributes:attributes];
+    if(self) {
+        NSString *text = [attributes objectForKey:@"text"];
+        NSString *foreground = [attributes objectForKey:@"foreground"];
+        NSString *background = [attributes objectForKey:@"background"];
+        if(!text) {
+            text = @"";
+        }
+        NCColor *bg = [NCColor colorFromString:background];
+        NCColor *fg = [NCColor colorFromString:foreground];
+        self.text = [[NCString alloc] initWithText:text
+                                    withBackground:bg ? bg : [NCColor blackColor]
+                                    withForeground:fg ? fg : [NCColor whiteColor]];
     }
     return self;
 }

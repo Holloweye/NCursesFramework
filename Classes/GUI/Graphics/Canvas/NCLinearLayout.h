@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 ChristerUL. All rights reserved.
 //
 
-#import <NCCanvas.h>
+#import "NCCanvas.h"
 
 typedef enum : NSUInteger {
     NCLinearLayoutOrientationVertical,

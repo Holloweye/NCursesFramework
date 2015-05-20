@@ -26,6 +26,8 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) Color color;
 
++ (NCColor*) colorFromString:(NSString*)str;
+
 + (NCColor*) clearColor;
 + (NCColor*) blackColor;
 + (NCColor*) redColor;

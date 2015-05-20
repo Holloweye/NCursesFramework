@@ -11,6 +11,14 @@
 
 @implementation NCGraphic
 
+- (id)initWithAttributes:(NSDictionary *)attributes
+{
+    self = [super init];
+    if(self) {
+    }
+    return self;
+}
+
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {

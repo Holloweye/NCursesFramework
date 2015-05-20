@@ -19,6 +19,23 @@
     return self;
 }
 
++ (NCColor *)colorFromString:(NSString *)str
+{
+    NCColor *c = nil;
+    if(str) {
+        c = [@{@"clear"     :[NCColor clearColor],
+               @"black"     :[NCColor blackColor],
+               @"red"       :[NCColor redColor],
+               @"green"     :[NCColor greenColor],
+               @"yellow"    :[NCColor yellowColor],
+               @"blue"      :[NCColor blueColor],
+               @"magenta"   :[NCColor magentaColor],
+               @"cyan"      :[NCColor cyanColor],
+               @"white"     :[NCColor whiteColor]} objectForKey:str];
+    }
+    return c;
+}
+
 + (NCColor*) clearColor
 {
     return [[NCColor alloc] initWithColor:ColorTransparent];

@@ -30,7 +30,8 @@
     return self;
 }
 
-- (id)initWithForeground:(NCColor *)foreground withBackground:(NCColor *)background
+- (id)initWithForeground:(NCColor *)foreground
+          withBackground:(NCColor *)background
 {
     self = [super init];
     if(self) {

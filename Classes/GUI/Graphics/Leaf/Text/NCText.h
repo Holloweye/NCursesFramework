@@ -1,5 +1,5 @@
 //
-//  NCGraphicText.h
+//  NCText.h
 //  NCursesF
 //
 //  Created by Christer on 2015-03-10.

@@ -13,6 +13,8 @@
 
 @interface NCGraphic : NSObject
 
+- (id)initWithAttributes:(NSDictionary*)attributes;
+
 - (NCRendition*)drawInBounds:(CGSize)bounds
                 withPlatform:(NCPlatform*)platform;
 - (CGSize)sizeWithinBounds:(CGSize)bounds;
