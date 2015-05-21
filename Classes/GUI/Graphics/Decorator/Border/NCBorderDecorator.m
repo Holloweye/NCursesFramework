@@ -10,6 +10,7 @@
 #import "NCRendition.h"
 #import "NCBorderStrategy.h"
 #import "NCBorderFilledStrategy.h"
+#import "NCBorderDottedStrategy.h"
 #import "NCRender.h"
 #import "NCPlatform.h"
 
@@ -29,6 +30,88 @@
     self = [super initWithGraphic:graphic];
     if(self) {
         _strategy = [[NCBorderFilledStrategy alloc] init];
+    }
+    return self;
+}
+
+- (id)initWithAttributes:(NSDictionary *)attributes
+{
+    self = [super initWithAttributes:attributes];
+    if(self) {
+        BOOL filled = YES;
+        char nw = '+';
+        char ne = '+';
+        char sw = '+';
+        char se = '+';
+        char n = '-';
+        char e = '|';
+        char s = '-';
+        char w = '|';
+        int spacing = 2;
+        NCColor *bg = [NCColor blackColor];
+        NCColor *fg = [NCColor whiteColor];
+        
+        if([[attributes objectForKey:@"type"] isEqualToString:@"dotted"]) {
+            filled = NO;
+        }
+        
+        NSString *nwStr = [attributes objectForKey:@"nw"];
+        nw = (nwStr.length > 0 ? [nwStr characterAtIndex:0] : nw);
+        
+        NSString *neStr = [attributes objectForKey:@"ne"];
+        ne = (neStr.length > 0 ? [neStr characterAtIndex:0] : ne);
+        
+        NSString *swStr = [attributes objectForKey:@"sw"];
+        sw = (swStr.length > 0 ? [swStr characterAtIndex:0] : sw);
+        
+        NSString *seStr = [attributes objectForKey:@"se"];
+        se = (seStr.length > 0 ? [seStr characterAtIndex:0] : se);
+        
+        NSString *nStr = [attributes objectForKey:@"n"];
+        n = (nStr.length > 0 ? [nStr characterAtIndex:0] : n);
+        
+        NSString *eStr = [attributes objectForKey:@"e"];
+        e = (eStr.length > 0 ? [eStr characterAtIndex:0] : e);
+        
+        NSString *sStr = [attributes objectForKey:@"s"];
+        s = (sStr.length > 0 ? [sStr characterAtIndex:0] : s);
+        
+        NSString *wStr = [attributes objectForKey:@"w"];
+        w = (wStr.length > 0 ? [wStr characterAtIndex:0] : w);
+        
+        bg = [NCColor colorFromString:[attributes objectForKey:@"background"]];
+        fg = [NCColor colorFromString:[attributes objectForKey:@"foreground"]];
+        
+        bg = (bg ? bg : [NCColor blackColor]);
+        fg = (fg ? fg : [NCColor whiteColor]);
+        
+        NSString *spacingStr = [attributes objectForKey:@"spacing"];
+        spacing = (spacingStr.length > 0 ? [spacingStr intValue] : spacing);
+        
+        if(filled) {
+            _strategy = [[NCBorderFilledStrategy alloc] initWithCornerNW:nw
+                                                            withCornerNE:ne
+                                                            withCornerSW:sw
+                                                            withCornerSE:se
+                                                                   withN:n
+                                                                   withE:e
+                                                                   withS:s
+                                                                   withW:w
+                                                          withBackground:bg
+                                                          withForeground:fg];
+        } else {
+            _strategy = [[NCBorderDottedStrategy alloc] initWithCornerNW:nw
+                                                            withCornerNE:ne
+                                                            withCornerSW:sw
+                                                            withCornerSE:se
+                                                                   withN:n
+                                                                   withE:e
+                                                                   withS:s
+                                                                   withW:w
+                                                             withSpacing:spacing
+                                                          withBackground:bg
+                                                          withForeground:fg];
+        }
     }
     return self;
 }

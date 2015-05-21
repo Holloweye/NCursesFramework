@@ -36,4 +36,16 @@
     _graphic = nil;
 }
 
+- (NCGraphic *)findGraphicWithId:(NSString *)sid
+{
+    NCGraphic *graphic = nil;
+    if([self.sid isEqualToString:sid]) {
+        graphic = self;
+    }
+    if(!graphic) {
+        graphic = [_graphic findGraphicWithId:sid];
+    }
+    return graphic;
+}
+
 @end
