@@ -38,10 +38,12 @@
                                @"bottomCenter":[NSNumber numberWithInt:NCGravityBottomCenter],
                                @"bottomRight":[NSNumber numberWithInt:NCGravityBottomRight]} objectForKey:gravityStr];
         if(gravity) {
-            self.gravity = [gravity intValue];
+            _gravity = [gravity intValue];
         } else {
-            self.gravity = NCGravityTopLeft;
+            _gravity = NCGravityTopLeft;
         }
+        
+        _sid = [attributes objectForKey:@"id"];
     }
     return self;
 }
@@ -55,6 +57,11 @@
 - (CGSize)sizeWithinBounds:(CGSize)bounds
 {
     return CGSizeMake(0, 0);
+}
+
+- (NCGraphic *)findGraphicWithId:(NSString *)sid
+{
+    return ([self.sid isEqualToString:sid] ? self : nil);
 }
 
 - (NCCanvas *)getCanvas

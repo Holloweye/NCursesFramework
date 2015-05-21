@@ -30,6 +30,20 @@
     return self;
 }
 
+- (NCGraphic *)findGraphicWithId:(NSString *)sid
+{
+    NCGraphic *graphic = nil;
+    if([self.sid isEqualToString:sid]) {
+        graphic = self;
+    }
+    
+    for(int i = 0; i < _children.count && graphic == nil; i++) {
+        NCGraphic *child = [_children objectAtIndex:i];
+        graphic = [child findGraphicWithId:sid];
+    }
+    return graphic;
+}
+
 - (NCCanvas *)getCanvas
 {
     return self;

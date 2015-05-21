@@ -27,6 +27,7 @@ typedef enum : NSUInteger {
 
 @interface NCGraphic : NSObject
 
+@property (nonatomic, strong, readonly) NSString *sid;
 @property (nonatomic, assign) NCGravity gravity;
 
 - (id)initWithAttributes:(NSDictionary*)attributes;
@@ -34,6 +35,8 @@ typedef enum : NSUInteger {
 - (NCRendition*)drawInBounds:(CGSize)bounds
                 withPlatform:(NCPlatform*)platform;
 - (CGSize)sizeWithinBounds:(CGSize)bounds;
+
+- (NCGraphic*)findGraphicWithId:(NSString*)sid;
 
 - (NCCanvas*)getCanvas;
 - (void)addChild:(NCGraphic*)child;

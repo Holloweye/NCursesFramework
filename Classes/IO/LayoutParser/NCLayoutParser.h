@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ParserDelegate <NSObject>
+@protocol NCLayoutParserDelegate <NSObject>
 @required
 - (void)didStartElement:(NSString*)name
          withAttributes:(NSDictionary*)attributes;
@@ -17,11 +17,10 @@
 
 @end
 
-@interface Parser : NSObject
+@interface NCLayoutParser : NSObject
 
-@property (nonatomic, weak) id<ParserDelegate> delegate;
+@property (nonatomic, weak) id<NCLayoutParserDelegate> delegate;
 
-- (id)initWithData:(NSData*)data;
-- (void)parse;
+- (void)parse:(NSData*)data;
 
 @end

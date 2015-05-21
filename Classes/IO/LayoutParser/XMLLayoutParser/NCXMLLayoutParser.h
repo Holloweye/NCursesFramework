@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 ChristerUL. All rights reserved.
 //
 
-#import "Parser.h"
+#import "NCLayoutParser.h"
 
-@interface XMLParser : Parser
+@interface NCXMLLayoutParser : NCLayoutParser
 
 @end

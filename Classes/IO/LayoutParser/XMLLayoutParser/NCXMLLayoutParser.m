@@ -6,29 +6,17 @@
 //  Copyright (c) 2015 ChristerUL. All rights reserved.
 //
 
-#import "XMLParser.h"
+#import "NCXMLLayoutParser.h"
 
-@interface XMLParser () <NSXMLParserDelegate>
-{
-    NSData *_data;
-}
+@interface NCXMLLayoutParser () <NSXMLParserDelegate>
 @end
 
-@implementation XMLParser
+@implementation NCXMLLayoutParser
 
-- (id)initWithData:(NSData *)data
+- (void)parse:(NSData *)data
 {
-    self = [super initWithData:data];
-    if(self) {
-        _data = data;
-    }
-    return self;
-}
-
-- (void)parse
-{
-    if(_data) {
-        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:_data];
+    if(data) {
+        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
         [parser setDelegate:self];
         [parser parse];
     }
