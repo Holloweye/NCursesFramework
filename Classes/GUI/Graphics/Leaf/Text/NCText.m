@@ -23,9 +23,10 @@
 {
     self = [super init];
     if(self) {
+        self.verticalAlignment = NCVerticalAlignmentTop;
+        self.horizontalAlignment = NCLineAlignmentLeft;
         self.lineBreak = NCLineBreakByWordWrapping;
         self.truncation = NCLineTruncationByTruncationTail;
-        self.alignment = NCLineAlignmentLeft;
     }
     return self;
 }
@@ -34,6 +35,38 @@
 {
     self = [super initWithAttributes:attributes];
     if(self) {
+        if([[attributes objectForKey:@"lineBreak"] isEqualToString:@"noWrapping"]) {
+            self.lineBreak = NCLineBreakByNoWrapping;
+        } else if([[attributes objectForKey:@"lineBreak"] isEqualToString:@"charWrapping"]) {
+            self.lineBreak = NCLineBreakByCharWrapping;
+        } else {
+            self.lineBreak = NCLineBreakByWordWrapping;
+        }
+        
+        if([[attributes objectForKey:@"truncation"] isEqualToString:@"clipping"]) {
+            self.truncation = NCLineTruncationByClipping;
+        } else if([[attributes objectForKey:@"truncation"] isEqualToString:@"truncatingHead"]) {
+            self.truncation = NCLineTruncationByTruncatingHead;
+        } else {
+            self.truncation = NCLineTruncationByTruncationTail;
+        }
+        
+        if([[attributes objectForKey:@"verticalAlignment"] isEqualToString:@"center"]) {
+            self.verticalAlignment = NCLineAlignmentCenter;
+        } else if([[attributes objectForKey:@"verticalAlignment"] isEqualToString:@"right"]) {
+            self.verticalAlignment = NCLineAlignmentRight;
+        } else {
+            self.verticalAlignment = NCLineAlignmentLeft;
+        }
+        
+        if([[attributes objectForKey:@"horizontalAlignment"] isEqualToString:@"middle"]) {
+            self.horizontalAlignment = NCVerticalAlignmentMiddle;
+        } else if([[attributes objectForKey:@"horizontalAlignment"] isEqualToString:@"bottom"]) {
+            self.horizontalAlignment = NCVerticalAlignmentBottom;
+        } else {
+            self.horizontalAlignment = NCVerticalAlignmentTop;
+        }
+        
         NSString *text = [attributes objectForKey:@"text"];
         NSString *foreground = [attributes objectForKey:@"foreground"];
         NSString *background = [attributes objectForKey:@"background"];
@@ -77,18 +110,26 @@
         
         for(int y = 0; lines && y < lines.count; y++) {
             NCString *text = [lines objectAtIndex:y];
+            
+            int yOffset = 0;
+            if(self.verticalAlignment == NCVerticalAlignmentMiddle) {
+                yOffset = (bounds.height - lines.count) / 2;
+            } else if(self.verticalAlignment == NCVerticalAlignmentBottom) {
+                yOffset = (bounds.height - lines.count);
+            }
+            
             for(NSUInteger x = 0; x < text.length; x++) {
                 NCChar *c = [text getCharAtIndex:x];
                 
                 int xOffset = 0;
-                if(self.alignment == NCLineAlignmentRight && text.length < bounds.width) {
-                    xOffset = bounds.width - text.length;
-                } else if(self.alignment == NCLineAlignmentCenter) {
-                    xOffset = (bounds.width - text.length) / 2;
+                if(self.horizontalAlignment == NCLineAlignmentCenter) {
+                    xOffset = (bounds.width-text.length) / 2;
+                } else if(self.horizontalAlignment == NCLineAlignmentRight) {
+                    xOffset = (bounds.width-text.length);
                 }
-                
+
                 [rendition setCharacter:c.c
-                                     at:CGSizeMake(x, y)
+                                     at:CGSizeMake(x + xOffset, y + yOffset)
                          withForeground:c.foreground
                          withBackground:c.background];
                 

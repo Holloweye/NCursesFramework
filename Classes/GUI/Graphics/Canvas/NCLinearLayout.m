@@ -94,8 +94,19 @@
                                             withPlatform:platform];
         if(self.orientation == NCLinearLayoutOrientationVertical)
         {
+            int xOffset = 0;
+            if(element.grapic.gravity == NCGravityBottomCenter ||
+               element.grapic.gravity == NCGravityMiddleCenter ||
+               element.grapic.gravity == NCGravityTopCenter) {
+                xOffset = (bounds.width - rend.bounds.width) / 2;
+            } else if(element.grapic.gravity == NCGravityBottomRight ||
+                      element.grapic.gravity == NCGravityMiddleRight ||
+                      element.grapic.gravity == NCGravityTopRight) {
+                xOffset = (bounds.width - rend.bounds.width);
+            }
+            
             [rendition mergeRendition:rend
-                              inFrame:CGRectMake(0,
+                              inFrame:CGRectMake(xOffset,
                                                  offset,
                                                  rend.bounds.width,
                                                  rend.bounds.height)];
@@ -103,9 +114,20 @@
         }
         else if(self.orientation == NCLinearLayoutOrientationHorizontal)
         {
+            int yOffset = 0;
+            if(element.grapic.gravity == NCGravityMiddleCenter ||
+               element.grapic.gravity == NCGravityMiddleLeft ||
+               element.grapic.gravity == NCGravityMiddleRight) {
+                yOffset = (bounds.height - rend.bounds.height) / 2;
+            } else if(element.grapic.gravity == NCGravityBottomCenter ||
+                      element.grapic.gravity == NCGravityBottomLeft ||
+                      element.grapic.gravity == NCGravityBottomRight) {
+                yOffset = (bounds.height - rend.bounds.height);
+            }
+            
             [rendition mergeRendition:rend
                               inFrame:CGRectMake(offset,
-                                                 0,
+                                                 yOffset,
                                                  rend.bounds.width,
                                                  rend.bounds.height)];
             offset += rend.bounds.width;
@@ -116,7 +138,7 @@
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
 {
-    CGSize totalSize = (self.orientation == NCLinearLayoutOrientationVertical ? CGSizeMake(bounds.width, 0) : CGSizeMake(0, bounds.height));
+    CGSize totalSize = CGSizeMake(0, 0);
     
     for(NCGraphic *graphic in self.children)
     {
@@ -128,6 +150,10 @@
             if(isWithinBounds) {
                 totalSize = CGSizeMake(totalSize.width, totalSize.height + size.height);
             }
+            
+            if(size.width > totalSize.width && size.width < bounds.width) {
+                totalSize = CGSizeMake(size.width, totalSize.height);
+            }
         }
         else if(self.orientation == NCLinearLayoutOrientationHorizontal)
         {
@@ -136,6 +162,10 @@
             BOOL isWithinBounds = totalSize.width + size.width <= bounds.width;
             if(isWithinBounds) {
                 totalSize = CGSizeMake(totalSize.width + size.width, totalSize.height);
+            }
+            
+            if(size.height > totalSize.height && size.height < bounds.height) {
+                totalSize = CGSizeMake(totalSize.width, size.height);
             }
         }
     }

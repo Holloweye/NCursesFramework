@@ -11,7 +11,23 @@
 @class NCCanvas;
 @class NCPlatform;
 
+typedef enum : NSUInteger {
+    NCGravityTopLeft,
+    NCGravityTopCenter,
+    NCGravityTopRight,
+    
+    NCGravityMiddleLeft,
+    NCGravityMiddleCenter,
+    NCGravityMiddleRight,
+    
+    NCGravityBottomLeft,
+    NCGravityBottomCenter,
+    NCGravityBottomRight,
+} NCGravity;
+
 @interface NCGraphic : NSObject
+
+@property (nonatomic, assign) NCGravity gravity;
 
 - (id)initWithAttributes:(NSDictionary*)attributes;
 

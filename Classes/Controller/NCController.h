@@ -11,5 +11,6 @@
 @interface NCController : NSObject
 
 - (id)initWithXML:(NSData*)xml;
+- (void)main;
 
 @end

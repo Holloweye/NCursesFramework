@@ -56,6 +56,10 @@
     return self;
 }
 
+- (void)main
+{
+}
+
 - (void)setGraphicPropertyWithName:(NSString*)name
                          withValue:(NCGraphic*)graphic
 {

@@ -27,11 +27,18 @@ typedef enum : NSUInteger {
     NCLineAlignmentRight,
 } NCLineAlignment;
 
+typedef enum : NSUInteger {
+    NCVerticalAlignmentTop,
+    NCVerticalAlignmentMiddle,
+    NCVerticalAlignmentBottom,
+} NCVerticalAlignment;
+
 @interface NCText : NCGraphic
 
 @property (nonatomic, strong) NCString *text;
 @property (nonatomic, assign) NCLineBreakMode lineBreak;
 @property (nonatomic, assign) NCLineTruncationMode truncation;
-@property (nonatomic, assign) NCLineAlignment alignment;
+@property (nonatomic, assign) NCLineAlignment horizontalAlignment;
+@property (nonatomic, assign) NCLineAlignment verticalAlignment;
 
 @end
