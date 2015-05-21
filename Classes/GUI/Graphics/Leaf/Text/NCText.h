@@ -39,6 +39,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) NCLineBreakMode lineBreak;
 @property (nonatomic, assign) NCLineTruncationMode truncation;
 @property (nonatomic, assign) NCLineAlignment horizontalAlignment;
-@property (nonatomic, assign) NCLineAlignment verticalAlignment;
+@property (nonatomic, assign) NCVerticalAlignment verticalAlignment;
 
 @end

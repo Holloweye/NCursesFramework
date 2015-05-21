@@ -51,20 +51,20 @@
             self.truncation = NCLineTruncationByTruncationTail;
         }
         
-        if([[attributes objectForKey:@"verticalAlignment"] isEqualToString:@"center"]) {
-            self.verticalAlignment = NCLineAlignmentCenter;
-        } else if([[attributes objectForKey:@"verticalAlignment"] isEqualToString:@"right"]) {
-            self.verticalAlignment = NCLineAlignmentRight;
+        if([[attributes objectForKey:@"horizontalAlignment"] isEqualToString:@"center"]) {
+            self.horizontalAlignment = NCLineAlignmentCenter;
+        } else if([[attributes objectForKey:@"horizontalAlignment"] isEqualToString:@"right"]) {
+            self.horizontalAlignment = NCLineAlignmentRight;
         } else {
-            self.verticalAlignment = NCLineAlignmentLeft;
+            self.horizontalAlignment = NCLineAlignmentLeft;
         }
         
-        if([[attributes objectForKey:@"horizontalAlignment"] isEqualToString:@"middle"]) {
-            self.horizontalAlignment = NCVerticalAlignmentMiddle;
-        } else if([[attributes objectForKey:@"horizontalAlignment"] isEqualToString:@"bottom"]) {
-            self.horizontalAlignment = NCVerticalAlignmentBottom;
+        if([[attributes objectForKey:@"verticalAlignment"] isEqualToString:@"middle"]) {
+            self.verticalAlignment = NCVerticalAlignmentMiddle;
+        } else if([[attributes objectForKey:@"verticalAlignment"] isEqualToString:@"bottom"]) {
+            self.verticalAlignment = NCVerticalAlignmentBottom;
         } else {
-            self.horizontalAlignment = NCVerticalAlignmentTop;
+            self.verticalAlignment = NCVerticalAlignmentTop;
         }
         
         NSString *text = [attributes objectForKey:@"text"];
