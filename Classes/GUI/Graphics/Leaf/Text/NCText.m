@@ -7,6 +7,7 @@
 //
 
 #import "NCText.h"
+#import "NCGraphic+Bounds.h"
 #import "NCRendition.h"
 #import "NCPlatform.h"
 
@@ -268,7 +269,10 @@
     CGSize size = [self sizeOfText:self.text
                          breakMode:self.lineBreak
                              width:bounds.width];
-    return CGSizeMake(MIN(size.width, bounds.width), MIN(size.height, bounds.height));
+    
+    size = CGSizeMake(MIN(size.width, bounds.width), MIN(size.height, bounds.height));
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
 }
 
 - (CGSize) sizeOfText:(NCString*)text

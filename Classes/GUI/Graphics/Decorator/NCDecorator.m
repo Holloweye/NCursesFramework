@@ -7,6 +7,7 @@
 //
 
 #import "NCDecorator.h"
+#import "NCGraphic+Bounds.h"
 
 @implementation NCDecorator
 
@@ -24,6 +25,18 @@
 {
     return [_graphic drawInBounds:bounds
                      withPlatform:platform];
+}
+
+- (CGSize)sizeWithinBounds:(CGSize)bounds
+{
+    CGSize size = CGSizeZero;
+    if(self.graphic) {
+        size = [self.graphic sizeWithinBounds:bounds];
+        size = CGSizeMake(size.width, size.height);
+    }
+    size = CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
 }
 
 - (void)addChild:(NCGraphic *)child

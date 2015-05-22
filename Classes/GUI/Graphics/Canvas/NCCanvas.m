@@ -7,6 +7,7 @@
 //
 
 #import "NCCanvas.h"
+#import "NCGraphic+Bounds.h"
 #import "NCRendition.h"
 #import "NCPlatform.h"
 
@@ -128,8 +129,10 @@
     height += MAX(MAX(sizes[NCGravityMiddleLeft].height, sizes[NCGravityMiddleCenter].height), sizes[NCGravityMiddleRight].height);
     height += MAX(MAX(sizes[NCGravityBottomLeft].height, sizes[NCGravityBottomCenter].height), sizes[NCGravityBottomRight].height);
     
-    return CGSizeMake(MIN(width, bounds.width),
-                      MIN(height, bounds.height));
+    CGSize size = CGSizeMake(MIN(width, bounds.width),
+                             MIN(height, bounds.height));
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "NCBorderDecorator.h"
+#import "NCGraphic+Bounds.h"
 #import "NCRendition.h"
 #import "NCBorderStrategy.h"
 #import "NCBorderFilledStrategy.h"
@@ -160,7 +161,9 @@
         size = [self.graphic sizeWithinBounds:bounds];
         size = CGSizeMake(size.width+2, size.height+2);
     }
-    return CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
+    size = CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
 }
 
 @end

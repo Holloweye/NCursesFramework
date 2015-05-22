@@ -7,6 +7,7 @@
 //
 
 #import "NCLinearLayout.h"
+#import "NCGraphic+Bounds.h"
 #import "NCRendition.h"
 #import "NCPlatform.h"
 
@@ -169,7 +170,8 @@
             }
         }
     }
-    return totalSize;
+    return [self sizeRespectingMinMaxValuesForBounds:totalSize
+                                     forParentBounds:bounds];
 }
 
 @end

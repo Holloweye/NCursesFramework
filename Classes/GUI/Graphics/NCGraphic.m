@@ -43,6 +43,11 @@
             _gravity = NCGravityTopLeft;
         }
         
+        _minWidth = [attributes objectForKey:@"minWidth"];
+        _minHeight = [attributes objectForKey:@"minHeight"];
+        _maxWidth = [attributes objectForKey:@"maxWidth"];
+        _maxHeight = [attributes objectForKey:@"maxHeight"];
+        
         _sid = [attributes objectForKey:@"id"];
     }
     return self;

@@ -7,6 +7,7 @@
 //
 
 #import "NCScrollDecorator.h"
+#import "NCGraphic+Bounds.h"
 #import "NCRendition.h"
 #import "NCScrollBarStrategy.h"
 #import "NCColor.h"
@@ -32,6 +33,20 @@
         _background = [NCColor blackColor];
         _offset = CGSizeZero;
         _orientation = NCScrollOrientationVertical;
+    }
+    return self;
+}
+
+- (id)initWithAttributes:(NSDictionary *)attributes
+{
+    self = [super initWithAttributes:attributes];
+    if(self) {
+        _offset = CGSizeZero;
+        
+        NCColor *bg = [NCColor colorFromString:[attributes objectForKey:@"background"]];
+        _background = (bg ? bg : [NCColor blackColor]);
+        
+        _orientation = ([[attributes objectForKey:@"orientation"] isEqualToString:@"horizontal"] ? NCScrollOrientationHorizontal : NCScrollOrientationVertical);
     }
     return self;
 }
@@ -108,6 +123,18 @@
         }
     }
     return rendition;
+}
+
+- (CGSize)sizeWithinBounds:(CGSize)bounds
+{
+    CGSize size = CGSizeZero;
+    if(self.graphic) {
+        size = [self.graphic sizeWithinBounds:bounds];
+        size = CGSizeMake(size.width+(self.strategy?1:0), size.height);
+    }
+    size = CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
 }
 
 @end
