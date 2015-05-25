@@ -23,8 +23,9 @@
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {
-    return [_graphic drawInBounds:bounds
-                     withPlatform:platform];
+    return [self applyPaddingOnRendition:[_graphic drawInBounds:bounds
+                                                   withPlatform:platform]
+                            withPlatform:platform];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
@@ -35,8 +36,8 @@
         size = CGSizeMake(size.width, size.height);
     }
     size = CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
-    return [self sizeRespectingMinMaxValuesForBounds:size
-                                     forParentBounds:bounds];
+    return [self sizeAfterAdjustmentsForSize:size
+                            withParentBounds:bounds];
 }
 
 - (void)addChild:(NCGraphic *)child

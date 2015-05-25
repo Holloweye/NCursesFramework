@@ -151,7 +151,8 @@
                           inFrame:CGRectMake(bounds.width-1, 0, MIN(bounds.width, 1), bounds.height)];
     }
     
-    return rendition;
+    return [self applyPaddingOnRendition:rendition
+                            withPlatform:platform];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
@@ -162,8 +163,8 @@
         size = CGSizeMake(size.width+2, size.height+2);
     }
     size = CGSizeMake(MIN(bounds.width, size.width), MIN(bounds.height, size.height));
-    return [self sizeRespectingMinMaxValuesForBounds:size
-                                     forParentBounds:bounds];
+    return [self sizeAfterAdjustmentsForSize:size
+                            withParentBounds:bounds];
 }
 
 @end

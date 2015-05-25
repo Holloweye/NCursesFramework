@@ -134,7 +134,8 @@
             offset += rend.bounds.width;
         }
     }
-    return rendition;
+    return [self applyPaddingOnRendition:rendition
+                            withPlatform:platform];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
@@ -170,8 +171,8 @@
             }
         }
     }
-    return [self sizeRespectingMinMaxValuesForBounds:totalSize
-                                     forParentBounds:bounds];
+    return [self sizeAfterAdjustmentsForSize:totalSize
+                            withParentBounds:bounds];
 }
 
 @end

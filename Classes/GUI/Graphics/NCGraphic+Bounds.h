@@ -7,10 +7,18 @@
 //
 
 #import "NCGraphic.h"
+#import "NCPlatform.h"
+#import "NCRendition.h"
 
 @interface NCGraphic (Bounds)
 
 - (CGSize)sizeRespectingMinMaxValuesForBounds:(CGSize)myBounds
                               forParentBounds:(CGSize)parentBounds;
+
+- (CGSize)sizeAppendingPaddingForBounds:(CGSize)myBounds
+                        forParentBounds:(CGSize)parentBounds;
+
+- (NCRendition *)applyPaddingOnRendition:(NCRendition*)rendition
+                            withPlatform:(NCPlatform*)platform;
 
 @end

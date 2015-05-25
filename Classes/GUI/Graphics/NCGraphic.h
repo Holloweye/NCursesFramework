@@ -58,17 +58,25 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSString *maxWidth;
 @property (nonatomic, strong) NSString *maxHeight;
 
+@property (nonatomic, strong) NSString *topPadding;
+@property (nonatomic, strong) NSString *rightPadding;
+@property (nonatomic, strong) NSString *bottomPadding;
+@property (nonatomic, strong) NSString *leftPadding;
+
 - (id)initWithAttributes:(NSDictionary*)attributes;
 
 - (NCRendition*)drawInBounds:(CGSize)bounds
                 withPlatform:(NCPlatform*)platform;
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds;
+- (CGSize)sizeAfterAdjustmentsForSize:(CGSize)size
+                     withParentBounds:(CGSize)bounds;
 
 - (NCGraphic*)findGraphicWithId:(NSString*)sid;
 
 - (NCCanvas*)getCanvas;
 - (void)addChild:(NCGraphic*)child;
+- (void)insertChild:(NCGraphic*)child atIndex:(NSUInteger)index;
 - (void)removeChild:(NCGraphic*)child;
 
 @end

@@ -55,6 +55,11 @@
     [_children addObject:child];
 }
 
+- (void)insertChild:(NCGraphic *)child atIndex:(NSUInteger)index
+{
+    [_children insertObject:child atIndex:index];
+}
+
 - (void)removeChild:(NCGraphic *)child
 {
     [_children addObject:child];
@@ -102,7 +107,8 @@
                           inFrame:rect];
     }
     
-    return rendition;
+    return [self applyPaddingOnRendition:rendition
+                            withPlatform:platform];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
@@ -131,8 +137,9 @@
     
     CGSize size = CGSizeMake(MIN(width, bounds.width),
                              MIN(height, bounds.height));
-    return [self sizeRespectingMinMaxValuesForBounds:size
-                                     forParentBounds:bounds];
+    
+    return [self sizeAfterAdjustmentsForSize:size
+                            withParentBounds:bounds];
 }
 
 @end

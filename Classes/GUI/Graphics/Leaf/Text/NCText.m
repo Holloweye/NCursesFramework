@@ -7,9 +7,9 @@
 //
 
 #import "NCText.h"
-#import "NCGraphic+Bounds.h"
 #import "NCRendition.h"
 #import "NCPlatform.h"
+#import "NCGraphic+Bounds.h"
 
 @interface NCText ()
 {
@@ -100,8 +100,7 @@
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {
-    NCRendition *rendition = [super drawInBounds:bounds
-                                    withPlatform:platform];
+    NCRendition *rendition = [platform createRenditionWithBounds:bounds];
     @try {
         int index = 0;
         NSArray *lines = [self lineBreakAndTruncate:self.text
@@ -141,7 +140,8 @@
     @catch (NSException *exception) {
         //[Logger log:[NSString stringWithFormat:@"drawText - Exception thrown: %@/nName:%@/nUserInfo:%@",exception,exception.name,exception.userInfo]];
     }
-    return rendition;
+    return [self applyPaddingOnRendition:rendition
+                            withPlatform:platform];
 }
 
 - (NSArray*) lineBreakAndTruncate:(NCString*)text
@@ -271,8 +271,8 @@
                              width:bounds.width];
     
     size = CGSizeMake(MIN(size.width, bounds.width), MIN(size.height, bounds.height));
-    return [self sizeRespectingMinMaxValuesForBounds:size
-                                     forParentBounds:bounds];
+    return [self sizeAfterAdjustmentsForSize:size
+                            withParentBounds:bounds];
 }
 
 - (CGSize) sizeOfText:(NCString*)text

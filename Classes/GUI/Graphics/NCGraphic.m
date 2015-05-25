@@ -8,6 +8,9 @@
 
 #import "NCGraphic.h"
 #import "NCPlatform.h"
+#import "NCRendition.h"
+#import "NCGraphic+Bounds.h"
+#import "NCEvaluate.h"
 
 @implementation NCGraphic
 
@@ -48,6 +51,11 @@
         _maxWidth = [attributes objectForKey:@"maxWidth"];
         _maxHeight = [attributes objectForKey:@"maxHeight"];
         
+        _topPadding = [attributes objectForKey:@"topPadding"];
+        _rightPadding = [attributes objectForKey:@"rightPadding"];
+        _bottomPadding = [attributes objectForKey:@"bottomPadding"];
+        _leftPadding = [attributes objectForKey:@"leftPadding"];
+        
         _sid = [attributes objectForKey:@"id"];
     }
     return self;
@@ -56,12 +64,23 @@
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {
-    return [platform createRenditionWithBounds:bounds];
+    return [self applyPaddingOnRendition:[platform createRenditionWithBounds:bounds] withPlatform:platform];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
 {
-    return CGSizeMake(0, 0);
+    return [self sizeAfterAdjustmentsForSize:bounds
+                            withParentBounds:bounds];
+}
+
+- (CGSize)sizeAfterAdjustmentsForSize:(CGSize)size
+                     withParentBounds:(CGSize)bounds
+{
+    size = [self sizeAppendingPaddingForBounds:size
+                               forParentBounds:bounds];
+    
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
 }
 
 - (NCGraphic *)findGraphicWithId:(NSString *)sid
@@ -75,6 +94,10 @@
 }
 
 - (void)addChild:(NCGraphic *)child
+{
+}
+
+- (void)insertChild:(NCGraphic *)child atIndex:(NSUInteger)index
 {
 }
 
