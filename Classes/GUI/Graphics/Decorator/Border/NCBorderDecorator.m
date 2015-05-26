@@ -120,6 +120,9 @@
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {
+    CGRect padding = [self padding];
+    bounds = CGSizeMake(MAX(bounds.width - padding.origin.x - padding.size.width, 0),
+                        MAX(bounds.height - padding.origin.y - padding.size.height, 0));
     NCRendition *rendition = [platform createRenditionWithBounds:bounds];
     
     if(self.graphic && bounds.width > 2 && bounds.height > 2) {

@@ -64,7 +64,11 @@
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {
-    return [self applyPaddingOnRendition:[platform createRenditionWithBounds:bounds] withPlatform:platform];
+    CGRect padding = [self padding];
+    bounds = CGSizeMake(MAX(bounds.width - padding.origin.x - padding.size.width, 0),
+                        MAX(bounds.height - padding.origin.y - padding.size.height, 0));
+    return [self applyPaddingOnRendition:[platform createRenditionWithBounds:bounds]
+                            withPlatform:platform];
 }
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds

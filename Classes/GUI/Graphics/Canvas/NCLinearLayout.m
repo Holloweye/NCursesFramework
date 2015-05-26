@@ -86,6 +86,10 @@
             }
         }
     }
+    
+    CGRect padding = [self padding];
+    totalSize = CGSizeMake(MAX(totalSize.width - padding.origin.x - padding.size.width, 0),
+                           MAX(totalSize.height - padding.origin.y - padding.size.height, 0));
     rendition = [platform createRenditionWithBounds:totalSize];
     
     int offset = 0;

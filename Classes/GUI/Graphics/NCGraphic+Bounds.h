@@ -12,6 +12,8 @@
 
 @interface NCGraphic (Bounds)
 
+- (CGRect)padding;
+
 - (CGSize)sizeRespectingMinMaxValuesForBounds:(CGSize)myBounds
                               forParentBounds:(CGSize)parentBounds;
 

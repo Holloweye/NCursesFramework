@@ -53,22 +53,27 @@
     return CGSizeMake(w,h);
 }
 
-- (CGSize)sizeAppendingPaddingForBounds:(CGSize)myBounds
-                        forParentBounds:(CGSize)parentBounds
+- (CGRect)padding
 {
     NSDictionary *words = @{};
     
-    CGRect margin = CGRectMake(self.leftPadding ? [NCEvaluate evaluate:[self leftPadding]
-                                                             variables:words] : 0,
-                               self.topPadding ? [NCEvaluate evaluate:[self topPadding]
-                                                            variables:words] : 0,
-                               self.rightPadding ? [NCEvaluate evaluate:[self rightPadding]
-                                                              variables:words] : 0,
-                               self.bottomPadding ? [NCEvaluate evaluate:[self bottomPadding]
-                                                               variables:words] : 0);
+    return CGRectMake(self.leftPadding ? [NCEvaluate evaluate:[self leftPadding]
+                                                    variables:words] : 0,
+                      self.topPadding ? [NCEvaluate evaluate:[self topPadding]
+                                                   variables:words] : 0,
+                      self.rightPadding ? [NCEvaluate evaluate:[self rightPadding]
+                                                     variables:words] : 0,
+                      self.bottomPadding ? [NCEvaluate evaluate:[self bottomPadding]
+                                                      variables:words] : 0);
+}
+
+- (CGSize)sizeAppendingPaddingForBounds:(CGSize)myBounds
+                        forParentBounds:(CGSize)parentBounds
+{
+    CGRect padding = [self padding];
     
-    return CGSizeMake(myBounds.width + margin.origin.x + margin.size.width,
-                      myBounds.height + margin.origin.y + margin.size.height);
+    return CGSizeMake(myBounds.width + padding.origin.x + padding.size.width,
+                      myBounds.height + padding.origin.y + padding.size.height);
 }
 
 - (NCRendition *)applyPaddingOnRendition:(NCRendition*)rendition
