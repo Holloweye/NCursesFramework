@@ -14,6 +14,9 @@
 
 - (CGRect)padding;
 
+- (CGSize)sizeAfterAdjustmentsForSize:(CGSize)size
+                     withParentBounds:(CGSize)bounds;
+
 - (CGSize)sizeRespectingMinMaxValuesForBounds:(CGSize)myBounds
                               forParentBounds:(CGSize)parentBounds;
 

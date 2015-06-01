@@ -7,12 +7,9 @@
 //
 
 #import "NCString.h"
+#import "NCString_Protected.h"
 
 @implementation NCChar
-@end
-
-@interface NCString ()
-@property (nonatomic, strong) NSArray *chars;
 @end
 
 @implementation NCString

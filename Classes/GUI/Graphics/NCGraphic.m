@@ -77,16 +77,6 @@
                             withParentBounds:bounds];
 }
 
-- (CGSize)sizeAfterAdjustmentsForSize:(CGSize)size
-                     withParentBounds:(CGSize)bounds
-{
-    size = [self sizeAppendingPaddingForBounds:size
-                               forParentBounds:bounds];
-    
-    return [self sizeRespectingMinMaxValuesForBounds:size
-                                     forParentBounds:bounds];
-}
-
 - (NCGraphic *)findGraphicWithId:(NSString *)sid
 {
     return ([self.sid isEqualToString:sid] ? self : nil);
@@ -106,6 +96,10 @@
 }
 
 - (void)removeChild:(NCGraphic *)child
+{
+}
+
+- (void)removeAllChildren
 {
 }
 

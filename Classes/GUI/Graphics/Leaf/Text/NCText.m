@@ -7,6 +7,7 @@
 //
 
 #import "NCText.h"
+#import "NCText_Protected.h"
 #import "NCRendition.h"
 #import "NCPlatform.h"
 #import "NCGraphic+Bounds.h"
@@ -104,44 +105,39 @@
     bounds = CGSizeMake(MAX(bounds.width - padding.origin.x - padding.size.width, 0),
                         MAX(bounds.height - padding.origin.y - padding.size.height, 0));
     NCRendition *rendition = [platform createRenditionWithBounds:bounds];
-    @try {
-        int index = 0;
-        NSArray *lines = [self lineBreakAndTruncate:self.text
-                                           inBounds:bounds
-                                          lineBreak:self.lineBreak
-                                          truncMode:self.truncation];
+    int index = 0;
+    NSArray *lines = [self lineBreakAndTruncate:self.text
+                                       inBounds:bounds
+                                      lineBreak:self.lineBreak
+                                      truncMode:self.truncation];
+    
+    for(int y = 0; lines && y < lines.count; y++) {
+        NCString *text = [lines objectAtIndex:y];
         
-        for(int y = 0; lines && y < lines.count; y++) {
-            NCString *text = [lines objectAtIndex:y];
-            
-            int yOffset = 0;
-            if(self.verticalAlignment == NCVerticalAlignmentMiddle) {
-                yOffset = (bounds.height - lines.count) / 2;
-            } else if(self.verticalAlignment == NCVerticalAlignmentBottom) {
-                yOffset = (bounds.height - lines.count);
-            }
-            
-            for(NSUInteger x = 0; x < text.length; x++) {
-                NCChar *c = [text getCharAtIndex:x];
-                
-                int xOffset = 0;
-                if(self.horizontalAlignment == NCLineAlignmentCenter) {
-                    xOffset = (bounds.width-text.length) / 2;
-                } else if(self.horizontalAlignment == NCLineAlignmentRight) {
-                    xOffset = (bounds.width-text.length);
-                }
-
-                [rendition setCharacter:c.c
-                                     at:CGSizeMake(x + xOffset, y + yOffset)
-                         withForeground:c.foreground
-                         withBackground:c.background];
-                
-                index++;
-            }
+        int yOffset = 0;
+        if(self.verticalAlignment == NCVerticalAlignmentMiddle) {
+            yOffset = (bounds.height - lines.count) / 2;
+        } else if(self.verticalAlignment == NCVerticalAlignmentBottom) {
+            yOffset = (bounds.height - lines.count);
         }
-    }
-    @catch (NSException *exception) {
-        //[Logger log:[NSString stringWithFormat:@"drawText - Exception thrown: %@/nName:%@/nUserInfo:%@",exception,exception.name,exception.userInfo]];
+        
+        for(NSUInteger x = 0; x < text.length; x++) {
+            NCChar *c = [text getCharAtIndex:x];
+            
+            int xOffset = 0;
+            if(self.horizontalAlignment == NCLineAlignmentCenter) {
+                xOffset = (bounds.width-text.length) / 2;
+            } else if(self.horizontalAlignment == NCLineAlignmentRight) {
+                xOffset = (bounds.width-text.length);
+            }
+            
+            [rendition setCharacter:c.c
+                                 at:CGSizeMake(x + xOffset, y + yOffset)
+                     withForeground:c.foreground
+                     withBackground:c.background];
+            
+            index++;
+        }
     }
     return [self applyPaddingOnRendition:rendition
                             withPlatform:platform];

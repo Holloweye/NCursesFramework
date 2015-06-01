@@ -53,6 +53,11 @@
     _graphic = nil;
 }
 
+- (void)removeAllChildren
+{
+    _graphic = nil;
+}
+
 - (NCGraphic *)findGraphicWithId:(NSString *)sid
 {
     NCGraphic *graphic = nil;

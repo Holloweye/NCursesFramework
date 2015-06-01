@@ -53,6 +53,16 @@
     return CGSizeMake(w,h);
 }
 
+- (CGSize)sizeAfterAdjustmentsForSize:(CGSize)size
+                     withParentBounds:(CGSize)bounds
+{
+    size = [self sizeAppendingPaddingForBounds:size
+                               forParentBounds:bounds];
+    
+    return [self sizeRespectingMinMaxValuesForBounds:size
+                                     forParentBounds:bounds];
+}
+
 - (CGRect)padding
 {
     NSDictionary *words = @{};
