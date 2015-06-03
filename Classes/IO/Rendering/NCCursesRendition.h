@@ -10,4 +10,8 @@
 
 @interface NCCursesRendition : NCRendition
 
+- (int)fgForPos:(CGSize)pos;
+- (int)bgForPos:(CGSize)pos;
+- (char)charForPos:(CGSize)pos;
+
 @end

@@ -84,29 +84,29 @@
             {
                 [rendition setCharacter:(x == 0 ? _nw : (x == bounds.width-1 ? _ne : _n))
                                      at:CGSizeMake(x, y)
-                         withForeground:_foreground
-                         withBackground:_background];
+                         withForeground:_foreground.color
+                         withBackground:_background.color];
             }
             else if(position == NCBorderPositionLeft)
             {
                 [rendition setCharacter:(y == 0 ? _nw : (y == bounds.width-1 ? _sw : _w))
                                      at:CGSizeMake(x, y)
-                         withForeground:_foreground
-                         withBackground:_background];
+                         withForeground:_foreground.color
+                         withBackground:_background.color];
             }
             else if(position == NCBorderPositionBottom)
             {
                 [rendition setCharacter:(x == 0 ? _sw : (x == bounds.width-1 ? _se : _s))
                                      at:CGSizeMake(x, y)
-                         withForeground:_foreground
-                         withBackground:_background];
+                         withForeground:_foreground.color
+                         withBackground:_background.color];
             }
             else
             {
                 [rendition setCharacter:(y == 0 ? _ne : (y == bounds.width-1 ? _se : _e))
                                      at:CGSizeMake(x, y)
-                         withForeground:_foreground
-                         withBackground:_background];
+                         withForeground:_foreground.color
+                         withBackground:_background.color];
             }
         }
     }

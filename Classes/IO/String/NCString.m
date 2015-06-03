@@ -14,6 +14,15 @@
 
 @implementation NCString
 
+- (instancetype)init
+{
+    self = [super init];
+    if(self) {
+        self.chars = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (id)initWithText:(NSString *)text
     withBackground:(NCColor *)background
     withForeground:(NCColor *)foreground

@@ -23,8 +23,7 @@
 {
     NCColor *c = nil;
     if(str) {
-        c = [@{@"clear"     :[NCColor clearColor],
-               @"black"     :[NCColor blackColor],
+        c = [@{@"black"     :[NCColor blackColor],
                @"red"       :[NCColor redColor],
                @"green"     :[NCColor greenColor],
                @"yellow"    :[NCColor yellowColor],
@@ -34,11 +33,6 @@
                @"white"     :[NCColor whiteColor]} objectForKey:str];
     }
     return c;
-}
-
-+ (NCColor*) clearColor
-{
-    return [[NCColor alloc] initWithColor:ColorTransparent];
 }
 
 + (NCColor*) blackColor

@@ -34,18 +34,16 @@
 		2C1623A71B0B99450094C250 /* NCString.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C1466A81AAF4E6900778FB6 /* NCString.h */; };
 		2C1623A81B0B99450094C250 /* NCColor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD61B891A924CDA00ED0BF1 /* NCColor.h */; };
 		2C1623A91B0B99450094C250 /* NCKey.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */; };
-		2C1623AA1B0B99450094C250 /* NCRender.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD61B911A924CDA00ED0BF1 /* NCRender.h */; };
 		2C1623AB1B0B99450094C250 /* NCRendition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C1466B21AAF513800778FB6 /* NCRendition.h */; };
 		2C1623AC1B0B99450094C250 /* NCCursesRendition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CB180B81AB1F68000731445 /* NCCursesRendition.h */; };
 		2C1623AD1B0B99460094C250 /* Logger.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD61B9A1A924CDA00ED0BF1 /* Logger.h */; };
-		2C2B3A0E1B16201500A7F48B /* NCMutableString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A0C1B16201500A7F48B /* NCMutableString.h */; };
+		2C2B3A0E1B16201500A7F48B /* NCMutableString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A0C1B16201500A7F48B /* NCMutableString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C2B3A0F1B16201500A7F48B /* NCMutableString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B3A0D1B16201500A7F48B /* NCMutableString.m */; };
 		2C2B3A111B1620C100A7F48B /* NCString_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A101B1620C100A7F48B /* NCString_Protected.h */; };
 		2C2B3A131B16235E00A7F48B /* NCText_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A121B16235E00A7F48B /* NCText_Protected.h */; };
 		2C38065B1B0CEA8200488860 /* NCDummyPlatform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C0D3C571B0C49BD000DB255 /* NCDummyPlatform.h */; };
 		2C38065C1B0CEA8200488860 /* NCDummyRendition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C0D3C5B1B0C4B03000DB255 /* NCDummyRendition.h */; };
-		2C392C321B1584D200E6B2ED /* NCTextEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C392C301B1584D200E6B2ED /* NCTextEdit.h */; };
-		2C392C331B1584D200E6B2ED /* NCTextEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C392C311B1584D200E6B2ED /* NCTextEdit.m */; };
+		2C392C321B1584D200E6B2ED /* NCTextEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C392C301B1584D200E6B2ED /* NCTextEdit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C392C391B158AA200E6B2ED /* NCLinearLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C392C361B158AA200E6B2ED /* NCLinearLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C392C3A1B158AA200E6B2ED /* NCLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C392C371B158AA200E6B2ED /* NCLinearLayout.m */; };
 		2C392C3D1B158AB100E6B2ED /* NCRelativeLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C392C3B1B158AB100E6B2ED /* NCRelativeLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,9 +79,11 @@
 		2C560C471B0EF0EF00112EBB /* NCEvaluate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C54A0B01B0E654D00F81144 /* NCEvaluate.h */; };
 		2C560C4A1B0EF28900112EBB /* NCExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C560C481B0EF28900112EBB /* NCExpression.h */; };
 		2C560C4B1B0EF28900112EBB /* NCExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C560C491B0EF28900112EBB /* NCExpression.m */; };
+		2C68829E1B1E04E5005FC461 /* NCTextEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C392C311B1584D200E6B2ED /* NCTextEdit.m */; };
+		2C68829F1B1E04F1005FC461 /* NCTextEdit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C392C301B1584D200E6B2ED /* NCTextEdit.h */; };
+		2C6882A01B1E0508005FC461 /* NCMutableString.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C2B3A0C1B16201500A7F48B /* NCMutableString.h */; };
 		2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180B81AB1F68000731445 /* NCCursesRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CB180BB1AB1F68000731445 /* NCCursesRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB180B91AB1F68000731445 /* NCCursesRendition.m */; };
-		2CB180BD1AB1F75700731445 /* NCRendition_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */; };
 		2CB4BD901A76A60500E21116 /* libNCursesFramework.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */; };
 		2CC147EF1AC4664000079172 /* NCCursesPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC147EB1AC4664000079172 /* NCCursesPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CC147F01AC4664000079172 /* NCCursesPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC147EC1AC4664000079172 /* NCCursesPlatform.m */; };
@@ -115,8 +115,6 @@
 		2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */; };
 		2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD61BB21A924CDA00ED0BF1 /* NCKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B8F1A924CDA00ED0BF1 /* NCKey.m */; };
-		2CD61BB31A924CDA00ED0BF1 /* NCRender.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B911A924CDA00ED0BF1 /* NCRender.h */; };
-		2CD61BB41A924CDA00ED0BF1 /* NCRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B921A924CDA00ED0BF1 /* NCRender.m */; };
 		2CD61BB91A924CDA00ED0BF1 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD61B9A1A924CDA00ED0BF1 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD61BBA1A924CDA00ED0BF1 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD61B9B1A924CDA00ED0BF1 /* Logger.m */; };
 /* End PBXBuildFile section */
@@ -138,6 +136,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				2C6882A01B1E0508005FC461 /* NCMutableString.h in CopyFiles */,
+				2C68829F1B1E04F1005FC461 /* NCTextEdit.h in CopyFiles */,
 				2C392C3F1B158B8C00E6B2ED /* NCLinearLayout.h in CopyFiles */,
 				2C392C401B158B8C00E6B2ED /* NCRelativeLayout.h in CopyFiles */,
 				2C3BB61F1B137B2E00BEEB5B /* NCSpacer.h in CopyFiles */,
@@ -148,7 +148,6 @@
 				2C1623A71B0B99450094C250 /* NCString.h in CopyFiles */,
 				2C1623A81B0B99450094C250 /* NCColor.h in CopyFiles */,
 				2C1623A91B0B99450094C250 /* NCKey.h in CopyFiles */,
-				2C1623AA1B0B99450094C250 /* NCRender.h in CopyFiles */,
 				2C1623AB1B0B99450094C250 /* NCRendition.h in CopyFiles */,
 				2C1623AC1B0B99450094C250 /* NCCursesRendition.h in CopyFiles */,
 				2C1623AD1B0B99460094C250 /* Logger.h in CopyFiles */,
@@ -220,7 +219,6 @@
 		2C560C491B0EF28900112EBB /* NCExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCExpression.m; sourceTree = "<group>"; };
 		2CB180B81AB1F68000731445 /* NCCursesRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesRendition.h; sourceTree = "<group>"; };
 		2CB180B91AB1F68000731445 /* NCCursesRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesRendition.m; sourceTree = "<group>"; };
-		2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition_Protected.h; sourceTree = "<group>"; };
 		2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libNCursesFramework.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4BD8F1A76A60500E21116 /* NCursesFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCursesFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4BD951A76A60500E21116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,8 +252,6 @@
 		2CD61B8A1A924CDA00ED0BF1 /* NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
 		2CD61B8E1A924CDA00ED0BF1 /* NCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCKey.h; sourceTree = "<group>"; };
 		2CD61B8F1A924CDA00ED0BF1 /* NCKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCKey.m; sourceTree = "<group>"; };
-		2CD61B911A924CDA00ED0BF1 /* NCRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRender.h; sourceTree = "<group>"; };
-		2CD61B921A924CDA00ED0BF1 /* NCRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRender.m; sourceTree = "<group>"; };
 		2CD61B9A1A924CDA00ED0BF1 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		2CD61B9B1A924CDA00ED0BF1 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -573,11 +569,8 @@
 		2CD61B901A924CDA00ED0BF1 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				2CD61B911A924CDA00ED0BF1 /* NCRender.h */,
-				2CD61B921A924CDA00ED0BF1 /* NCRender.m */,
 				2C1466B21AAF513800778FB6 /* NCRendition.h */,
 				2C1466B31AAF513800778FB6 /* NCRendition.m */,
-				2CB180BC1AB1F75700731445 /* NCRendition_Protected.h */,
 				2CB180B81AB1F68000731445 /* NCCursesRendition.h */,
 				2CB180B91AB1F68000731445 /* NCCursesRendition.m */,
 				2C0D3C5B1B0C4B03000DB255 /* NCDummyRendition.h */,
@@ -629,11 +622,11 @@
 				2C54A0C21B0E68BF00F81144 /* NCNumberToken.h in Headers */,
 				2C2B3A131B16235E00A7F48B /* NCText_Protected.h in Headers */,
 				2CC1481D1AC4670F00079172 /* NCScrollBarSimpleStrategy.h in Headers */,
-				2C392C321B1584D200E6B2ED /* NCTextEdit.h in Headers */,
 				2C2B3A111B1620C100A7F48B /* NCString_Protected.h in Headers */,
 				2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */,
 				2C54A0C61B0E68CF00F81144 /* NCWordToken.h in Headers */,
 				2C392C3D1B158AB100E6B2ED /* NCRelativeLayout.h in Headers */,
+				2C392C321B1584D200E6B2ED /* NCTextEdit.h in Headers */,
 				2C392C391B158AA200E6B2ED /* NCLinearLayout.h in Headers */,
 				2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */,
 				2C3BB61D1B13790C00BEEB5B /* NCSpacer.h in Headers */,
@@ -650,9 +643,7 @@
 				2C0D3C5D1B0C4B03000DB255 /* NCDummyRendition.h in Headers */,
 				2C560C4A1B0EF28900112EBB /* NCExpression.h in Headers */,
 				2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */,
-				2CD61BB31A924CDA00ED0BF1 /* NCRender.h in Headers */,
 				2CD61BB91A924CDA00ED0BF1 /* Logger.h in Headers */,
-				2CB180BD1AB1F75700731445 /* NCRendition_Protected.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +736,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C68829E1B1E04E5005FC461 /* NCTextEdit.m in Sources */,
 				2C54A0B31B0E654D00F81144 /* NCEvaluate.m in Sources */,
 				2CD61BBA1A924CDA00ED0BF1 /* Logger.m in Sources */,
 				2C1466BC1AAF53B000778FB6 /* NCMatrix.m in Sources */,
@@ -775,7 +767,6 @@
 				2C54A0A81B0E337F00F81144 /* NCXMLLayoutParser.m in Sources */,
 				2CC148161AC4670F00079172 /* NCBorderDottedStrategy.m in Sources */,
 				2CC1481C1AC4670F00079172 /* NCDecorator.m in Sources */,
-				2CD61BB41A924CDA00ED0BF1 /* NCRender.m in Sources */,
 				2C392C3A1B158AA200E6B2ED /* NCLinearLayout.m in Sources */,
 				2C560C4B1B0EF28900112EBB /* NCExpression.m in Sources */,
 				2C1466B51AAF513800778FB6 /* NCRendition.m in Sources */,
@@ -784,7 +775,6 @@
 				2C54A0CB1B0E6D3C00F81144 /* NCSource.m in Sources */,
 				2C0D3C5A1B0C49BD000DB255 /* NCDummyPlatform.m in Sources */,
 				2CB180BB1AB1F68000731445 /* NCCursesRendition.m in Sources */,
-				2C392C331B1584D200E6B2ED /* NCTextEdit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

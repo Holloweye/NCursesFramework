@@ -55,8 +55,8 @@
         for(int x = 0; x < bounds.width; x++) {
             [rendition setCharacter:self.character
                                  at:CGSizeMake(x, y)
-                     withForeground:self.foreground
-                     withBackground:self.background];
+                     withForeground:self.foreground.color
+                     withBackground:self.background.color];
         }
     }
     return [self applyPaddingOnRendition:rendition

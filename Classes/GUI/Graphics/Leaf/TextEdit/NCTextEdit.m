@@ -11,12 +11,13 @@
 #import "NCGraphic+Bounds.h"
 
 @implementation NCTextEdit
+@dynamic text;
 
 - (instancetype)init
 {
     self = [super init];
     if(self) {
-        
+        self.text = [[NCMutableString alloc] init];
     }
     return self;
 }
@@ -25,7 +26,7 @@
 {
     self = [super initWithAttributes:attributes];
     if(self) {
-        
+        self.text = [[NCMutableString alloc] init];
     }
     return self;
 }
@@ -33,8 +34,6 @@
 - (NCRendition *)drawInBounds:(CGSize)bounds
                  withPlatform:(NCPlatform *)platform
 {
-    BOOL didDrawCursor = NO;
-    
     CGRect padding = [self padding];
     bounds = CGSizeMake(MAX(bounds.width - padding.origin.x - padding.size.width, 0),
                         MAX(bounds.height - padding.origin.y - padding.size.height, 0));
@@ -65,13 +64,21 @@
                 xOffset = (bounds.width-text.length);
             }
             
-            [rendition setCharacter:c.c
-                                 at:CGSizeMake(x + xOffset, y + yOffset)
-                     withForeground:c.foreground
-                     withBackground:c.background];
+            if(self.cursorPosition.y == y && self.cursorPosition.x == x) {
+                [rendition setCharacter:c.c
+                                     at:CGSizeMake(x + xOffset, y + yOffset)
+                         withForeground:c.background.color
+                         withBackground:c.foreground.color];
+            } else {
+                [rendition setCharacter:c.c
+                                     at:CGSizeMake(x + xOffset, y + yOffset)
+                         withForeground:c.foreground.color
+                         withBackground:c.background.color];
+            }
             index++;
         }
     }
+    
     return [self applyPaddingOnRendition:rendition
                             withPlatform:platform];
 }

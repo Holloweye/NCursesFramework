@@ -133,8 +133,8 @@
             
             [rendition setCharacter:c.c
                                  at:CGSizeMake(x + xOffset, y + yOffset)
-                     withForeground:c.foreground
-                     withBackground:c.background];
+                     withForeground:c.foreground.color
+                     withBackground:c.background.color];
             
             index++;
         }

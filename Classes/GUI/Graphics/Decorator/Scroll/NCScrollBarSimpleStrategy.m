@@ -67,8 +67,8 @@
         for(int x = 0; x < barSize; x++) {
             [rendition setCharacter:'#'
                                  at:CGSizeMake(barPos + x, 0)
-                     withForeground:_foreground
-                     withBackground:_background];
+                     withForeground:_foreground.color
+                     withBackground:_background.color];
         }
     } else {
         int barSize = MAX(1, BAR_MAX_SIZE * p);
@@ -84,8 +84,8 @@
         for(int y = 0; y < barSize; y++) {
             [rendition setCharacter:'#'
                                  at:CGSizeMake(0, barPos + y)
-                     withForeground:_foreground
-                     withBackground:_background];
+                     withForeground:_foreground.color
+                     withBackground:_background.color];
         }
     }
     return rendition;

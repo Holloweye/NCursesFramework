@@ -17,7 +17,6 @@ typedef enum : NSUInteger {
     ColorMagenta,
     ColorCyan,
     ColorWhite,
-    ColorTransparent
 } Color;
 
 @interface NCColor : NSObject
@@ -28,7 +27,6 @@ typedef enum : NSUInteger {
 
 + (NCColor*) colorFromString:(NSString*)str;
 
-+ (NCColor*) clearColor;
 + (NCColor*) blackColor;
 + (NCColor*) redColor;
 + (NCColor*) greenColor;

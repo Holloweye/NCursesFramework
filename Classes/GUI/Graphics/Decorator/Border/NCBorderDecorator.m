@@ -12,7 +12,6 @@
 #import "NCBorderStrategy.h"
 #import "NCBorderFilledStrategy.h"
 #import "NCBorderDottedStrategy.h"
-#import "NCRender.h"
 #import "NCPlatform.h"
 
 @implementation NCBorderDecorator

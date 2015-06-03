@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class NCColor;
+#import "NCColor.h"
 @class NCRender;
 
 @interface NCRendition : NSObject
@@ -18,10 +18,8 @@
 
 - (void)setCharacter:(char)c
                   at:(CGSize)pos
-      withForeground:(NCColor*)foreground
-      withBackground:(NCColor*)background;
-
-- (NCRender *)atIndex:(CGSize)pos;
+      withForeground:(Color)foreground
+      withBackground:(Color)background;
 
 - (void)mergeRendition:(NCRendition*)rendition
                inFrame:(CGRect)frame;

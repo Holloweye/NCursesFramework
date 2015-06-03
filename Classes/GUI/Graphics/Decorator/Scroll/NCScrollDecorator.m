@@ -88,7 +88,7 @@
                                                  graphicRendition.bounds.height)];
             
             int scrollMax = graphicRendition.bounds.height > bounds.height ? graphicRendition.bounds.height - bounds.height : 0;
-            int scrollPos = abs(MAX(_offset.height, 0-scrollMax));
+            int scrollPos = fabs(MAX(_offset.height, 0-scrollMax));
             
             if(_strategy) {
                 NCRendition *barRendition = [_strategy drawInBounds:CGSizeMake(1, bounds.height)
@@ -117,7 +117,7 @@
                                                  graphicRendition.bounds.height)];
             
             int scrollMax = graphicRendition.bounds.width > bounds.width ? graphicRendition.bounds.width - bounds.width : 0;
-            int scrollPos = abs(MAX(_offset.width, 0-scrollMax));
+            int scrollPos = fabs(MAX(_offset.width, 0-scrollMax));
             
             if(_strategy) {
                 NCRendition *barRendition = [_strategy drawInBounds:CGSizeMake(bounds.width, 1)
