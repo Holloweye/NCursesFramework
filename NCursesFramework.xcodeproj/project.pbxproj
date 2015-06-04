@@ -12,7 +12,7 @@
 		2C0D3C5D1B0C4B03000DB255 /* NCDummyRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C0D3C5B1B0C4B03000DB255 /* NCDummyRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C0D3C5E1B0C4B03000DB255 /* NCDummyRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D3C5C1B0C4B03000DB255 /* NCDummyRendition.m */; };
 		2C1466B01AAF4E6900778FB6 /* NCString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466A81AAF4E6900778FB6 /* NCString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C1466B11AAF4E6900778FB6 /* NCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466A91AAF4E6900778FB6 /* NCString.m */; };
+		2C1466B11AAF4E6900778FB6 /* NCString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466A91AAF4E6900778FB6 /* NCString.mm */; };
 		2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466B21AAF513800778FB6 /* NCRendition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C1466B51AAF513800778FB6 /* NCRendition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1466B31AAF513800778FB6 /* NCRendition.m */; };
 		2C1466BB1AAF53B000778FB6 /* NCMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1466B91AAF53B000778FB6 /* NCMatrix.h */; };
@@ -38,8 +38,8 @@
 		2C1623AC1B0B99450094C250 /* NCCursesRendition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CB180B81AB1F68000731445 /* NCCursesRendition.h */; };
 		2C1623AD1B0B99460094C250 /* Logger.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD61B9A1A924CDA00ED0BF1 /* Logger.h */; };
 		2C2B3A0E1B16201500A7F48B /* NCMutableString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A0C1B16201500A7F48B /* NCMutableString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C2B3A0F1B16201500A7F48B /* NCMutableString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B3A0D1B16201500A7F48B /* NCMutableString.m */; };
-		2C2B3A111B1620C100A7F48B /* NCString_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A101B1620C100A7F48B /* NCString_Protected.h */; };
+		2C2B3A0F1B16201500A7F48B /* NCMutableString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B3A0D1B16201500A7F48B /* NCMutableString.mm */; };
+		2C2B3A111B1620C100A7F48B /* NCString_Protected.hh in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A101B1620C100A7F48B /* NCString_Protected.hh */; };
 		2C2B3A131B16235E00A7F48B /* NCText_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2B3A121B16235E00A7F48B /* NCText_Protected.h */; };
 		2C38065B1B0CEA8200488860 /* NCDummyPlatform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C0D3C571B0C49BD000DB255 /* NCDummyPlatform.h */; };
 		2C38065C1B0CEA8200488860 /* NCDummyRendition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C0D3C5B1B0C4B03000DB255 /* NCDummyRendition.h */; };
@@ -175,15 +175,15 @@
 		2C0D3C581B0C49BD000DB255 /* NCDummyPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDummyPlatform.m; sourceTree = "<group>"; };
 		2C0D3C5B1B0C4B03000DB255 /* NCDummyRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDummyRendition.h; sourceTree = "<group>"; };
 		2C0D3C5C1B0C4B03000DB255 /* NCDummyRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDummyRendition.m; sourceTree = "<group>"; };
-		2C1466A81AAF4E6900778FB6 /* NCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCString.h; sourceTree = "<group>"; };
-		2C1466A91AAF4E6900778FB6 /* NCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCString.m; sourceTree = "<group>"; };
+		2C1466A81AAF4E6900778FB6 /* NCString.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = NCString.h; sourceTree = "<group>"; };
+		2C1466A91AAF4E6900778FB6 /* NCString.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCString.mm; sourceTree = "<group>"; };
 		2C1466B21AAF513800778FB6 /* NCRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRendition.h; sourceTree = "<group>"; };
 		2C1466B31AAF513800778FB6 /* NCRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRendition.m; sourceTree = "<group>"; };
 		2C1466B91AAF53B000778FB6 /* NCMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMatrix.h; sourceTree = "<group>"; };
 		2C1466BA1AAF53B000778FB6 /* NCMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMatrix.m; sourceTree = "<group>"; };
 		2C2B3A0C1B16201500A7F48B /* NCMutableString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMutableString.h; sourceTree = "<group>"; };
-		2C2B3A0D1B16201500A7F48B /* NCMutableString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMutableString.m; sourceTree = "<group>"; };
-		2C2B3A101B1620C100A7F48B /* NCString_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCString_Protected.h; sourceTree = "<group>"; };
+		2C2B3A0D1B16201500A7F48B /* NCMutableString.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCMutableString.mm; sourceTree = "<group>"; };
+		2C2B3A101B1620C100A7F48B /* NCString_Protected.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCString_Protected.hh; sourceTree = "<group>"; };
 		2C2B3A121B16235E00A7F48B /* NCText_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCText_Protected.h; sourceTree = "<group>"; };
 		2C392C301B1584D200E6B2ED /* NCTextEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTextEdit.h; sourceTree = "<group>"; };
 		2C392C311B1584D200E6B2ED /* NCTextEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTextEdit.m; sourceTree = "<group>"; };
@@ -279,10 +279,10 @@
 			isa = PBXGroup;
 			children = (
 				2C1466A81AAF4E6900778FB6 /* NCString.h */,
-				2C1466A91AAF4E6900778FB6 /* NCString.m */,
+				2C1466A91AAF4E6900778FB6 /* NCString.mm */,
 				2C2B3A0C1B16201500A7F48B /* NCMutableString.h */,
-				2C2B3A0D1B16201500A7F48B /* NCMutableString.m */,
-				2C2B3A101B1620C100A7F48B /* NCString_Protected.h */,
+				2C2B3A0D1B16201500A7F48B /* NCMutableString.mm */,
+				2C2B3A101B1620C100A7F48B /* NCString_Protected.hh */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -622,7 +622,7 @@
 				2C54A0C21B0E68BF00F81144 /* NCNumberToken.h in Headers */,
 				2C2B3A131B16235E00A7F48B /* NCText_Protected.h in Headers */,
 				2CC1481D1AC4670F00079172 /* NCScrollBarSimpleStrategy.h in Headers */,
-				2C2B3A111B1620C100A7F48B /* NCString_Protected.h in Headers */,
+				2C2B3A111B1620C100A7F48B /* NCString_Protected.hh in Headers */,
 				2CB180BA1AB1F68000731445 /* NCCursesRendition.h in Headers */,
 				2C54A0C61B0E68CF00F81144 /* NCWordToken.h in Headers */,
 				2C392C3D1B158AB100E6B2ED /* NCRelativeLayout.h in Headers */,
@@ -692,7 +692,7 @@
 		2CB4BD7C1A76A60500E21116 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = ChristerUL;
 				TargetAttributes = {
 					2CB4BD831A76A60500E21116 = {
@@ -745,7 +745,7 @@
 				2C54A0A61B0E337F00F81144 /* NCLayoutParser.m in Sources */,
 				2C3BB61E1B13790C00BEEB5B /* NCSpacer.m in Sources */,
 				2CC147F01AC4664000079172 /* NCCursesPlatform.m in Sources */,
-				2C1466B11AAF4E6900778FB6 /* NCString.m in Sources */,
+				2C1466B11AAF4E6900778FB6 /* NCString.mm in Sources */,
 				2C54A0C71B0E68CF00F81144 /* NCWordToken.m in Sources */,
 				2CC148121AC4670F00079172 /* NCCanvas.m in Sources */,
 				2CD61BB21A924CDA00ED0BF1 /* NCKey.m in Sources */,
@@ -759,7 +759,7 @@
 				2CC148241AC4670F00079172 /* NCText.m in Sources */,
 				2CC147F21AC4664000079172 /* NCPlatform.m in Sources */,
 				2CC148201AC4670F00079172 /* NCScrollBarStrategy.m in Sources */,
-				2C2B3A0F1B16201500A7F48B /* NCMutableString.m in Sources */,
+				2C2B3A0F1B16201500A7F48B /* NCMutableString.mm in Sources */,
 				2CC1481E1AC4670F00079172 /* NCScrollBarSimpleStrategy.m in Sources */,
 				2CC148141AC4670F00079172 /* NCBorderDecorator.m in Sources */,
 				2CC148221AC4670F00079172 /* NCScrollDecorator.m in Sources */,
@@ -873,6 +873,7 @@
 		2CB4BD991A76A60500E21116 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -885,6 +886,7 @@
 		2CB4BD9A1A76A60500E21116 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;

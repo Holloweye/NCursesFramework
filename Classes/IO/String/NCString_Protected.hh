@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "vector"
 
 @interface NCString ()
-@property (nonatomic, strong) NSMutableArray *chars;
+{
+    @protected
+    std::vector<int> chars;
+}
+
+- (id)initWithVector:(std::vector<int>)vector;
+
 @end

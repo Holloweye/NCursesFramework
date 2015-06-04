@@ -55,8 +55,6 @@
         }
         
         for(NSUInteger x = 0; x < text.length; x++) {
-            NCChar *c = [text getCharAtIndex:x];
-            
             int xOffset = 0;
             if(self.horizontalAlignment == NCLineAlignmentCenter) {
                 xOffset = (bounds.width-text.length) / 2;
@@ -65,15 +63,15 @@
             }
             
             if(self.cursorPosition.y == y && self.cursorPosition.x == x) {
-                [rendition setCharacter:c.c
+                [rendition setCharacter:[text getCharAtIndex:x]
                                      at:CGSizeMake(x + xOffset, y + yOffset)
-                         withForeground:c.background.color
-                         withBackground:c.foreground.color];
+                         withForeground:[text getBgAtIndex:x]
+                         withBackground:[text getFgAtIndex:x]];
             } else {
-                [rendition setCharacter:c.c
+                [rendition setCharacter:[text getCharAtIndex:x]
                                      at:CGSizeMake(x + xOffset, y + yOffset)
-                         withForeground:c.foreground.color
-                         withBackground:c.background.color];
+                         withForeground:[text getFgAtIndex:x]
+                         withBackground:[text getBgAtIndex:x]];
             }
             index++;
         }

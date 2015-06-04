@@ -7,7 +7,7 @@
 //
 
 #import "NCMutableString.h"
-#import "NCString_Protected.h"
+#import "NCString_Protected.hh"
 
 @implementation NCMutableString
 
@@ -15,11 +15,7 @@
       withBackground:(NCColor *)background
       withForeground:(NCColor *)foreground
 {
-    NCChar *ch = [[NCChar alloc] init];
-    ch.c = c;
-    ch.foreground = (foreground ? foreground : [NCColor whiteColor]);
-    ch.background = (background ? background : [NCColor blackColor]);
-    [self.chars addObject:ch];
+    chars.push_back(c + foreground.color * 1000 + background.color * 10000);
 }
 
 - (void)insertCharacter:(char)c
@@ -27,16 +23,16 @@
          withForeground:(NCColor *)foreground
                 atIndex:(NSUInteger)index
 {
-    NCChar *ch = [[NCChar alloc] init];
-    ch.c = c;
-    ch.foreground = (foreground ? foreground : [NCColor whiteColor]);
-    ch.background = (background ? background : [NCColor blackColor]);
-    [self.chars insertObject:ch atIndex:index];
+    chars.insert(chars.begin(), c + foreground.color * 1000 + background.color * 10000);
 }
 
 - (void)deleteCharacterAtIndex:(NSUInteger)index
 {
-    [self.chars removeObjectAtIndex:index];
+    if(index < chars.size()) {
+        chars.erase(chars.begin() + index);
+    } else if(chars.size() > 0) {
+        chars.erase(chars.end());
+    }
 }
 
 @end

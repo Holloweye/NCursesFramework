@@ -9,12 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "NCColor.h"
 
-@interface NCChar : NSObject
-@property (nonatomic, assign) char c;
-@property (nonatomic, strong) NCColor *foreground;
-@property (nonatomic, strong) NCColor *background;
-@end
-
 @interface NCString : NSObject
 
 - (id)initWithText:(NSString*)text
@@ -29,12 +23,18 @@
 
 @property (readonly) NSUInteger length;
 
-- (NCChar*)getCharAtIndex:(NSUInteger)index;
+- (char)getCharAtIndex:(NSUInteger)index;
+- (Color)getFgAtIndex:(NSUInteger)index;
+- (Color)getBgAtIndex:(NSUInteger)index;
+
 - (NCString*)substringToIndex:(NSUInteger)index;
 - (NCString*)substringFromIndex:(NSUInteger)index;
+
 - (NSArray*)componentsSeparatedByCharactersInSet:(NSCharacterSet*)characterSet;
+
 - (NCString*)appendHeadText:(NCString *)text;
 - (NCString*)appendTailText:(NCString *)text;
+
 - (char)characterAtIndex:(NSUInteger)index;
 
 @end
