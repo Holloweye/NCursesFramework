@@ -30,20 +30,28 @@ You're now ready to build.
 ## Using the framework
 
 To start using the framework just add:
-> #import "NCursesFramework.h"
+```
+#import "NCursesFramework.h"
+```
 
 It is possible to define all the layouts in xml. You can inflate a xml layout using the NCLayoutInflator:
-> NCGraphic *root = [NCLayoutInflator inflateGraphicFromXML:<NSData>];
+```
+NCGraphic *root = [NCLayoutInflator inflateGraphicFromXML:<NSData>];
+```
 
 To render the root graphic:
-> NCRendition *rendition = [root drawInBounds:[[NCCursesPlatform factory] screenSize] withPlatform:[NCCursesPlatform factory]];
-> [rendition drawToScreen];
+```
+NCRendition *rendition = [root drawInBounds:[[NCCursesPlatform factory] screenSize] withPlatform:[NCCursesPlatform factory]];
+[rendition drawToScreen];
+```
 
 Although you might not be able to have any time to see it in action because the program might closes itself instantly. To resolve this issue we can wait for user to input a key between each rendering:
-> while(true) {
-> 	// render...
-> 	NCKey *keyPressed = [[NCCursesPlatform factory] getKey];
->	if([key isEqualTo:[NCKey NCKEY_q]]) {
->		break;
->	}
-> }
+```
+while(true) {
+	// render...
+	NCKey *keyPressed = [[NCCursesPlatform factory] getKey];
+	if([key isEqualTo:[NCKey NCKEY_q]]) {
+		break;
+	}
+}
+```
