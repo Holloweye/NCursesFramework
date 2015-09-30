@@ -46,6 +46,7 @@ Here is an example of a xml layout:
 	<NCText text=" world!"/>
 </NCLinearLayout>
 ```
+Although this is a simple example of a layout you can create. You could actually create very complex layouts with multiple children with different containers. You could even split your layouts into several xml files, this is useful when you want to reuse a layout mulitple times in the program.
 
 To render the root graphic:
 ```
@@ -64,3 +65,28 @@ while(true) {
 	}
 }
 ```
+
+And here is all of it together:
+```
+#import <Foundation/Foundation.h>
+#import "NCursesFramework.h"
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+		NCGraphic *root = [NCLayoutInflator inflateGraphicFromXML:<NSData>];
+
+		while(true) {
+			NCRendition *rendition = [root drawInBounds:[[NCCursesPlatform factory] screenSize] withPlatform:[NCCursesPlatform factory]];
+			[rendition drawToScreen];
+
+			NCKey *key = [[NCCursesPlatform factory] getKey];
+			if([key isEqualTo:[NCKey NCKEY_q]]) {
+				break;
+			}
+		}
+	}
+    return 0;
+}
+```
+
+Have fun!
