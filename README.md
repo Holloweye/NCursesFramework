@@ -39,6 +39,14 @@ It is possible to define all the layouts in xml. You can inflate a xml layout us
 NCGraphic *root = [NCLayoutInflator inflateGraphicFromXML:<NSData>];
 ```
 
+Here is an example of a xml layout:
+```
+<NCLinearLayout orientation="horizontal">
+	<NCText text="Hello" foreground="red"/>
+	<NCText text=" world!"/>
+</NCLinearLayout>
+```
+
 To render the root graphic:
 ```
 NCRendition *rendition = [root drawInBounds:[[NCCursesPlatform factory] screenSize] withPlatform:[NCCursesPlatform factory]];
@@ -48,8 +56,9 @@ NCRendition *rendition = [root drawInBounds:[[NCCursesPlatform factory] screenSi
 Although you might not be able to have any time to see it in action because the program might closes itself instantly. To resolve this issue we can wait for user to input a key between each rendering:
 ```
 while(true) {
-	// render...
-	NCKey *keyPressed = [[NCCursesPlatform factory] getKey];
+	// render here...
+
+	NCKey *key = [[NCCursesPlatform factory] getKey];
 	if([key isEqualTo:[NCKey NCKEY_q]]) {
 		break;
 	}

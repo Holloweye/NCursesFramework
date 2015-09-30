@@ -25,15 +25,24 @@ typedef enum : NSUInteger {
     NCGravityBottomRight,
 } NCGravity;
 
+@interface NCGraphic : NSObject
 /*
  XML keys availiable:
  
  "id" = sid
- "gravity" = gravity
- "minSize" = minSize
+ "gravity" = "topLeft"    / "topCenter"    / "topRight"    /
+             "middleLeft" / "middleCenter" / "middleRight" / 
+             "bottomLeft" / "bottomCenter" / "bottomRight"
+ "minWidth" = minWidth
+ "minHeight" = minHeight
+ "maxWidth" = maxWidth
+ "maxHeight" = maxHeight
+ "topPadding" = topPadding
+ "rightPadding" = rightPadding
+ "bottomPadding" = bottomPadding
+ "leftPadding" = leftPadding
  
  */
-@interface NCGraphic : NSObject
 
 /*
  Identifier name for this graphic, used to later retrieve it with [graphic findGraphicWithId:].
@@ -94,9 +103,6 @@ typedef enum : NSUInteger {
  */
 - (NCGraphic*)findGraphicWithId:(NSString*)sid;
 
-/*
- 
- */
 - (NCCanvas*)getCanvas;
 - (void)addChild:(NCGraphic*)child;
 - (void)insertChild:(NCGraphic*)child atIndex:(NSUInteger)index;

@@ -8,6 +8,9 @@
 
 #import "NCGraphic.h"
 
+/*
+ A generic container, inherit from this class to create a new type of container graphic.
+ */
 @interface NCCanvas : NCGraphic
 @property (nonatomic, strong, readonly) NSMutableArray *children;
 @end

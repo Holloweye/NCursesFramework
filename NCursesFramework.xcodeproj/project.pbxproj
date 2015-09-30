@@ -53,18 +53,6 @@
 		2C3BB61D1B13790C00BEEB5B /* NCSpacer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3BB61B1B13790C00BEEB5B /* NCSpacer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C3BB61E1B13790C00BEEB5B /* NCSpacer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BB61C1B13790C00BEEB5B /* NCSpacer.m */; };
 		2C3BB61F1B137B2E00BEEB5B /* NCSpacer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C3BB61B1B13790C00BEEB5B /* NCSpacer.h */; };
-		2C52280D1B20A53500360C36 /* BKAsciiConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5228041B20A53500360C36 /* BKAsciiConverter.h */; };
-		2C52280E1B20A53500360C36 /* BKAsciiConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5228051B20A53500360C36 /* BKAsciiConverter.m */; };
-		2C52280F1B20A53500360C36 /* BKAsciiConverter_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5228061B20A53500360C36 /* BKAsciiConverter_Internal.h */; };
-		2C5228101B20A53500360C36 /* BKAsciiConverter_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5228071B20A53500360C36 /* BKAsciiConverter_Internal.m */; };
-		2C5228111B20A53500360C36 /* BKAsciiDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5228081B20A53500360C36 /* BKAsciiDefinition.h */; };
-		2C5228121B20A53500360C36 /* BKAsciiDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5228091B20A53500360C36 /* BKAsciiDefinition.m */; };
-		2C5228131B20A53500360C36 /* NSImage+BKAscii.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52280B1B20A53500360C36 /* NSImage+BKAscii.h */; };
-		2C5228141B20A53500360C36 /* NSImage+BKAscii.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52280C1B20A53500360C36 /* NSImage+BKAscii.m */; };
-		2C5228181B20AA9100360C36 /* NCImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5228161B20AA9100360C36 /* NCImage.h */; };
-		2C5228191B20AA9100360C36 /* NCImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C5228171B20AA9100360C36 /* NCImage.mm */; };
-		2C52281D1B20B0B100360C36 /* NSColor+Distance.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52281B1B20B0B100360C36 /* NSColor+Distance.h */; };
-		2C52281E1B20B0B100360C36 /* NSColor+Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52281C1B20B0B100360C36 /* NSColor+Distance.m */; };
 		2C52A45F1B0F869C002AA4EE /* NCGraphic+Bounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A45D1B0F869C002AA4EE /* NCGraphic+Bounds.h */; };
 		2C52A4601B0F869C002AA4EE /* NCGraphic+Bounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A45E1B0F869C002AA4EE /* NCGraphic+Bounds.m */; };
 		2C54A0A51B0E337F00F81144 /* NCLayoutParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C54A0A01B0E337F00F81144 /* NCLayoutParser.h */; };
@@ -208,18 +196,6 @@
 		2C392C3C1B158AB100E6B2ED /* NCRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRelativeLayout.m; sourceTree = "<group>"; };
 		2C3BB61B1B13790C00BEEB5B /* NCSpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSpacer.h; sourceTree = "<group>"; };
 		2C3BB61C1B13790C00BEEB5B /* NCSpacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSpacer.m; sourceTree = "<group>"; };
-		2C5228041B20A53500360C36 /* BKAsciiConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAsciiConverter.h; sourceTree = "<group>"; };
-		2C5228051B20A53500360C36 /* BKAsciiConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAsciiConverter.m; sourceTree = "<group>"; };
-		2C5228061B20A53500360C36 /* BKAsciiConverter_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAsciiConverter_Internal.h; sourceTree = "<group>"; };
-		2C5228071B20A53500360C36 /* BKAsciiConverter_Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAsciiConverter_Internal.m; sourceTree = "<group>"; };
-		2C5228081B20A53500360C36 /* BKAsciiDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAsciiDefinition.h; sourceTree = "<group>"; };
-		2C5228091B20A53500360C36 /* BKAsciiDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAsciiDefinition.m; sourceTree = "<group>"; };
-		2C52280B1B20A53500360C36 /* NSImage+BKAscii.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+BKAscii.h"; sourceTree = "<group>"; };
-		2C52280C1B20A53500360C36 /* NSImage+BKAscii.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+BKAscii.m"; sourceTree = "<group>"; };
-		2C5228161B20AA9100360C36 /* NCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImage.h; sourceTree = "<group>"; };
-		2C5228171B20AA9100360C36 /* NCImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCImage.mm; sourceTree = "<group>"; };
-		2C52281B1B20B0B100360C36 /* NSColor+Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Distance.h"; sourceTree = "<group>"; };
-		2C52281C1B20B0B100360C36 /* NSColor+Distance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Distance.m"; sourceTree = "<group>"; };
 		2C52A45D1B0F869C002AA4EE /* NCGraphic+Bounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCGraphic+Bounds.h"; sourceTree = "<group>"; };
 		2C52A45E1B0F869C002AA4EE /* NCGraphic+Bounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCGraphic+Bounds.m"; sourceTree = "<group>"; };
 		2C54A0A01B0E337F00F81144 /* NCLayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLayoutParser.h; sourceTree = "<group>"; };
@@ -358,56 +334,6 @@
 				2C3BB61C1B13790C00BEEB5B /* NCSpacer.m */,
 			);
 			path = Spacer;
-			sourceTree = "<group>";
-		};
-		2C5228021B20A53500360C36 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				2C52281A1B20B0B100360C36 /* MTColorDistance */,
-				2C5228031B20A53500360C36 /* BKAsciiImage */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
-		2C5228031B20A53500360C36 /* BKAsciiImage */ = {
-			isa = PBXGroup;
-			children = (
-				2C5228041B20A53500360C36 /* BKAsciiConverter.h */,
-				2C5228051B20A53500360C36 /* BKAsciiConverter.m */,
-				2C5228061B20A53500360C36 /* BKAsciiConverter_Internal.h */,
-				2C5228071B20A53500360C36 /* BKAsciiConverter_Internal.m */,
-				2C5228081B20A53500360C36 /* BKAsciiDefinition.h */,
-				2C5228091B20A53500360C36 /* BKAsciiDefinition.m */,
-				2C52280A1B20A53500360C36 /* UIKit */,
-			);
-			path = BKAsciiImage;
-			sourceTree = "<group>";
-		};
-		2C52280A1B20A53500360C36 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				2C52280B1B20A53500360C36 /* NSImage+BKAscii.h */,
-				2C52280C1B20A53500360C36 /* NSImage+BKAscii.m */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		2C5228151B20AA7900360C36 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				2C5228161B20AA9100360C36 /* NCImage.h */,
-				2C5228171B20AA9100360C36 /* NCImage.mm */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
-		2C52281A1B20B0B100360C36 /* MTColorDistance */ = {
-			isa = PBXGroup;
-			children = (
-				2C52281B1B20B0B100360C36 /* NSColor+Distance.h */,
-				2C52281C1B20B0B100360C36 /* NSColor+Distance.m */,
-			);
-			path = MTColorDistance;
 			sourceTree = "<group>";
 		};
 		2C54A09F1B0E337F00F81144 /* LayoutParser */ = {
@@ -583,7 +509,6 @@
 		2CC1480B1AC4670F00079172 /* Leaf */ = {
 			isa = PBXGroup;
 			children = (
-				2C5228151B20AA7900360C36 /* Image */,
 				2C3BB61A1B1378F900BEEB5B /* Spacer */,
 				2C392C2F1B1584BA00E6B2ED /* TextEdit */,
 				2CC1480C1AC4670F00079172 /* Text */,
@@ -604,7 +529,6 @@
 		2CD61B6F1A924CDA00ED0BF1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2C5228021B20A53500360C36 /* Libs */,
 				2CC147F31AC4670F00079172 /* GUI */,
 				2CD61B871A924CDA00ED0BF1 /* IO */,
 				2CD61B981A924CDA00ED0BF1 /* Utils */,
@@ -686,7 +610,6 @@
 			files = (
 				2C1466B01AAF4E6900778FB6 /* NCString.h in Headers */,
 				2CC148251AC4670F00079172 /* NCGraphic.h in Headers */,
-				2C5228111B20A53500360C36 /* BKAsciiDefinition.h in Headers */,
 				2C52A45F1B0F869C002AA4EE /* NCGraphic+Bounds.h in Headers */,
 				2CC148151AC4670F00079172 /* NCBorderDottedStrategy.h in Headers */,
 				2CC147F11AC4664000079172 /* NCPlatform.h in Headers */,
@@ -695,10 +618,8 @@
 				2CC148231AC4670F00079172 /* NCText.h in Headers */,
 				2CC148211AC4670F00079172 /* NCScrollDecorator.h in Headers */,
 				2CC147EF1AC4664000079172 /* NCCursesPlatform.h in Headers */,
-				2C5228131B20A53500360C36 /* NSImage+BKAscii.h in Headers */,
 				2C54A0CA1B0E6D3C00F81144 /* NCSource.h in Headers */,
 				2CC148131AC4670F00079172 /* NCBorderDecorator.h in Headers */,
-				2C52281D1B20B0B100360C36 /* NSColor+Distance.h in Headers */,
 				2CC1481B1AC4670F00079172 /* NCDecorator.h in Headers */,
 				2CC148191AC4670F00079172 /* NCBorderStrategy.h in Headers */,
 				2C54A0BE1B0E68AE00F81144 /* NCSignToken.h in Headers */,
@@ -711,7 +632,6 @@
 				2C54A0C61B0E68CF00F81144 /* NCWordToken.h in Headers */,
 				2C392C3D1B158AB100E6B2ED /* NCRelativeLayout.h in Headers */,
 				2C392C321B1584D200E6B2ED /* NCTextEdit.h in Headers */,
-				2C5228181B20AA9100360C36 /* NCImage.h in Headers */,
 				2C392C391B158AA200E6B2ED /* NCLinearLayout.h in Headers */,
 				2CD61BB11A924CDA00ED0BF1 /* NCKey.h in Headers */,
 				2C3BB61D1B13790C00BEEB5B /* NCSpacer.h in Headers */,
@@ -728,10 +648,8 @@
 				2C0D3C591B0C49BD000DB255 /* NCDummyPlatform.h in Headers */,
 				2C0D3C5D1B0C4B03000DB255 /* NCDummyRendition.h in Headers */,
 				2C560C4A1B0EF28900112EBB /* NCExpression.h in Headers */,
-				2C52280D1B20A53500360C36 /* BKAsciiConverter.h in Headers */,
 				2CD61BAD1A924CDA00ED0BF1 /* NCColor.h in Headers */,
 				2CD61BB91A924CDA00ED0BF1 /* Logger.h in Headers */,
-				2C52280F1B20A53500360C36 /* BKAsciiConverter_Internal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,7 +745,6 @@
 				2C68829E1B1E04E5005FC461 /* NCTextEdit.m in Sources */,
 				2C54A0B31B0E654D00F81144 /* NCEvaluate.m in Sources */,
 				2CD61BBA1A924CDA00ED0BF1 /* Logger.m in Sources */,
-				2C52280E1B20A53500360C36 /* BKAsciiConverter.m in Sources */,
 				2C1466BC1AAF53B000778FB6 /* NCMatrix.m in Sources */,
 				2CD61BAE1A924CDA00ED0BF1 /* NCColor.m in Sources */,
 				2CC1481A1AC4670F00079172 /* NCBorderStrategy.m in Sources */,
@@ -836,13 +753,10 @@
 				2CC147F01AC4664000079172 /* NCCursesPlatform.m in Sources */,
 				2C1466B11AAF4E6900778FB6 /* NCString.mm in Sources */,
 				2C54A0C71B0E68CF00F81144 /* NCWordToken.m in Sources */,
-				2C5228141B20A53500360C36 /* NSImage+BKAscii.m in Sources */,
 				2CC148121AC4670F00079172 /* NCCanvas.m in Sources */,
 				2CD61BB21A924CDA00ED0BF1 /* NCKey.m in Sources */,
-				2C5228101B20A53500360C36 /* BKAsciiConverter_Internal.m in Sources */,
 				2C54A0AD1B0E35C900F81144 /* NCLayoutInflator.m in Sources */,
 				2C54A0BF1B0E68AE00F81144 /* NCSignToken.m in Sources */,
-				2C5228121B20A53500360C36 /* BKAsciiDefinition.m in Sources */,
 				2C392C3E1B158AB100E6B2ED /* NCRelativeLayout.m in Sources */,
 				2CC148181AC4670F00079172 /* NCBorderFilledStrategy.m in Sources */,
 				2C54A0B71B0E684B00F81144 /* NCTokenizer.m in Sources */,
@@ -856,8 +770,6 @@
 				2CC148141AC4670F00079172 /* NCBorderDecorator.m in Sources */,
 				2CC148221AC4670F00079172 /* NCScrollDecorator.m in Sources */,
 				2C54A0BB1B0E689700F81144 /* NCToken.m in Sources */,
-				2C5228191B20AA9100360C36 /* NCImage.mm in Sources */,
-				2C52281E1B20B0B100360C36 /* NSColor+Distance.m in Sources */,
 				2C54A0A81B0E337F00F81144 /* NCXMLLayoutParser.m in Sources */,
 				2CC148161AC4670F00079172 /* NCBorderDottedStrategy.m in Sources */,
 				2CC1481C1AC4670F00079172 /* NCDecorator.m in Sources */,
