@@ -54,7 +54,7 @@ NCRendition *rendition = [root drawInBounds:[[NCCursesPlatform factory] screenSi
 [rendition drawToScreen];
 ```
 
-Although you might not be able to have any time to see it in action because the program might closes itself instantly. To resolve this issue we can wait for user to input a key between each rendering:
+Although you might not be able to have any time to see it in action because the program might close itself instantly. To resolve this issue we can wait for user to input a key between each rendering:
 ```
 while(true) {
 	// render here...
