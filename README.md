@@ -89,4 +89,24 @@ int main(int argc, const char * argv[]) {
 }
 ```
 
+### Debugging tips
+
+You might have noticed that when you try run your program through XCode nothing happens. This is because of ncurses need to run in a seperate terminal window. To fix this we need to add a new run script.
+
+1. Go to Build Phases.
+2. Press the "+" -> New Run Script Phase.
+3. Add the following code into the script:
+```
+open /Applications/Utilities/Terminal.app $CONFIGURATION_BUILD_DIR/$EXECUTABLE_NAME
+```
+
+Now everytime you press the run button in XCode the program should run in a new window. Although if your program crashes, you will not be able to tell on which line. This is becasue your debugger is not attached to the process correctly. To fix this do the following.
+
+1. Product -> Scheme -> Edit Scheme...
+2. Then on the left menu select "Run".
+3. In the middle of the screen you will find several options. Make sure "Wait for executable to be launched" is selected.
+4. Press the close button.
+
+The debugger should not wait for the executable to start and then attach automaticly to it.
+
 Have fun!

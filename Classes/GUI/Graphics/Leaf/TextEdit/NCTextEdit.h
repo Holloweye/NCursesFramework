@@ -14,9 +14,11 @@
 @property (nonatomic, strong) NCMutableString *text;
 @property (nonatomic, assign) CGPoint cursorPosition;
 
-- (void)addCharacter:(char)c
-                  at:(CGPoint)pos;
+- (void)addCharacter:(char)c;
+- (void)addCharacters:(const char *)chars;
+- (void)insertCharacters:(const char *)chars;
 
-- (void)deleteCharacterAt:(CGPoint)pos;
+- (void)removeCharacters:(int)count;
+- (void)deleteCharacters:(int)count;
 
 @end

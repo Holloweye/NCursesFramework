@@ -18,21 +18,32 @@
     chars.push_back(c + foreground.color * 1000 + background.color * 10000);
 }
 
-- (void)insertCharacter:(char)c
-         withBackground:(NCColor *)background
-         withForeground:(NCColor *)foreground
-                atIndex:(NSUInteger)index
+- (void)insertCharacters:(const char *)str
+          withBackground:(NCColor *)background
+          withForeground:(NCColor *)foreground
+                 atIndex:(NSUInteger)index
 {
-    chars.insert(chars.begin(), c + foreground.color * 1000 + background.color * 10000);
+    for(int i = 0; i < strlen(str); i++) {
+        chars.insert(chars.begin() + index, str[i] + foreground.color * 1000 + background.color * 10000);
+        index++;
+    }
 }
 
-- (void)deleteCharacterAtIndex:(NSUInteger)index
+- (BOOL)deleteCharacterAtIndex:(NSUInteger)index
+                         count:(NSUInteger)count
 {
-    if(index < chars.size()) {
-        chars.erase(chars.begin() + index);
-    } else if(chars.size() > 0) {
-        chars.erase(chars.end());
+    if(index < self.length) {
+        if(index + count > self.length) {
+            count = self.length - index;
+        }
+        if(count > 0) {
+            if(index + count <= chars.size()) {
+                chars.erase(chars.begin() + index, chars.begin() + index + count);
+                return YES;
+            }
+        }
     }
+    return NO;
 }
 
 @end

@@ -10,6 +10,6 @@
 
 @interface Logger : NSObject
 
-+ (void) log:(NSString*)string;
++ (void) log:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
 @end

@@ -79,6 +79,7 @@
 		2C560C471B0EF0EF00112EBB /* NCEvaluate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C54A0B01B0E654D00F81144 /* NCEvaluate.h */; };
 		2C560C4A1B0EF28900112EBB /* NCExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C560C481B0EF28900112EBB /* NCExpression.h */; };
 		2C560C4B1B0EF28900112EBB /* NCExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C560C491B0EF28900112EBB /* NCExpression.m */; };
+		2C6368741BBDD20700EA7184 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2C6368731BBDD18900EA7184 /* PrefixHeader.pch */; settings = {ASSET_TAGS = (); }; };
 		2C68829E1B1E04E5005FC461 /* NCTextEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C392C311B1584D200E6B2ED /* NCTextEdit.m */; };
 		2C68829F1B1E04F1005FC461 /* NCTextEdit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C392C301B1584D200E6B2ED /* NCTextEdit.h */; };
 		2C6882A01B1E0508005FC461 /* NCMutableString.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C2B3A0C1B16201500A7F48B /* NCMutableString.h */; };
@@ -220,6 +221,7 @@
 		2C54A0C91B0E6D3C00F81144 /* NCSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSource.m; sourceTree = "<group>"; };
 		2C560C481B0EF28900112EBB /* NCExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCExpression.h; sourceTree = "<group>"; };
 		2C560C491B0EF28900112EBB /* NCExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCExpression.m; sourceTree = "<group>"; };
+		2C6368731BBDD18900EA7184 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2CB180B81AB1F68000731445 /* NCCursesRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCursesRendition.h; sourceTree = "<group>"; };
 		2CB180B91AB1F68000731445 /* NCCursesRendition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCursesRendition.m; sourceTree = "<group>"; };
 		2CB4BD841A76A60500E21116 /* libNCursesFramework.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libNCursesFramework.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -533,6 +535,7 @@
 				2CD61B871A924CDA00ED0BF1 /* IO */,
 				2CD61B981A924CDA00ED0BF1 /* Utils */,
 				2CC8840E1B201A0F00ADC465 /* NCursesFramework.h */,
+				2C6368731BBDD18900EA7184 /* PrefixHeader.pch */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				2CC884101B201B2100ADC465 /* NCursesFramework.h in Headers */,
 				2C2B3A0E1B16201500A7F48B /* NCMutableString.h in Headers */,
 				2C54A0BA1B0E689700F81144 /* NCToken.h in Headers */,
+				2C6368741BBDD20700EA7184 /* PrefixHeader.pch in Headers */,
 				2C54A0B61B0E684B00F81144 /* NCTokenizer.h in Headers */,
 				2C54A0B21B0E654D00F81144 /* NCEvaluate.h in Headers */,
 				2C1466B41AAF513800778FB6 /* NCRendition.h in Headers */,
@@ -883,6 +887,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/PrefixHeader.pch;
 				INSTALL_PATH = "@executable_path/";
 				OTHER_LDFLAGS = "-lncurses";
 				PRODUCT_NAME = NCursesFramework;
@@ -896,6 +902,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/PrefixHeader.pch;
 				INSTALL_PATH = "@executable_path/";
 				OTHER_LDFLAGS = "-lncurses";
 				PRODUCT_NAME = NCursesFramework;

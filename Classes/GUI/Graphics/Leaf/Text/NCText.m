@@ -16,6 +16,7 @@
 {
     NSArray *_textCache;
     int _widthCache;
+    int _heightCache;
 }
 @end
 
@@ -89,6 +90,7 @@
     _text = text;
     _textCache = nil;
     _widthCache = 0;
+    _heightCache = 0;
 }
 
 - (void)setLineBreak:(NCLineBreakMode)lineBreak
@@ -96,6 +98,7 @@
     _lineBreak = lineBreak;
     _textCache = nil;
     _widthCache = 0;
+    _heightCache = 0;
 }
 
 - (NCRendition *)drawInBounds:(CGSize)bounds
@@ -189,10 +192,11 @@
                   inBounds:(CGSize)bounds
                   withMode:(NCLineBreakMode)mode
 {
-    if(_textCache && _widthCache == bounds.width) {
+    if(_textCache && _widthCache == bounds.width && _heightCache == bounds.height) {
         return _textCache;
     } else {
         _widthCache = bounds.width;
+        _heightCache = bounds.height;
         
         NSMutableArray *preWrapping = [NSMutableArray arrayWithArray:[text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]]];
         

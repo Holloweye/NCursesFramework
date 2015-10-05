@@ -9,6 +9,7 @@
 #import "NCTextEdit.h"
 #import "NCText_Protected.h"
 #import "NCGraphic+Bounds.h"
+#import "Logger.h"
 
 @implementation NCTextEdit
 @dynamic text;
@@ -82,32 +83,81 @@
 }
 
 - (void)addCharacter:(char)c
-                  at:(CGPoint)pos
 {
-    [self.text insertCharacter:c
-                withBackground:[NCColor blackColor]
-                withForeground:[NCColor whiteColor]
-                       atIndex:[self indexFromPos:pos]];
+    char *cp = malloc(sizeof(char) * 2);
+    cp[0] = c;
+    cp[1] = '\0';
+    [self addCharacters:cp];
+    free(cp);
 }
 
-- (void)deleteCharacterAt:(CGPoint)pos
+- (void)addCharacters:(const char *)chars
 {
-    [self.text deleteCharacterAtIndex:[self indexFromPos:pos]];
+    NSUInteger index = [self indexFromPos:self.cursorPosition];
+    [self.text insertCharacters:chars
+                 withBackground:[NCColor blackColor]
+                 withForeground:[NCColor whiteColor]
+                        atIndex:index];
+    self.cursorPosition = [self pointFromIndex:index + strlen(chars)];
+}
+
+- (void)insertCharacters:(const char *)chars
+{
+    [self.text insertCharacters:chars
+                 withBackground:[NCColor blackColor]
+                 withForeground:[NCColor whiteColor]
+                        atIndex:[self indexFromPos:self.cursorPosition]];
+}
+
+- (void)removeCharacters:(int)count
+{
+    NSUInteger index = [self indexFromPos:self.cursorPosition];
+    if(index >= count) {
+        index -= count;
+    }
+    else {
+        index = 0;
+    }
+    
+    if([self.text deleteCharacterAtIndex:index
+                                   count:count]) {
+        self.cursorPosition = [self pointFromIndex:index];
+    }
+}
+
+- (void)deleteCharacters:(int)count
+{
+    [self.text deleteCharacterAtIndex:[self indexFromPos:self.cursorPosition]
+                                count:count];
 }
 
 - (NSUInteger)indexFromPos:(CGPoint)pos
 {
     NSUInteger index = 0;
     NSArray *lines = [self.text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    for(NSUInteger i = 0; i < (NSUInteger)pos.y + 1; i++) {
+    for(NSUInteger i = 0; i <= (NSUInteger)pos.y; i++) {
         NCString *line = [lines objectAtIndex:i];
         if(i < pos.y) {
-            index += line.length;
+            index += line.length + 1;
         } else {
-            index += (pos.x < line.length ? MAX(line.length - 1, 0) : 0);
+            index += MIN(pos.x, line.length);
         }
     }
     return index;
+}
+
+- (CGPoint)pointFromIndex:(NSUInteger)index
+{
+    CGPoint point = CGPointZero;
+    for(NSUInteger i = 0; i < index; i++) {
+        if([[NSCharacterSet newlineCharacterSet] characterIsMember:[self.text getCharAtIndex:i]]) {
+            point.y++;
+            point.x = 0;
+        } else {
+            point.x++;
+        }
+    }
+    return point;
 }
 
 @end

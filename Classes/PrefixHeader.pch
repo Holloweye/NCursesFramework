@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  NCursesFramework
+//
+//  Created by Christer Ulfsparre on 01/10/15.
+//  Copyright © 2015 ChristerUL. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+
+#import "Logger.h"
+
+#define NSLog(...) [Logger log:__VA_ARGS__];
+
+#endif /* PrefixHeader_h */

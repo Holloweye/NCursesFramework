@@ -129,10 +129,13 @@
     for(NSUInteger i = 0; i < [self length]; i++) {
         char c = [self getCharAtIndex:i];
         if([characterSet characterIsMember:c]) {
-            if(tmp != NULL && tmp->size() > 0) {
-                NCString *str = [[NCString alloc] initWithVector:*tmp];
-                [components addObject:str];
+            if(tmp == NULL) {
+                tmp = new std::vector<int>();
             }
+            
+            NCString *str = [[NCString alloc] initWithVector:*tmp];
+            [components addObject:str];
+            tmp = NULL;
         } else {
             if(tmp == NULL) {
                 tmp = new std::vector<int>();
@@ -141,12 +144,22 @@
         }
         
         BOOL isLast = i+1 == [self length];
-        if(isLast && tmp != NULL && tmp->size() > 0) {
+        if(isLast) {
+            if(tmp == NULL) {
+                tmp = new std::vector<int>();
+            }
+            
             NCString *str = [[NCString alloc] initWithVector:*tmp];
             [components addObject:str];
+            tmp = NULL;
         }
     }
     tmp = NULL;
+    if(components.count == 0) {
+        [components addObject:[[NCString alloc] initWithText:@""
+                                              withBackground:nil
+                                              withForeground:nil]];
+    }
     return components;
 }
 
@@ -180,6 +193,16 @@
 - (char)characterAtIndex:(NSUInteger)index
 {
     return (index < chars.size() ? chars[index] % 1000 : 0);
+}
+
+- (NSString *)description
+{
+    NSMutableString *str = [NSMutableString string];
+    for(NSUInteger i = 0; i < [self length]; i++) {
+        char c = [self getCharAtIndex:i];
+        [str appendFormat:@"%c",c];
+    }
+    return str;
 }
 
 @end

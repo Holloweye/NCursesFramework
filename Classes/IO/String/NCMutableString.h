@@ -14,11 +14,12 @@
       withBackground:(NCColor*)background
       withForeground:(NCColor*)foreground;
 
-- (void)insertCharacter:(char)c
-         withBackground:(NCColor*)background
-         withForeground:(NCColor*)foreground
-                atIndex:(NSUInteger)index;
+- (void)insertCharacters:(const char *)str
+          withBackground:(NCColor *)background
+          withForeground:(NCColor *)foreground
+                 atIndex:(NSUInteger)index;
 
-- (void)deleteCharacterAtIndex:(NSUInteger)index;
+- (BOOL)deleteCharacterAtIndex:(NSUInteger)index
+                         count:(NSUInteger)count;
 
 @end

@@ -10,12 +10,25 @@
 
 @implementation Logger
 
-+ (void) log:(NSString *)text
++ (void)initialize
+{
+    if([[NSFileManager defaultManager] fileExistsAtPath:[Logger logPath]]) {
+        [[NSFileManager defaultManager] removeItemAtPath:[Logger logPath]
+                                                   error:nil];
+    }
+}
+
++ (void) log:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2)
 {
     int timestamp = [[NSDate date] timeIntervalSince1970];
     int hour = (timestamp % 86400) / 3600;
     int min = (timestamp % 3600) / 60;
     int sec = (timestamp % 60);
+    
+    va_list ap;
+    va_start(ap, format);
+    NSString *text = [[NSString alloc] initWithFormat:format arguments:ap];
+    va_end(ap);
     text = [NSString stringWithFormat:@"%i:%i:%i %@\n",hour,min,sec,text];
     
     if([[NSFileManager defaultManager] fileExistsAtPath:[Logger logPath]]) {
@@ -30,7 +43,7 @@
 
 + (NSString*)logPath
 {
-    return @"/Users/Christer/Desktop/log.txt";
+    return [NSString stringWithFormat:@"%@/%@",NSHomeDirectory(),@"ncursesframework_log.txt"];
 }
 
 @end
