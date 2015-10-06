@@ -19,6 +19,8 @@
     self = [super init];
     if(self) {
         self.text = [[NCMutableString alloc] init];
+        self.maxLength = NSIntegerMax;
+        self.drawCursor = YES;
     }
     return self;
 }
@@ -28,6 +30,27 @@
     self = [super initWithAttributes:attributes];
     if(self) {
         self.text = [[NCMutableString alloc] init];
+        
+        NSString *secure = [attributes objectForKey:@"secure"];
+        if([secure isEqualToString:@"true"]) {
+            self.secure = YES;
+        }
+        
+        NSString *drawCursor = [attributes objectForKey:@"drawCursor"];
+        if([drawCursor isEqualToString:@"false"]) {
+            self.drawCursor = NO;
+        }
+        else {
+            self.drawCursor = YES;
+        }
+        
+        NSString *maxLen = [attributes objectForKey:@"maxLength"];
+        if(maxLen) {
+            self.maxLength = [maxLen intValue];
+        }
+        else {
+            self.maxLength = NSIntegerMax;
+        }
     }
     return self;
 }
@@ -45,6 +68,7 @@
                                       lineBreak:self.lineBreak
                                       truncMode:self.truncation];
     
+    BOOL cursorDrawn = NO;
     for(int y = 0; lines && y < lines.count; y++) {
         NCString *text = [lines objectAtIndex:y];
         
@@ -63,19 +87,32 @@
                 xOffset = (bounds.width-text.length);
             }
             
-            if(self.cursorPosition.y == y && self.cursorPosition.x == x) {
-                [rendition setCharacter:[text getCharAtIndex:x]
+            char c = [text getCharAtIndex:x];
+            if(self.secure) {
+                c = '*';
+            }
+            
+            if(self.cursorPosition.y == y && self.cursorPosition.x == x && self.drawCursor) {
+                cursorDrawn = YES;
+                [rendition setCharacter:c
                                      at:CGSizeMake(x + xOffset, y + yOffset)
                          withForeground:[text getBgAtIndex:x]
                          withBackground:[text getFgAtIndex:x]];
             } else {
-                [rendition setCharacter:[text getCharAtIndex:x]
+                [rendition setCharacter:c
                                      at:CGSizeMake(x + xOffset, y + yOffset)
                          withForeground:[text getFgAtIndex:x]
                          withBackground:[text getBgAtIndex:x]];
             }
             index++;
         }
+    }
+    
+    if(!cursorDrawn && self.drawCursor) {
+        [rendition setCharacter:' '
+                             at:CGSizeMake(self.cursorPosition.x, self.cursorPosition.y)
+                 withForeground:ColorBlack
+                 withBackground:ColorWhite];
     }
     
     return [self applyPaddingOnRendition:rendition
@@ -94,19 +131,44 @@
 - (void)addCharacters:(const char *)chars
 {
     NSUInteger index = [self indexFromPos:self.cursorPosition];
-    [self.text insertCharacters:chars
-                 withBackground:[NCColor blackColor]
-                 withForeground:[NCColor whiteColor]
-                        atIndex:index];
-    self.cursorPosition = [self pointFromIndex:index + strlen(chars)];
+    NSUInteger len = [self doAddCharacters:chars
+                                   atIndex:index];
+    
+    self.cursorPosition = [self pointFromIndex:index + len];
 }
 
 - (void)insertCharacters:(const char *)chars
 {
+    [self doAddCharacters:chars
+                  atIndex:[self indexFromPos:self.cursorPosition]];
+}
+
+- (NSUInteger)doAddCharacters:(const char *)chars
+                      atIndex:(NSUInteger)index
+{
+    char *text = (char*)chars;
+    BOOL needsRelease = NO;
+    if(self.text.length + strlen(chars) > self.maxLength) {
+        NSUInteger tot = self.text.length + strlen(chars);
+        NSUInteger len = strlen(chars) - (tot - self.maxLength);
+        if(len == 0) {
+            return 0;
+        }
+        text = malloc(sizeof(char) * len);
+        memcpy(text, chars, len);
+        needsRelease = YES;
+    }
+    
     [self.text insertCharacters:chars
                  withBackground:[NCColor blackColor]
                  withForeground:[NCColor whiteColor]
-                        atIndex:[self indexFromPos:self.cursorPosition]];
+                        atIndex:index];
+    
+    if(needsRelease) {
+        free(text);
+        text = NULL;
+    }
+    return strlen(text);
 }
 
 - (void)removeCharacters:(int)count
@@ -158,6 +220,33 @@
         }
     }
     return point;
+}
+
+- (CGSize)sizeWithinBounds:(CGSize)bounds
+{
+    CGSize size = [self sizeOfText:self.text
+                         breakMode:self.lineBreak
+                             width:bounds.width];
+    
+    if(self.cursorPosition.y >= size.height) {
+        size.height += self.cursorPosition.y - size.height + 1;
+    }
+    
+    if(self.cursorPosition.x >= size.width) {
+        if(self.cursorPosition.x + 1 < bounds.width) {
+            size.width++;
+            if(size.height == 0) {
+                size.height++;
+            }
+        }
+        else {
+            size.height++;
+        }
+    }
+    
+    size = CGSizeMake(MIN(size.width, bounds.width), MIN(size.height, bounds.height));
+    return [self sizeAfterAdjustmentsForSize:size
+                            withParentBounds:bounds];
 }
 
 @end
