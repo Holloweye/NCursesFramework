@@ -29,7 +29,18 @@
 {
     self = [super initWithAttributes:attributes];
     if(self) {
-        self.text = [[NCMutableString alloc] init];
+        NSString *text = [attributes objectForKey:@"text"];
+        NSString *foreground = [attributes objectForKey:@"foreground"];
+        NSString *background = [attributes objectForKey:@"background"];
+        if(!text) {
+            text = @"";
+        }
+        NCColor *bg = [NCColor colorFromString:background];
+        NCColor *fg = [NCColor colorFromString:foreground];
+        
+        self.text = [[NCMutableString alloc] initWithText:text
+                                           withBackground:bg ? bg : [NCColor blackColor]
+                                           withForeground:fg ? fg : [NCColor whiteColor]];
         
         NSString *secure = [attributes objectForKey:@"secure"];
         if([secure isEqualToString:@"true"]) {
@@ -62,11 +73,16 @@
     bounds = CGSizeMake(MAX(bounds.width - padding.origin.x - padding.size.width, 0),
                         MAX(bounds.height - padding.origin.y - padding.size.height, 0));
     NCRendition *rendition = [platform createRenditionWithBounds:bounds];
-    int index = 0;
+    NSUInteger index = 0;
+    NSUInteger cursorIndex = [self indexFromPos:self.cursorPosition];
+    
     NSArray *lines = [self lineBreakAndTruncate:self.text
                                        inBounds:bounds
                                       lineBreak:self.lineBreak
                                       truncMode:self.truncation];
+    
+    NSUInteger xCursor = 0;
+    NSUInteger yCursor = 0;
     
     BOOL cursorDrawn = NO;
     for(int y = 0; lines && y < lines.count; y++) {
@@ -92,25 +108,49 @@
                 c = '*';
             }
             
-            if(self.cursorPosition.y == y && self.cursorPosition.x == x && self.drawCursor) {
+            NSUInteger rx = x + xOffset;
+            NSUInteger ry = y + yOffset;
+            
+            /* Set cursor draw position to current position. */
+            if(!cursorDrawn && index < cursorIndex) {
+                xCursor = rx;
+                yCursor = ry;
+            }
+            
+            if(cursorIndex == index && self.drawCursor) {
                 cursorDrawn = YES;
                 [rendition setCharacter:c
-                                     at:CGSizeMake(x + xOffset, y + yOffset)
+                                     at:CGSizeMake(rx, ry)
                          withForeground:[text getBgAtIndex:x]
                          withBackground:[text getFgAtIndex:x]];
             } else {
                 [rendition setCharacter:c
-                                     at:CGSizeMake(x + xOffset, y + yOffset)
+                                     at:CGSizeMake(rx, ry)
                          withForeground:[text getFgAtIndex:x]
                          withBackground:[text getBgAtIndex:x]];
             }
             index++;
         }
+        
+        /* Set cursor draw position on a new line. */
+        if(!cursorDrawn && index < cursorIndex) {
+            xCursor = -1;
+            yCursor = y + yOffset + 1;
+        }
+        cursorIndex--;
     }
     
+    /* Draw cursor if not already done so. */
     if(!cursorDrawn && self.drawCursor) {
+        xCursor++;
+        if(xCursor >= bounds.width) {
+            xCursor = 0;
+            if(yCursor + 1 < bounds.height) {
+                yCursor++;
+            }
+        }
         [rendition setCharacter:' '
-                             at:CGSizeMake(self.cursorPosition.x, self.cursorPosition.y)
+                             at:CGSizeMake(xCursor, yCursor)
                  withForeground:ColorBlack
                  withBackground:ColorWhite];
     }
@@ -197,12 +237,12 @@
 {
     NSUInteger index = 0;
     NSArray *lines = [self.text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    for(NSUInteger i = 0; i <= (NSUInteger)pos.y; i++) {
+    for(NSInteger i = 0; i <= pos.y && i < lines.count; i++) {
         NCString *line = [lines objectAtIndex:i];
         if(i < pos.y) {
             index += line.length + 1;
         } else {
-            index += MIN(pos.x, line.length);
+            index += MIN(MAX(pos.x, 0), line.length);
         }
     }
     return index;
@@ -233,7 +273,7 @@
     }
     
     if(self.cursorPosition.x >= size.width) {
-        if(self.cursorPosition.x + 1 < bounds.width) {
+        if(self.cursorPosition.x < bounds.width) {
             size.width++;
             if(size.height == 0) {
                 size.height++;
@@ -247,6 +287,12 @@
     size = CGSizeMake(MIN(size.width, bounds.width), MIN(size.height, bounds.height));
     return [self sizeAfterAdjustmentsForSize:size
                             withParentBounds:bounds];
+}
+
+- (void)setCursorPosition:(CGPoint)cursorPosition
+{
+    _cursorPosition = [self pointFromIndex:[self indexFromPos:cursorPosition]];
+    int a = 0;
 }
 
 @end

@@ -198,7 +198,7 @@
         _widthCache = bounds.width;
         _heightCache = bounds.height;
         
-        NSMutableArray *preWrapping = [NSMutableArray arrayWithArray:[text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]]];
+        NSMutableArray *preWrapping = [NSMutableArray arrayWithArray:[text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
         
         if(mode == NCLineBreakByNoWrapping) {
             return preWrapping;
@@ -209,53 +209,51 @@
         for(NCString *t in preWrapping)
         {
             NCString *text = t;
-            while(text.length > 0 && lines.count < bounds.height)
+            
+            NSInteger maxPossibleLength = MIN(text.length, bounds.width);
+            
+            if(mode == NCLineBreakByCharWrapping)
             {
-                NSInteger maxPossibleLength = MIN(text.length, bounds.width);
-                
-                if(mode == NCLineBreakByCharWrapping)
-                {
-                    [lines addObject:[text substringToIndex:maxPossibleLength]];
-                    text = [text substringFromIndex:maxPossibleLength];
-                }
-                else if(mode == NCLineBreakByWordWrapping)
-                {
-                    if(maxPossibleLength == text.length) {
-                        [lines addObject:text];
-                        text = [[NCString alloc] initWithText:@""
-                                               withBackground:[NCColor blackColor]
-                                               withForeground:[NCColor whiteColor]];
-                    } else {
-                        if(!isblank([text characterAtIndex:maxPossibleLength-1]) && !isblank([text characterAtIndex:maxPossibleLength])) {
-                            NSInteger wordS = maxPossibleLength-1;
-                            NSInteger wordL = 0;
-                            for(NSInteger i = maxPossibleLength-1; i >= 0; i--) {
-                                char c = [text characterAtIndex:i];
-                                if(isblank(c)) {
-                                    break;
-                                } else {
-                                    wordS = i;
-                                }
-                            }
-                            for(NSInteger i = wordS; i < text.length; i++) {
-                                char c = [text characterAtIndex:i];
-                                wordL++;
-                                if(isblank(c)) {
-                                    break;
-                                }
-                            }
-                            if(wordL > bounds.width) {
-                                [lines addObject:[text substringToIndex:maxPossibleLength]];
-                                text = [text substringFromIndex:maxPossibleLength];
+                [lines addObject:[text substringToIndex:maxPossibleLength]];
+                text = [text substringFromIndex:maxPossibleLength];
+            }
+            else if(mode == NCLineBreakByWordWrapping)
+            {
+                if(maxPossibleLength == text.length) {
+                    [lines addObject:text];
+                    text = [[NCString alloc] initWithText:@""
+                                           withBackground:[NCColor blackColor]
+                                           withForeground:[NCColor whiteColor]];
+                } else {
+                    if(!isblank([text characterAtIndex:maxPossibleLength-1]) && !isblank([text characterAtIndex:maxPossibleLength])) {
+                        NSInteger wordS = maxPossibleLength-1;
+                        NSInteger wordL = 0;
+                        for(NSInteger i = maxPossibleLength-1; i >= 0; i--) {
+                            char c = [text characterAtIndex:i];
+                            if(isblank(c)) {
+                                break;
                             } else {
-                                [lines addObject:[text substringToIndex:wordS]];
-                                text = [text substringFromIndex:wordS];
+                                wordS = i;
                             }
-                            
-                        } else {
+                        }
+                        for(NSInteger i = wordS; i < text.length; i++) {
+                            char c = [text characterAtIndex:i];
+                            wordL++;
+                            if(isblank(c)) {
+                                break;
+                            }
+                        }
+                        if(wordL > bounds.width) {
                             [lines addObject:[text substringToIndex:maxPossibleLength]];
                             text = [text substringFromIndex:maxPossibleLength];
+                        } else {
+                            [lines addObject:[text substringToIndex:wordS]];
+                            text = [text substringFromIndex:wordS];
                         }
+                        
+                    } else {
+                        [lines addObject:[text substringToIndex:maxPossibleLength]];
+                        text = [text substringFromIndex:maxPossibleLength];
                     }
                 }
             }
