@@ -23,6 +23,14 @@
                   inBounds:(CGSize)bounds
                   withMode:(NCLineBreakMode)mode;
 
+- (NSArray*) lineBreakLines:(NSArray*)lines
+                   inBounds:(CGSize)bounds
+                   withMode:(NCLineBreakMode)mode;
+
+- (NSArray*)lineBreakLine:(NCString *)line
+                 inBounds:(CGSize)bounds
+                 withMode:(NCLineBreakMode)mode;
+
 - (CGSize) sizeOfText:(NCString*)text
             breakMode:(NCLineBreakMode)linebreak
                 width:(NSUInteger)width;

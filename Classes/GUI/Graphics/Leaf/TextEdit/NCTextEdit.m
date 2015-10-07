@@ -76,10 +76,33 @@
     NSUInteger index = 0;
     NSUInteger cursorIndex = [self indexFromPos:self.cursorPosition];
     
-    NSArray *lines = [self lineBreakAndTruncate:self.text
+    NSArray *tmp = [self.text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSMutableArray *lines = [NSMutableArray array];
+    for(NSUInteger i = 0; i < tmp.count; i++) {
+        NCString *line = tmp[i];
+        NSArray<NCString*> *nlines = [self lineBreakLine:line
+                                                inBounds:bounds
+                                                withMode:self.lineBreak];
+        if(self.cursorPosition.y > i) {
+            cursorIndex += nlines.count - 1;
+        }
+        else if(self.cursorPosition.y == i) {
+            int cindex = 0;
+            for(NSUInteger j = 0; j < nlines.count; j++) {
+                if(cindex + nlines[j].length >= self.cursorPosition.x) {
+                    break;
+                }
+                cindex += nlines[j].length;
+                cursorIndex++;
+            }
+        }
+        
+        for(NCString *nl in nlines) {
+            [lines addObject:[self truncateText:nl
                                        inBounds:bounds
-                                      lineBreak:self.lineBreak
-                                      truncMode:self.truncation];
+                                       withMode:self.truncation]];
+        }
+    }
     
     NSUInteger xCursor = 0;
     NSUInteger yCursor = 0;
@@ -131,13 +154,12 @@
             }
             index++;
         }
-        
         /* Set cursor draw position on a new line. */
         if(!cursorDrawn && index < cursorIndex) {
             xCursor = -1;
             yCursor = y + yOffset + 1;
         }
-        cursorIndex--;
+        index++;
     }
     
     /* Draw cursor if not already done so. */
@@ -264,16 +286,19 @@
 
 - (CGSize)sizeWithinBounds:(CGSize)bounds
 {
+    CGSize p = [self sizeAfterAdjustmentsForSize:bounds
+                                withParentBounds:bounds];
+    
     CGSize size = [self sizeOfText:self.text
                          breakMode:self.lineBreak
-                             width:bounds.width];
+                             width:p.width];
     
     if(self.cursorPosition.y >= size.height) {
         size.height += self.cursorPosition.y - size.height + 1;
     }
     
     if(self.cursorPosition.x >= size.width) {
-        if(self.cursorPosition.x < bounds.width) {
+        if(self.cursorPosition.x < p.width) {
             size.width++;
             if(size.height == 0) {
                 size.height++;
@@ -292,7 +317,6 @@
 - (void)setCursorPosition:(CGPoint)cursorPosition
 {
     _cursorPosition = [self pointFromIndex:[self indexFromPos:cursorPosition]];
-    int a = 0;
 }
 
 @end
