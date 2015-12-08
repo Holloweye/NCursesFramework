@@ -79,7 +79,7 @@
 		2C560C471B0EF0EF00112EBB /* NCEvaluate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C54A0B01B0E654D00F81144 /* NCEvaluate.h */; };
 		2C560C4A1B0EF28900112EBB /* NCExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C560C481B0EF28900112EBB /* NCExpression.h */; };
 		2C560C4B1B0EF28900112EBB /* NCExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C560C491B0EF28900112EBB /* NCExpression.m */; };
-		2C6368741BBDD20700EA7184 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2C6368731BBDD18900EA7184 /* PrefixHeader.pch */; settings = {ASSET_TAGS = (); }; };
+		2C6368741BBDD20700EA7184 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2C6368731BBDD18900EA7184 /* PrefixHeader.pch */; };
 		2C68829E1B1E04E5005FC461 /* NCTextEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C392C311B1584D200E6B2ED /* NCTextEdit.m */; };
 		2C68829F1B1E04F1005FC461 /* NCTextEdit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C392C301B1584D200E6B2ED /* NCTextEdit.h */; };
 		2C6882A01B1E0508005FC461 /* NCMutableString.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C2B3A0C1B16201500A7F48B /* NCMutableString.h */; };

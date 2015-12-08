@@ -136,7 +136,7 @@
             
             /* Set cursor draw position to current position. */
             if(!cursorDrawn && index < cursorIndex) {
-                xCursor = rx;
+                xCursor = rx + 1;
                 yCursor = ry;
             }
             
@@ -164,7 +164,6 @@
     
     /* Draw cursor if not already done so. */
     if(!cursorDrawn && self.drawCursor) {
-        xCursor++;
         if(xCursor >= bounds.width) {
             xCursor = 0;
             if(yCursor + 1 < bounds.height) {
@@ -262,7 +261,7 @@
     for(NSInteger i = 0; i <= pos.y && i < lines.count; i++) {
         NCString *line = [lines objectAtIndex:i];
         if(i < pos.y) {
-            index += line.length + 1;
+            index += line.length + (i+1 != lines.count ? 1 : 0);
         } else {
             index += MIN(MAX(pos.x, 0), line.length);
         }
@@ -289,16 +288,19 @@
     CGSize p = [self sizeAfterAdjustmentsForSize:bounds
                                 withParentBounds:bounds];
     
+    int textAreaWidth = p.width - self.padding.size.width - self.padding.origin.x;
+    textAreaWidth = MAX(textAreaWidth, 0);
+    
     CGSize size = [self sizeOfText:self.text
                          breakMode:self.lineBreak
-                             width:p.width];
+                             width:textAreaWidth];
     
     if(self.cursorPosition.y >= size.height) {
         size.height += self.cursorPosition.y - size.height + 1;
     }
     
     if(self.cursorPosition.x >= size.width) {
-        if(self.cursorPosition.x < p.width) {
+        if(self.cursorPosition.x < textAreaWidth) {
             size.width++;
             if(size.height == 0) {
                 size.height++;
