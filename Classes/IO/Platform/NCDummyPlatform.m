@@ -25,7 +25,7 @@ static NCDummyPlatform *instance = nil;
 - (NCKey *)getKey
 {
     char c = (char)getchar();
-    return [NCKey getKeyFromChar:c];
+    return [NCKey getKeyFromChar1:c char2:-1 char3:-1 char4:-1];
 }
 
 - (NCRendition *)createRenditionWithBounds:(CGSize)bounds

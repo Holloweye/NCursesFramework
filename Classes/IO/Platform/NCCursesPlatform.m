@@ -50,8 +50,16 @@ static NCCursesPlatform *instance = nil;
 
 - (NCKey *)getKey
 {
-    char c = getch();
-    return [NCKey getKeyFromChar:c];
+    char c1 = getch();
+    timeout(0);
+    char c2 = getch();
+    char c3 = getch();
+    char c4 = getch();
+    timeout(-1);
+    return [NCKey getKeyFromChar1:c1
+                            char2:c2
+                            char3:c3
+                            char4:c4];
 }
 
 - (NCRendition *)createRenditionWithBounds:(CGSize)bounds

@@ -12,7 +12,10 @@
 
 - (char) getCharacter;
 
-+ (NCKey *) getKeyFromChar:(char)c;
++ (NCKey *) getKeyFromChar1:(char)c1
+                      char2:(char)c2
+                      char3:(char)c3
+                      char4:(char)c4;
 
 + (NCKey *) NCKEY_a;
 + (NCKey *) NCKEY_b;
@@ -67,6 +70,58 @@
 + (NCKey *) NCKEY_X;
 + (NCKey *) NCKEY_Y;
 + (NCKey *) NCKEY_Z;
+
++ (NCKey *) NCKEY_CTRL_A;
++ (NCKey *) NCKEY_CTRL_B;
++ (NCKey *) NCKEY_CTRL_C;
++ (NCKey *) NCKEY_CTRL_D;
++ (NCKey *) NCKEY_CTRL_E;
++ (NCKey *) NCKEY_CTRL_F;
++ (NCKey *) NCKEY_CTRL_GH;
++ (NCKey *) NCKEY_CTRL_I;
++ (NCKey *) NCKEY_CTRL_JM;
++ (NCKey *) NCKEY_CTRL_K;
++ (NCKey *) NCKEY_CTRL_L;
++ (NCKey *) NCKEY_CTRL_N;
++ (NCKey *) NCKEY_CTRL_O;
++ (NCKey *) NCKEY_CTRL_P;
++ (NCKey *) NCKEY_CTRL_Q;
++ (NCKey *) NCKEY_CTRL_R;
++ (NCKey *) NCKEY_CTRL_S;
++ (NCKey *) NCKEY_CTRL_T;
++ (NCKey *) NCKEY_CTRL_U;
++ (NCKey *) NCKEY_CTRL_V;
++ (NCKey *) NCKEY_CTRL_W;
++ (NCKey *) NCKEY_CTRL_X;
++ (NCKey *) NCKEY_CTRL_Y;
++ (NCKey *) NCKEY_CTRL_Z;
+
++ (NCKey *) NCKEY_ALT_A;
++ (NCKey *) NCKEY_ALT_B;
++ (NCKey *) NCKEY_ALT_C;
++ (NCKey *) NCKEY_ALT_D;
++ (NCKey *) NCKEY_ALT_E;
++ (NCKey *) NCKEY_ALT_F;
++ (NCKey *) NCKEY_ALT_G;
++ (NCKey *) NCKEY_ALT_H;
++ (NCKey *) NCKEY_ALT_I;
++ (NCKey *) NCKEY_ALT_J;
++ (NCKey *) NCKEY_ALT_K;
++ (NCKey *) NCKEY_ALT_L;
++ (NCKey *) NCKEY_ALT_M;
++ (NCKey *) NCKEY_ALT_N;
++ (NCKey *) NCKEY_ALT_O;
++ (NCKey *) NCKEY_ALT_P;
++ (NCKey *) NCKEY_ALT_Q;
++ (NCKey *) NCKEY_ALT_R;
++ (NCKey *) NCKEY_ALT_S;
++ (NCKey *) NCKEY_ALT_T;
++ (NCKey *) NCKEY_ALT_U;
++ (NCKey *) NCKEY_ALT_V;
++ (NCKey *) NCKEY_ALT_W;
++ (NCKey *) NCKEY_ALT_X;
++ (NCKey *) NCKEY_ALT_Y;
++ (NCKey *) NCKEY_ALT_Z;
 
 + (NCKey *) NCKEY_ENTER;
 + (NCKey *) NCKEY_BACK_SPACE;
